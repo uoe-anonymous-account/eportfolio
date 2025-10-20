@@ -1,0 +1,942 @@
+WEBVTT
+
+1
+00:00:02.360 --> 00:00:11.000
+Godfried Williams: So Hello, everyone, and and welcome to this evening seminar on deciphering big data.
+
+2
+00:00:12.020 --> 00:00:17.260
+Godfried Williams: My name is Godfrey Williams, and I'm the facilitator for this seminar.
+
+3
+00:00:25.220 --> 00:00:43.029
+Godfried Williams: So this the the general model outline, or what I'll call the the sketch of the entire model. As we look at introduction overview, we look at some concepts in in data files.
+
+4
+00:00:44.105 --> 00:00:54.880
+Godfried Williams: The case study on data investigations, application of data, pipeline and then building database management systems
+
+5
+00:00:55.060 --> 00:01:02.850
+Godfried Williams: by applying the application of the data pipeline as well as driving intelligence
+
+6
+00:01:03.170 --> 00:01:09.000
+Godfried Williams: from data. So that's the the module outline.
+
+7
+00:01:09.786 --> 00:01:14.920
+Godfried Williams: And I think we will certainly cover this as we progress.
+
+8
+00:01:16.000 --> 00:01:23.860
+Godfried Williams: Sort of taking on the different seminars. There's some announcement for this model.
+
+9
+00:01:24.510 --> 00:01:32.210
+Godfried Williams: We have the assignments that a 1st submission is on 8th of September.
+
+10
+00:01:32.720 --> 00:01:39.560
+Godfried Williams: and that's us do development in project. There's also a project report and review
+
+11
+00:01:39.680 --> 00:01:45.850
+Godfried Williams: that it's individual based and linked to this general team project.
+
+12
+00:01:46.250 --> 00:01:51.580
+Godfried Williams: Then, when it comes to the submissions on settings
+
+13
+00:01:51.750 --> 00:02:00.890
+Godfried Williams: 10 of October that is developing, or development of individual project where you come out with an executive summary.
+
+14
+00:02:01.180 --> 00:02:13.249
+Godfried Williams: and and I have to say that the assignments are all linked in the same contest, but they're different phases or different aspects that you need to
+
+15
+00:02:13.480 --> 00:02:26.810
+Godfried Williams: review and and present. Then then you have the individual E-portfolio as well, which is submitted just a week after the second individual project
+
+16
+00:02:27.090 --> 00:02:29.439
+Godfried Williams: assignment, which is the executive summary.
+
+17
+00:02:31.220 --> 00:02:36.910
+Godfried Williams: So what is big data. But I think that before
+
+18
+00:02:37.520 --> 00:02:41.340
+Godfried Williams: I sort of talk about big data like to
+
+19
+00:02:43.930 --> 00:02:51.330
+Godfried Williams: perhaps mention a few points about the rationale of having deciphering big data.
+
+20
+00:02:51.760 --> 00:02:57.710
+Godfried Williams: And the rationale is that I mean, data has become
+
+21
+00:02:58.170 --> 00:03:07.070
+Godfried Williams: a major asset in organizations. I'll not even say major organization. But I say organizations across, especially
+
+22
+00:03:07.400 --> 00:03:22.289
+Godfried Williams: for large organizations that either you know multinational or engage with a variety of different variety of stakeholders.
+
+23
+00:03:22.500 --> 00:03:27.400
+Godfried Williams: So data is a huge asset.
+
+24
+00:03:27.800 --> 00:03:34.170
+Godfried Williams: and that asset needs to be understood and then, deciphered.
+
+25
+00:03:34.270 --> 00:03:41.939
+Godfried Williams: exploited, made more. You need to make more sense out of the data so that it can inform management
+
+26
+00:03:42.110 --> 00:03:45.469
+Godfried Williams: to help management make the right kind of
+
+27
+00:03:45.620 --> 00:03:51.430
+Godfried Williams: decisions and also develop the right kind of strategies that will help
+
+28
+00:03:51.780 --> 00:03:58.310
+Godfried Williams: them to either remain competitive or sustainable in the long term
+
+29
+00:03:59.209 --> 00:04:09.259
+Godfried Williams: so that they don't end up being sort of extinguished or eliminated in the business space. So
+
+30
+00:04:09.560 --> 00:04:12.370
+Godfried Williams: data has become very important.
+
+31
+00:04:12.500 --> 00:04:14.180
+Godfried Williams: And because
+
+32
+00:04:14.280 --> 00:04:43.619
+Godfried Williams: data has become data has grown exponentially and become very large and difficult to contain in most systems within organizations or between organizations as they deal with different businesses. So you have a b 2 b business business environments and all that. Then there's a need to find ways to manage that data so that, you know, not just managing it, but also
+
+33
+00:04:44.278 --> 00:04:50.890
+Godfried Williams: driving intelligence, as I mentioned earlier on to enable these business organizations to
+
+34
+00:04:50.940 --> 00:05:14.400
+Godfried Williams: make the right kind of use of the data, help them to to stay competitive and all that. So that's the rationale behind deciphering big data because data has grown exponentially. So what is big data, the different kinds of definitions when it comes to big data. But we have to look at big data from
+
+35
+00:05:14.420 --> 00:05:28.299
+Godfried Williams: the various characteristics that it presents to us. And this comprised data growing exponentially in organizations or in businesses. And also the fact that
+
+36
+00:05:28.470 --> 00:05:41.300
+Godfried Williams: big data comes in a variety of formats, you know. So you can have formats in in test, you know, sound video or images, and therefore big data
+
+37
+00:05:41.300 --> 00:05:58.399
+Godfried Williams: with different formats. Then it's also boundless, and then also is highly complex. So we look at some of these contests as we go along. I've already mentioned what big data is. According to ohas, 2012
+
+38
+00:05:58.400 --> 00:06:12.280
+Godfried Williams: big data, defiant situation in which data sets have grown to such a normal sizes that conventional information tellers can no longer effectively handle. And I think I'll just, you know, stop at this point. So
+
+39
+00:06:12.880 --> 00:06:26.910
+Godfried Williams: the you cannot discuss data without necessarily looking at the ubiquitous nature of of systems. And when I say ubiquitous nature of systems. I'm referring to the infrastructure
+
+40
+00:06:27.060 --> 00:06:45.960
+Godfried Williams: that supports organizations and that enable organizations or businesses to function. And and these systems are deployed using all kinds of technologies, and with the the emergence or the trending of
+
+41
+00:06:46.190 --> 00:06:55.763
+Godfried Williams: different type of technology within the wireless spectrum or the wire wired infrastructure.
+
+42
+00:06:56.940 --> 00:07:10.080
+Godfried Williams: they are different standards that have to communicate or interact with each other. And what do I mean by different standards? I refer to different standards, such as
+
+43
+00:07:10.599 --> 00:07:17.959
+Godfried Williams: you have, Bluetooth. So certain devices will communicate using Bluetooth. Certain devices will communicate using infrared.
+
+44
+00:07:18.010 --> 00:07:35.320
+Godfried Williams: Some will communicate using wireless, you know. So there are different standards that without the standards. These devices will not be able to interact with each other, you know. So the understanding of the different standards enable devices to interact with one another.
+
+45
+00:07:35.330 --> 00:07:58.649
+Godfried Williams: and also within the typical infrastructure. You have all kind of software suites that are embedded within this infrastructure. So that makes the system ubiquitous because you have different systems, different technologies interacting with each other. And we cannot talk about
+
+46
+00:07:58.750 --> 00:08:02.720
+Godfried Williams: different technologies interacting with each other without necessarily
+
+47
+00:08:03.120 --> 00:08:13.759
+Godfried Williams: taking into account the exponential growth of data, the size of data within the business or within the organization. So you have to look at
+
+48
+00:08:13.920 --> 00:08:18.830
+Godfried Williams: both scenarios in one contest and be able to
+
+49
+00:08:18.940 --> 00:08:43.910
+Godfried Williams: create systems to be able to handle the big data for for the business or for the organization, so that organization can make the right kinds of decisions. You know. So here we have some example case study that you can look at a case study later on to do the global innovation network analysis case study that provides comprehensive insight
+
+50
+00:08:43.990 --> 00:09:11.680
+Godfried Williams: of the exponential growth of data among users and network services by examining the data, discovery and investigation phase in terms of the different type of data sources. So it's something that you can look at later on. But the idea here is that data come from different sources, as you mentioned in the preamble or background conversation. You didn't mention the fact that within the clinical setting
+
+51
+00:09:11.730 --> 00:09:19.519
+Godfried Williams: you have data coming from different sources, you have data coming from different sources. And because you have data come from different sources.
+
+52
+00:09:19.710 --> 00:09:39.990
+Godfried Williams: And I have to say, the parameters is very huge and very huge. You need to have effective ways of managing the data coming from different sources, and you may not have any control over the data coming from different sources, because the sources might be.
+
+53
+00:09:39.990 --> 00:09:53.569
+Godfried Williams: might be in different formats as well. So it presents to to us or to you as a clinical person, you know, person working within the clinical sciences, environment
+
+54
+00:09:53.570 --> 00:10:16.000
+Godfried Williams: to handle large data in different formats. And as a result of that, you need very powerful tools to be able to do that. And we need to make particular reference to again the characteristics of the big data. You're looking at various formats that are coming from different sources external to your organization.
+
+55
+00:10:16.300 --> 00:10:30.470
+Godfried Williams: The data grows exponentially continues to grow. You need to handle that. There's complexity also associated with that, and it can become boundless. You know that. Keep on growing. And and as a result, we need to really take that into
+
+56
+00:10:31.070 --> 00:10:58.339
+Godfried Williams: account as we we go along. There are some additional examples here that I can mention, such as the Ibm cognos analytics will help them to handle boundless data within the Internet of things certain but entire Internet of things. We we can relate that to ubiquitous computing, because Internet of things refers to
+
+57
+00:10:58.390 --> 00:11:15.430
+Godfried Williams: that sort of scenario or contest. When you have different devices that are communicating with each other through the Internet. We need to understand what an Internet is. The Internet is simply a network. But it's global.
+
+58
+00:11:15.730 --> 00:11:21.360
+Godfried Williams: And it's global. Because you have a number of
+
+59
+00:11:21.660 --> 00:11:45.009
+Godfried Williams: local area networks that are linked to to each other globally through either switches or gateways, or sometime we describe them as routers or routers, depending on how you want to. You want to say it, you know. So without the the routers, you or routers, you're not able to
+
+60
+00:11:45.170 --> 00:12:05.939
+Godfried Williams: connect these different networks. So with that, we have the Internet. And that's why you have IP addresses that are linked to specific local area networks. So if you're based in Sweden and you are interacting sending messages to someone in Britain. Your IP address in Sweden will sort of
+
+61
+00:12:05.940 --> 00:12:21.410
+Godfried Williams: reflect. It will show and will to locate you and know that the message that you're sending is coming from Sweden. So it's very important not to disclose the subject only from an infrastructure perspective. You should look at the
+
+62
+00:12:21.410 --> 00:12:46.869
+Godfried Williams: the subject from an infrastructure perspective as well as the processes that take place within the infrastructure. So you look at processes, you look at the data that is sort of shared. You look at the inter-process communication within the infrastructure, and by doing that you have a better appreciation
+
+63
+00:12:46.970 --> 00:13:11.140
+Godfried Williams: of how your data have grown, or how your data keeps on growing, you know. So it's always important to look at the subject from that sort of multi-dimensional point of view where you're thinking about the data, you're thinking about the processes that manage the data. You're also thinking about the infrastructure that
+
+64
+00:13:11.140 --> 00:13:19.220
+Godfried Williams: manages the data and the interprocess communication that takes place on that kind of
+
+65
+00:13:19.280 --> 00:13:43.580
+Godfried Williams: infrastructure. So complexity is one of the characteristics. As I mentioned, of the big data, we look at how the data grows exponentially, it becomes boundless. And then complexity is another feature. And what do we mean by complexity? We mean
+
+66
+00:13:43.670 --> 00:13:47.120
+Godfried Williams: complex data, because data can take
+
+67
+00:13:47.910 --> 00:13:54.910
+Godfried Williams: take different shapes. You can take different forms, and you can look at data from
+
+68
+00:13:55.030 --> 00:14:25.010
+Godfried Williams: either. It is very organized that is structured or unstructured or semi-structured. And what I, what do I mean by structured? Because if data is structured is very, I don't really say that it's easy to access the data, and it's easy to manage it. I'll say that it's perhaps more effective and efficient to manage it, because it's already organized. And that's why we describe the data as structured.
+
+69
+00:14:25.060 --> 00:14:31.700
+Godfried Williams: You know, it's it's already pre-made in a certain format. Now, when data is unstructured.
+
+70
+00:14:31.790 --> 00:14:37.300
+Godfried Williams: it means that it's coming in different shapes or forms. You know, the data can be
+
+71
+00:14:39.290 --> 00:14:50.830
+Godfried Williams: either. In test format, it can be mixed with images, it can be mixed with sound. And this could be deployed on a system that you may need to analyze. So you're looking at
+
+72
+00:14:50.830 --> 00:15:10.429
+Godfried Williams: data which is not just test, but it has images. It has videos, and it has other sound as well, and therefore you need to manage all that. And that's why you say that data is unstructured, and when it's semi-structured, referring to the fact that it has both features, it has some level
+
+73
+00:15:10.530 --> 00:15:35.009
+Godfried Williams: of organization, and also some feature which is not also very well organized, so complexity can be looked at in different dimensions as well, and this attributes of what is commonly known at 4 V's was the outcome of research conducted by a number of researchers at Ibm quite a while back.
+
+74
+00:15:35.090 --> 00:15:41.789
+Godfried Williams: and they came to the conclusion with this sort of characteristics, that
+
+75
+00:15:41.870 --> 00:15:59.880
+Godfried Williams: the big data is volumos, and that's synonymous to how it is huge. It has a variety of formats. That's how the data is presented. Veracity has to do with the quality of the data, because
+
+76
+00:15:59.990 --> 00:16:01.500
+Godfried Williams: data.
+
+77
+00:16:01.670 --> 00:16:14.550
+Godfried Williams: because it's an asset to have some level of quality, but the quality may vary from business to business or from organization to organization, and sometimes it may depend on
+
+78
+00:16:14.550 --> 00:16:35.910
+Godfried Williams: where the data is extracted, or where the data has been received from in terms of the sources of the data, and that could sort of determine the quality of the data. So veracity of the data is very important which we need to be able to determine or be able to make a good evaluation.
+
+79
+00:16:35.910 --> 00:16:53.410
+Godfried Williams: The quality state of that data, and also the velocity of the data which, under pain, all part of the complexity of the data. Now, now, what do I mean by the velocity of the data when you are accessing data, whether from
+
+80
+00:16:53.490 --> 00:16:57.030
+Godfried Williams: a database of any kind of filing system.
+
+81
+00:16:57.080 --> 00:17:22.310
+Godfried Williams: there's what is known as a turnaround time or a response time. So if you place a query to retrieve clinical data about different types of diseases or data to do with blood samples or something to do with not just blood samples, but also
+
+82
+00:17:22.310 --> 00:17:38.529
+Godfried Williams: demography. You know, the demography has to do with where you are actually mapping the blood samples to, you know, because it could be in specific regions in Sweden, you know, or any part of let's say London in England as well.
+
+83
+00:17:38.530 --> 00:17:54.210
+Godfried Williams: and look at London, and you say that perhaps the demography is within London in terms of how specific data can be associated with that specific location. When we do that. And we were retrieving the data.
+
+84
+00:17:54.450 --> 00:18:15.799
+Godfried Williams: The data has what we call a response time or a turnaround time. Usually, when you say the turnaround time it has to do with when you place the query, and when you get feedback from the system. So that's the sort of turnaround time you place the query you get a complete response
+
+85
+00:18:15.800 --> 00:18:26.209
+Godfried Williams: from the system. Then the response time as do the response, the query that you place. So the response is a subset of the turnaround time.
+
+86
+00:18:26.210 --> 00:18:52.870
+Godfried Williams: I don't go too much detail into that. But what I'm saying here is that when it comes to high complexity of data or the nature of the data. It has all kinds of implications, and some of the implications has to do with the fact that it bogs down the system. It affects system performance because you are an organization. Time is of the essence.
+
+87
+00:18:53.391 --> 00:19:08.470
+Godfried Williams: Being able to have the right kind of data in the right format is very critical to your functions, and and therefore you want the data to be managed effectively and efficiently.
+
+88
+00:19:08.470 --> 00:19:24.439
+Godfried Williams: And if it's not managed effectively and efficiently, it will impact on the way you do your business for the organization. So that is the implications of handling big data. And that is why there's a strong
+
+89
+00:19:24.700 --> 00:19:49.370
+Godfried Williams: should I say, strong rationale for having effective tools that can enable you to manipulate or exploit the data in such a way that your organization or your business can can sort of benefit from. So that is something that you need to pay particular attention to any questions up to this point, please any questions.
+
+90
+00:19:49.680 --> 00:19:54.100
+Godfried Williams: any questions, any comments, right.
+
+91
+00:19:54.440 --> 00:19:55.399
+Sonya Jackson: Good? Question, yeah.
+
+92
+00:19:55.550 --> 00:20:09.050
+Godfried Williams: Yeah. So so coming to the technologies. And you remember, there's a general outline is an introduction to the entire subject matter. So here we have understood the context of
+
+93
+00:20:09.230 --> 00:20:27.999
+Godfried Williams: data, the various characteristics that comes with the data, the importance of managing the data such that it can help your business or your organization, but also the technologies that are used in manipulating or handling the data.
+
+94
+00:20:28.020 --> 00:20:50.540
+Godfried Williams: And that's why the data sciences has become so important. That's also why the idea of artificial intelligence has become very important. So most organizations don't only look at data. They look at the science of handling the data, but also they explore all kinds of technologies
+
+95
+00:20:50.540 --> 00:21:16.680
+Godfried Williams: for handling the data and the technologies for handling the data or the ideas underlying effective handling of data that come from artificial intelligence. So here the example we have here is Ibm. Watson and cognis. In fact, I'm sort of very familiar with Ibm. Watson. When it was introduced as a platform as an intelligence systems platform
+
+96
+00:21:16.680 --> 00:21:21.459
+Godfried Williams: for handling data and being able to
+
+97
+00:21:22.238 --> 00:21:32.650
+Godfried Williams: create intelligent applications from data that were extracted from different sources. You know, whether in real time, or whether
+
+98
+00:21:32.740 --> 00:21:58.669
+Godfried Williams: you sort of store them in specific repositories or databases, and eventually use that to sort of create some kind of smart application. So, Watson, Ibm is an example. There are many applications, but I've just used examples which I'm very familiar with, and here you have cognos analytics as well. Then I sort of had the opportunity to work on a project where
+
+99
+00:21:59.040 --> 00:22:14.559
+Godfried Williams: we we looked at large data on a on a network platform, different networks, using what they call the Ibm curator. The Ibm curator is a Security Intelligence platform is the should I say, the Premium
+
+100
+00:22:14.610 --> 00:22:31.489
+Godfried Williams: Security Intelligence Platform for Ibm. And and I sort of also looked at the cave, which is an intelligent system for manipulating the large data. So those sort of interprocess communication
+
+101
+00:22:31.490 --> 00:22:50.999
+Godfried Williams: between key radar and cave cave is an acronym for knowledge based artificial intelligence forensics, you know. So it was all sort of integrated in a way to help manage live data, to be able to
+
+102
+00:22:51.550 --> 00:23:05.130
+Godfried Williams: derive intelligence, to repel potential attacks on computer networks platform. So without going to any much detail or the technicalities of it.
+
+103
+00:23:05.330 --> 00:23:27.499
+Godfried Williams: When we have an infrastructure from a cybersecurity perspective, there are always potential threats that that infrastructure could fix, and part of handling the threats or mitigating against the threats can be done, or could be effective. If you have
+
+104
+00:23:27.610 --> 00:23:45.210
+Godfried Williams: some sort of intelligent systems to help you do that. So that is what the system did, this integrated system was used, and looking at the infrastructure of the network, and and with an attempt of understanding potentially where the threats or the risk
+
+105
+00:23:45.330 --> 00:23:58.929
+Godfried Williams: could image on the, on any particular infrastructure or network systems. So it's important to sort of understand the debate. This bit. So part of this technology
+
+106
+00:23:59.060 --> 00:24:17.050
+Godfried Williams: has a number of elements. That is the data mining aspect of it, the data exploration, aspect and also data analysis, analysis and data presentation. And you can have a range of technologies that enable you to do
+
+107
+00:24:17.270 --> 00:24:33.620
+Godfried Williams: the data mining function, exploration, and as well as analysis and data presentation. And, as I mentioned, there are all kind of tools that enable to do that. But these are some examples that I can mention to you.
+
+108
+00:24:34.730 --> 00:24:48.719
+Godfried Williams: So then you have again, methodologies, tools, techniques, strategies for cleaning, exploring, creating, optimizing and evaluating big data. So we can see that
+
+109
+00:24:48.800 --> 00:25:05.379
+Godfried Williams: everything is about big data. It's about data. And it's about the fact that data has grown exponentially, and that creates a question for us. How do we handle this large data? It would look at it in context or this big data. Now
+
+110
+00:25:05.750 --> 00:25:28.400
+Godfried Williams: as much as there are certain technologies, there are also methodologies that we need to. We could employ and certain tools and techniques and strategies we can employ in helping us to to do that. We will sort of look at some of them here, but there's a general overview, and eventually we look at them more in in much more detail.
+
+111
+00:25:29.000 --> 00:25:38.669
+Godfried Williams: So so here we have claims and methodologies and techniques. We have Kleinson of the data.
+
+112
+00:25:39.475 --> 00:25:41.559
+Godfried Williams: Data comes with
+
+113
+00:25:42.520 --> 00:26:10.800
+Godfried Williams: a number of should I say characteristics, as we mentioned that? And if we were to refer our discussion to the point that I highlighted the 4 V's, that these Ibm researchers came out with one of the V's had to do with veracity. You know, veracity has to do with the quality of the data. You know the quality of the data. So anytime you hear veracity referring to the quality of the data.
+
+114
+00:26:10.940 --> 00:26:13.989
+Godfried Williams: you know. So because data.
+
+115
+00:26:14.230 --> 00:26:42.279
+Godfried Williams: the quality can be compromised or may not be of the right kind of standard. There's a need to cleanse the data. And it's not only to ensure the integrity of the data. Because when you clean data, you want to maintain a very high standard for the integrity of the data, but also by cleaning the data, you may end up eliminating unnecessary redundancies.
+
+116
+00:26:42.280 --> 00:27:02.750
+Godfried Williams: repetitions, duplications, outliers, that is, features of the data that are repetitive, and because those features are repetitive, you don't want to have them. And and if you have features that are repetitive that might impact on performance of a system, because remember that
+
+117
+00:27:02.960 --> 00:27:18.630
+Godfried Williams: when you have large data or big data on any system. It affects the performance of the system. There's a direct relationship, you know, there's a correlation between those 2 variables. That is the larger the data is.
+
+118
+00:27:19.330 --> 00:27:29.499
+Godfried Williams: as the data grows, it affects the performance of the system. So that's a key important point. So it means that you cannot
+
+119
+00:27:29.740 --> 00:27:38.460
+Godfried Williams: have this large data, because you may have within that large data set. That's a data set
+
+120
+00:27:38.710 --> 00:27:55.549
+Godfried Williams: repetitions you may have within the light that has said that some of them are just chaff. You know, they're not really relevant. They're just really not important. And therefore you need to eliminate that. And if you're able to do that efficiently. You're not just
+
+121
+00:27:55.650 --> 00:28:07.109
+Godfried Williams: improving the quality, the integrity of the data, but they are also doing something that will eventually impact on the performance of how the data is handled
+
+122
+00:28:07.520 --> 00:28:09.900
+Godfried Williams: on the system, you know. Because
+
+123
+00:28:10.030 --> 00:28:14.540
+Godfried Williams: you you might have heard about this common discussion about
+
+124
+00:28:14.980 --> 00:28:22.707
+Godfried Williams: what? What, how best should I describe this to you, this common discussion about
+
+125
+00:28:24.070 --> 00:28:35.920
+Godfried Williams: using, you know, in quantum computing. Maybe that's that's an example. It's not a theme for the discussion, but one of the features of quantum computing is that it's sort of
+
+126
+00:28:36.010 --> 00:28:56.799
+Godfried Williams: it can weigh down on systems. And it means specialist type of computers that store the data, not in binary, but in qubits. And and the impact is that it can really weigh so much on the system, and and therefore we should have clever ways to to sort of handle that. So here, performance
+
+127
+00:28:56.920 --> 00:28:59.969
+Godfried Williams: performance is a very important feature.
+
+128
+00:29:00.430 --> 00:29:30.169
+Godfried Williams: are very important aspects of computation. Anytime we're talking about computation in terms of handling of data in terms of interprocess communication with any kind of system. Performance is a very important feature. A lot of research has been done in computation that look at different algorithms, different models or frameworks for improving performance of systems. So
+
+129
+00:29:30.170 --> 00:29:37.550
+Godfried Williams: cleansing helps us to achieve that. Standardization is another type of
+
+130
+00:29:37.560 --> 00:29:47.889
+Godfried Williams: aspect of the of things that we need to look at, but ensuring that data that is shared as sort of standardized. And when we mean standardization, because
+
+131
+00:29:48.250 --> 00:29:51.830
+Godfried Williams: data can be distributed. You know, if you take the banking system.
+
+132
+00:29:51.990 --> 00:29:59.510
+Godfried Williams: you were talking about the the clinical environment. If you have standardized data, it means that
+
+133
+00:29:59.930 --> 00:30:24.260
+Godfried Williams: many of your stakeholders, including yourselves, will look at the data from a single perspective. You're not going to look at the data differently, you know, because the data gets to them. They look at the data differently because it has been presented to them in different formats. That's poor standardization. And you have a standardized systems, data formats. It means that what do you see
+
+134
+00:30:24.260 --> 00:30:50.169
+Godfried Williams: as a clinician is also the same thing that your other stakeholders will also see as well, and that enables effective communication that enables better engagement. It helps us to save time. Your business and organization will save time within the banking system. You can see that data is standardized. And that is why.
+
+135
+00:30:50.350 --> 00:30:52.120
+Godfried Williams: regardless of where you are.
+
+136
+00:30:52.170 --> 00:31:13.870
+Godfried Williams: If you use your ATM card and you have to interact with the system, you notice that there's a common interface that cuts across in many systems, and that is an example of standardization because the data format is being standardized and the formatting of the data is also very important, conveying data to a common
+
+137
+00:31:13.870 --> 00:31:26.250
+Godfried Williams: format which is readable for both structured or unstructured data. Now this enables the data to be processed and analyzed. One of the beautiful things that comes with
+
+138
+00:31:26.560 --> 00:31:51.140
+Godfried Williams: python programming is the fact that you can use the tools you know, to python program to manipulate or handle data of different formats. And that's beautiful. So you face the challenge of different formats. Python allows you to be able to. You know, deploy a program that can handle the different formats.
+
+139
+00:31:51.250 --> 00:31:54.850
+Godfried Williams: Have him say that this does not mean that
+
+140
+00:31:55.080 --> 00:32:22.160
+Godfried Williams: being able to convey data into similar formats is not good, it's very. It's actually even better if you can do that. So, normally depending on what is being done in a business organization, the organization or business may choose to ensure that all his data are of the same, of the same formats, you know, and it can be seen as whether it's a rig test format?
+
+141
+00:32:22.160 --> 00:32:42.089
+Godfried Williams: Or is a Csv or a particular type of format that might be familiar as a convention to that business, or that organization when it comes to normalization as a kind of strategy or techniques. So you can look at these from a technique's point of view, normalization is simplifying
+
+142
+00:32:42.160 --> 00:32:44.410
+Godfried Williams: the data which you have.
+
+143
+00:32:45.200 --> 00:32:46.660
+Godfried Williams: When we have
+
+144
+00:32:47.410 --> 00:32:56.580
+Godfried Williams: any kind of data set, any kind of data set, we need to understand that data set that we have may have relationships
+
+145
+00:32:56.710 --> 00:32:59.029
+Godfried Williams: among them, you know. So
+
+146
+00:32:59.140 --> 00:33:10.910
+Godfried Williams: because the data that you have is in a specific contest, whether is within the banking environment aviation or within within the clinical setting.
+
+147
+00:33:11.170 --> 00:33:27.420
+Godfried Williams: It's a particular contest, you know. It's looked at within a particular contest, and and therefore there are relationships among the data sets that you may have, or you may need to manage or handle. So normalization simplifies the relationship
+
+148
+00:33:27.870 --> 00:33:36.550
+Godfried Williams: among the data sets that you have. And again, it is designed to help eliminate redundancies
+
+149
+00:33:37.010 --> 00:34:01.160
+Godfried Williams: over dependencies of the data relationships, and also any kind of duplications that might is it. And normalization as a technique is usually applied when you model data relationally. So when you have relational databases or relational database management systems, that is where normalization can be very effective. Because, as I mentioned earlier on
+
+150
+00:34:01.160 --> 00:34:25.430
+Godfried Williams: normalization is designed to simplify the data relationships. And that is why you bring in that kind of technique. So these are very common techniques or strategies that you may need to consider as you go along handling your data, you may need to develop financial skills to be able to employ them, whether individually or collectively.
+
+151
+00:34:26.020 --> 00:34:42.760
+Godfried Williams: then, some common tools that we may need to. Look here, we have tools such as Python. I've mentioned, SQL. Mysql web services. You have the, you know, the Gui graphical user interface for for visualization.
+
+152
+00:34:44.409 --> 00:35:10.610
+Godfried Williams: you have Apis and middle ways and also Spss for stats analysis that has been used traditionally. So the range of tools that can be employed. This is this is not exhaustive of that kind of list, that kind of list. There's several tools that can be employed. But these are some examples that you may need to sort of explore in your journey of handling
+
+153
+00:35:10.740 --> 00:35:24.960
+Godfried Williams: big data in the journey of analyzing big data and also exploiting intelligence from the big data, any questions or comments. How would you relate? I have a question, how would you relate?
+
+154
+00:35:25.320 --> 00:35:54.050
+Godfried Williams: What sort of tools do you currently use within your organization in terms of handling the data that that sort of comes to you? Let's say in your department or your unit, or on your systems. What sort of tools do you use? I mean, if you may be able to give some examples? And how effective do you think these tools are? In which ways can these tools be improved? I think something that you can. You can also sort of look at as well. Yeah.
+
+155
+00:35:54.630 --> 00:36:24.600
+Sonya Jackson: Yeah, I mean, we use many different tools for looking at the data and analyzing the data. And this is one of the problems, really because they don't always cross talk to each other. So I mean, we go basically even from excel spreadsheets, which is not the easiest way of reading anything, using things that are put into spot fire. We have sas listings as well for sort of more, an analytical data. So we use many different platforms. Some are more visual, and some are more sort of structured data. Tables and things.
+
+156
+00:36:25.260 --> 00:36:30.799
+Godfried Williams: Right. So so what would you recommend if you were to look at if you were being tasked.
+
+157
+00:36:30.900 --> 00:37:00.410
+Godfried Williams: you know, to look at your various. I'm not saying that you need to thrash the tools that you're using. But how would you approach the recommend? The strategy for for looking at the different tools that you have in your organization, and how that can be employed more effectively, or what should be tweaked. How? How do you look at it? How do you go about your review? What are some of the things you take into consideration in doing that.
+
+158
+00:37:01.808 --> 00:37:09.530
+Sonya Jackson: I mean, this is a huge question. I'm not really sure I can, because the organization hasn't solved it as yet, but but I mean.
+
+159
+00:37:09.530 --> 00:37:10.840
+Godfried Williams: Why I'm asking you so.
+
+160
+00:37:10.840 --> 00:37:35.230
+Sonya Jackson: Yeah, I mean, you have common when you talk about normalization of the data, I think this is kind of important because you have common references across all these different data sources, and somehow you have to be able to tap into the common keys, so to speak, to pull out the information, I think, from the different sources in one place on one platform. I'm not sure what that exactly would be, but if you could go in, for example, to look at one patient
+
+161
+00:37:35.490 --> 00:37:41.700
+Sonya Jackson: and enter that patient code and get all the different information instead of having to go into multiple different systems.
+
+162
+00:37:41.960 --> 00:37:45.360
+Sonya Jackson: This would be my ideal, but I I don't know how to solve it. I'm afraid.
+
+163
+00:37:45.360 --> 00:37:54.045
+Godfried Williams: Right? Okay? So so I see what it means. They need a a kind of distributed system that that
+
+164
+00:37:54.690 --> 00:38:13.229
+Godfried Williams: allow some level of autonomy. But at the same time you're able to engage with other. You know, teams and share, you know, communicate at the same level, you know. That's my understanding. And I think that's always a challenge for many organizations, because they
+
+165
+00:38:13.230 --> 00:38:38.390
+Godfried Williams: the from my experience, what determines some of the decisions that are made by business organizations. The large organizations is cost. So you know. So when pitches are being made and the variety should I say factor that determines what needs to be acquired or is based on cost, then it later on ends up to be more expensive, you know, because
+
+166
+00:38:38.390 --> 00:39:05.870
+Godfried Williams: what it does is you bring in one kind of tool and down the line realize that it's not really addressing all your needs. And you bring another kind of tool. So eventually you have a suite of tools in the organization. And that's how that's how you find yourself as a business organizations at that particular point, because
+
+167
+00:39:05.870 --> 00:39:15.499
+Godfried Williams: you started by taking cost as a common denominator in your decision-making process, you know. So that's some of the observations
+
+168
+00:39:15.500 --> 00:39:42.359
+Godfried Williams: have made, you know, in the years, I think that that should always shouldn't be the case. You know. You have to actually examine your needs carefully and actually come out with a clear strategy of what needs to be done, and figure out how efficient and effective that will be done. So thank you for that kind of contribution. And in terms of strategies, strategies for handling
+
+169
+00:39:42.500 --> 00:39:56.880
+Godfried Williams: the large data I've mentioned, you know. Of course, I mentioned the techniques that are cleansing. It's a repeated a year. But strategies you've got machine learning, you know. So the the idea of machine learning
+
+170
+00:39:57.880 --> 00:40:06.470
+Godfried Williams: a branch of artificial intelligence is used in optimization, you know. So of course, with nature inspired algorithms. But
+
+171
+00:40:06.620 --> 00:40:10.230
+Godfried Williams: machine learning using optimization.
+
+172
+00:40:10.340 --> 00:40:31.020
+Godfried Williams: The notion is that we have limited resources that we need to make efficient use of that. And that's where machine learning comes in, because we don't have this unlimited resources that you know, plenty space for performance, and you know there are a lot of external pressure from either management, from the business demands.
+
+173
+00:40:31.020 --> 00:40:54.049
+Godfried Williams: from clients that must be met, and perhaps you may have, or stakeholders that must be met, and those stakeholders might need quicker responses might need data presented in particular formats, they might need a certain type of information that can only be derived when you make
+
+174
+00:40:54.050 --> 00:41:18.309
+Godfried Williams: very good sensors of the data sets that you have. So machine learning comes in as an optimizer. And there are all kinds of machine learning algorithms that can be employed. I've mentioned some examples here, like deep learning using artificial neural networks, genetic algorithms, you have set methods, test and organization and context analysis.
+
+175
+00:41:18.310 --> 00:41:39.129
+Godfried Williams: Or this kind of strategies. I don't have to go too much detail into that. But if I were to pick a couple of examples with the machine learning algorithm unless I pick, let's say, deep learning, so deep learning sort of evolved from the modeling of neural networks, you know. So we know that as
+
+176
+00:41:39.290 --> 00:41:56.819
+Godfried Williams: as human beings, you know, we have the biological neuron, which is the the cell of our brain, you know, and and neural networks sort of modeling. That officially is a model that kind of cell. But when we create that.
+
+177
+00:41:56.950 --> 00:42:17.990
+Godfried Williams: we create what we call multi layers of that particular neuron or not, something you can have in a single layer. We can have multiple layers. We have a single layer. So the different kinds of structures or topology that can be created when you want to when you want to model model a neural net.
+
+178
+00:42:18.110 --> 00:42:27.030
+Godfried Williams: you know. So the idea of deep learning is to look at the net, at multiple layers where iteration
+
+179
+00:42:27.480 --> 00:42:48.549
+Godfried Williams: or repetition of learning within this model can happen many times. And and you know, it's like we learn by repetition. We learn by repetition, because not always, you know. I mean, sometimes you learn different ways by looking at contest of the subject contest of the material that you have, and you can learn from that.
+
+180
+00:42:48.550 --> 00:43:10.200
+Godfried Williams: But in quite a lot of cases, through repetition, you know. Read any subject matter, we read again, and then we have some understanding of the material, you know. So the idea of deep learning is to allow us to go through these repetitions and look at the learning curve at different layers. So how does that translate
+
+181
+00:43:10.270 --> 00:43:16.150
+Godfried Williams: to optimization? How does that translate to optimization? So if we're able to learn
+
+182
+00:43:16.340 --> 00:43:24.690
+Godfried Williams: what sort of data sets we have and how the data is used in the business or in the organization.
+
+183
+00:43:25.120 --> 00:43:38.850
+Godfried Williams: In a way, we're able to find better ways of using the data through the learning. So we have better ways of using the data. We have more efficient ways of using the data.
+
+184
+00:43:38.920 --> 00:43:59.730
+Godfried Williams: We are also able to determine or dictate how the data can be stored, you know, in terms of storage management. Because we understand the nature of the data. We understand, what the the relevance of the data. So that is how optimization comes in. And then there are
+
+185
+00:43:59.980 --> 00:44:02.140
+Godfried Williams: other techniques that we can always talk about
+
+186
+00:44:02.390 --> 00:44:13.819
+Godfried Williams: for the sake of those discussion. I'm not going to expand, just stick to deep learning in relation to neural networks, and then perhaps, maybe, I may pick something like
+
+187
+00:44:16.080 --> 00:44:34.373
+Godfried Williams: like search methods. You know, you have all kind of different such methods that are driven by all kind of nature inspired algorithms, you know. So you can have what they call the ant colony optimization, search method. You know the way ants sort of
+
+188
+00:44:34.960 --> 00:45:00.230
+Godfried Williams: behave. You know the colony they behave. They have different members of the colony. You can have kings. You can have queens, you can have soldiers, and you can have workers. And they all play specific role. So that's where the idea of nature inspired algorithms coming, you know, when it comes to artificial intelligence, nature inspired algorithms. So I've used to
+
+189
+00:45:00.290 --> 00:45:22.090
+Godfried Williams: nature inspired algorithms, one from neural networks from our biological neurons model as artificial neural network. And then we have the search methods using examples such as the ant colony optimization algorithm to help us optimize the best path.
+
+190
+00:45:22.160 --> 00:45:39.520
+Godfried Williams: You know that we can. We can get to our destination or the best, the best part of using any kind of resources that you have. So that is the idea of machine learning. It's basically optimization of resources optimization on resources. Then you have data
+
+191
+00:45:40.020 --> 00:46:05.329
+Godfried Williams: refining data cleaning. I mentioned that earlier on. So I do not repeat it here now, the statistical methods that can be used traditionally using Spss as a tool that can help us conduct or carry out regression, analysis, correlation, clustering of the data, working out different permutations where large volume data requires
+
+192
+00:46:05.330 --> 00:46:32.349
+Godfried Williams: analysis and interpretation. So traditional statistics can help us do that. But it has its own limitations and extent that it can be used. But when you automate statistical algorithms and you bring in new ideas, or you hybridize some of these machine learning algorithms, you can achieve a better throughput or output within your system in terms of performance. Then look at data modeling. You know, the way
+
+193
+00:46:32.390 --> 00:46:54.239
+Godfried Williams: data is modeled is also very, very important. You know, you may choose to model data either relationally or you may look at it from an object orientation perspective. Or sometimes you have data, even in in flat files, you know, historically, data was just stored in files. And then you talk about individual files
+
+194
+00:46:54.370 --> 00:46:59.989
+Godfried Williams: in either serial or sequential format. And that's how data was told
+
+195
+00:47:00.140 --> 00:47:19.759
+Godfried Williams: prior to the advent of database management systems where the idea of relational database later on evolved. So data modeling is very important. And we choose specific styles or approaches for data modeling because we want to achieve a certain level of efficiency
+
+196
+00:47:19.760 --> 00:47:36.040
+Godfried Williams: when we deploy the data, you know. So you might have come across use case modeling, which is something that we look at as part of the series of seminars in terms of how data is modeled. Any questions at this point, any questions or comments.
+
+197
+00:47:36.060 --> 00:47:40.840
+Godfried Williams: any questions, specific ones please feel free to ask, and I'll answer them.
+
+198
+00:47:41.950 --> 00:47:47.149
+Godfried Williams: Right? Okay? So we have data requirements, security requirements
+
+199
+00:47:47.410 --> 00:48:10.980
+Godfried Williams: that form part of this discussion. We go more details down the line. I'm not going to really elaborate too much as we're going to discuss that further down the line. Data security architecture requirements do with the fact that data is an asset that is valuable. And because data is an asset that is valuable, it has to be protected.
+
+200
+00:48:11.000 --> 00:48:33.250
+Godfried Williams: The integrity must be maintained. There's a need to ensure that there's confidentiality when data is being stored and managed, you want to maintain the integrity of the data, and you also want to ensure that the data is always accessible. So the availability is very important when it comes to the data.
+
+201
+00:48:33.320 --> 00:48:36.140
+Godfried Williams: you know, and also handling data comes with
+
+202
+00:48:36.250 --> 00:48:56.899
+Godfried Williams: compliance and regulatory requirements in respect of the law or existing regulation, for instance, could be something with the data protection at, you know, like the Gdpr and rest you need to. What do you have in Sweden, I mean Sweden falls within, of course, part of the European Union, and therefore you. You have to comply with. Gdpr.
+
+203
+00:48:57.020 --> 00:48:58.619
+Godfried Williams: I think I'm correct, am I?
+
+204
+00:48:59.000 --> 00:49:08.428
+Godfried Williams: Yeah, sure. Okay. So you, you comply with Gdpr and performance security requirements and
+
+205
+00:49:09.030 --> 00:49:18.860
+Godfried Williams: also handling heterogeneous systems. Now, when you talk about heterogeneous systems. This is where the point that you made comes in.
+
+206
+00:49:18.920 --> 00:49:24.059
+Godfried Williams: You know, you talk about the different data formats, tools. You're using
+
+207
+00:49:24.120 --> 00:49:26.849
+Godfried Williams: different systems. You may be interacting with.
+
+208
+00:49:26.910 --> 00:49:38.529
+Godfried Williams: not necessarily in your organization. But it could be something that you could be doing completely outside. Externally, you've interact with other external entities.
+
+209
+00:49:38.560 --> 00:49:58.839
+Godfried Williams: and that creates heterogeneity, and it creates heterogeneous platforms and systems. So it's something that you must also bear in mind in terms of the data, because data on this type of platform will reflect different characteristics and features, and will also be presented differently.
+
+210
+00:49:58.840 --> 00:50:12.649
+Godfried Williams: and therefore you need to be aware of that, and determine how best to manage that or handle that kind of data. Then you have skills and requirements, key requirements and skills. When it comes to.
+
+211
+00:50:12.970 --> 00:50:29.570
+Godfried Williams: you know, data sciences or handling big data or large data. The computational understanding of systems is very important, because when it comes to computation referring to performance, speed, how systems work.
+
+212
+00:50:29.680 --> 00:50:44.220
+Godfried Williams: we're referring to latency in terms of any delays that you might observe when you are processing the data when data is being shared on a wider network, then also
+
+213
+00:50:44.550 --> 00:51:12.080
+Godfried Williams: the ability to apply some mathematical, should I say models algorithms to be able to improve how the system functions, including your statistical analysis and all that. So all these kind of they form the kind of skills you need, you know, and you may not have them, you know all of them at this point, but you may develop them as as time goes on, and you become better
+
+214
+00:51:12.080 --> 00:51:38.759
+Godfried Williams: at specific ones as you go along. So we've mentioned AI at this point it's become a very hot topic, and, as I always say, because for many people it seems that AI is a new thing. It's a new thing. It's been there for 70 years. There have been a wide range of applications that have been developed. I mean, I've led applications develop in financial systems, in medical systems.
+
+215
+00:51:38.840 --> 00:51:51.180
+Godfried Williams: Name it, you know, for I mean a system for diagnosing CPU as far back almost 30 years ago, using esper systems. So there are all kinds of
+
+216
+00:51:51.750 --> 00:52:03.990
+Godfried Williams: 2 strategies when it comes to AI. But what is buzzing, or what is making it exciting, is the introduction and adoption of large language models which combines
+
+217
+00:52:04.030 --> 00:52:23.050
+Godfried Williams: primarily deep learning and some features of natural language processing. I mean the other aspect that I cannot mention, or at this stage, but I can say that deep learning and natural language processing sort of when you put them together, it sort of it forms the construct of large language models.
+
+218
+00:52:23.060 --> 00:52:44.860
+Godfried Williams: So it's become very relevant. And I think that with the use of of the data, sciences, strategies, your organizations, or your businesses can benefit. And of course you must have effective communication skills, you know, because you, you can know everything, 100%. But the way you communicate that it is said
+
+219
+00:52:45.090 --> 00:52:55.959
+Godfried Williams: reflects how much you know, you know. So you may know something 100%. But you don't have effective ways of sharing that. Communicating that across
+
+220
+00:52:56.320 --> 00:52:59.369
+Godfried Williams: passing information. It might not reflect
+
+221
+00:52:59.460 --> 00:53:28.960
+Godfried Williams: to the what you know, it might not reflect fairly what you know. So communication is very important. Understanding of specific domain knowledge is also very important, and when I say domain knowledge, not every system will have what you call you will not be able to understand every domain, and therefore I think it's very key that you develop understanding of specific domain depending on the applications that will be available. So that's the end of this. What do you call
+
+222
+00:53:29.650 --> 00:53:43.620
+Godfried Williams: seminar this evening. Unless you have any questions, I'll call it round it up and and say that we're going to meet in the next session the next seminar to discuss the subject further any questions or comments. Sonia, yeah.
+
+223
+00:53:45.590 --> 00:53:50.300
+Sonya Jackson: No, I don't think really any specific questions for me. The only thing that came to mind is.
+
+224
+00:53:50.810 --> 00:53:56.319
+Sonya Jackson: at what point do you define something as being big data. Is there an answer to that? Or
+
+225
+00:53:56.630 --> 00:53:58.070
+Sonya Jackson: you know what.
+
+226
+00:53:58.780 --> 00:54:11.750
+Godfried Williams: Yes, I think that you define someone as big data. When you get to the point within your business, or within your organization, or within any sort of setup where your resources beginning, begin to
+
+227
+00:54:12.240 --> 00:54:29.889
+Godfried Williams: struggle to cope. You know there's a threshold that your systems should be able to function without impacting on performance, or how efficient your systems are. So if you begin to get a point where and I call it a threshold where
+
+228
+00:54:29.890 --> 00:54:49.779
+Godfried Williams: you're struggling to be effective, efficient in terms of performance, beginning to diminish your response. Times are being impacted upon. You are again, you're using many tools to handle the data. That is a reflection that you are in the space of big data.
+
+229
+00:54:50.440 --> 00:54:51.620
+Sonya Jackson: Okay. Thank you.
+
+230
+00:54:52.010 --> 00:55:13.049
+Godfried Williams: Right? Yeah, that's why a business should be able to. I mean, businesses should not wait till they get to that point. They need to make provisions within the organizations to plan ahead and put things in place, so that as data grows exponentially, they have systems to be able to handle that.
+
+231
+00:55:13.060 --> 00:55:25.229
+Godfried Williams: and that should be part of the the strategy for any organization or business at this stage, because of the the We're in the 4th 4, th you know dimension space, 4th
+
+232
+00:55:25.670 --> 00:55:48.000
+Godfried Williams: data, dimension space. We are in a full generation of technologies and most business organizations should be able to plan ahead. Yeah, I mean, it would just completely be societal if organizational business just wait to respond. It's not. It's not, you know. They'll not be able to compete. Yeah.
+
+233
+00:55:49.490 --> 00:55:50.850
+Sonya Jackson: Okay. Thank you. Alright.
+
+234
+00:55:51.020 --> 00:56:03.680
+Godfried Williams: Okay. So I look forward to seeing you and and other peers of yours and colleagues of yours, let's say in the next seminar. So thank you for coming once again and have a very good evening. Thank you. Good night.
+
+235
+00:56:03.960 --> 00:56:04.670
+Sonya Jackson: Thank you.
+

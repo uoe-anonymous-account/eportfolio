@@ -1,0 +1,966 @@
+WEBVTT
+
+1
+00:00:01.010 --> 00:00:17.480
+Godfried Williams: So, right, thanks for, coming once again to Seminar 5 on, discussions on the Dream Home Case Study, data-based, development. As I mentioned, as part of the background.
+
+2
+00:00:17.780 --> 00:00:21.629
+Godfried Williams: discussion briefly. I did highlight the fact that
+
+3
+00:00:21.730 --> 00:00:24.590
+Godfried Williams: This case study is a classic one.
+
+4
+00:00:24.760 --> 00:00:38.749
+Godfried Williams: And it's meant to provide us with that sort of opportunity to look into the requirements that are key to developing any database management system. So that's a dream home.
+
+5
+00:00:39.420 --> 00:00:40.790
+Godfried Williams: Case study.
+
+6
+00:00:47.460 --> 00:00:53.059
+Godfried Williams: Right, and learning outcomes haven't changed. It's sort of still based on previous
+
+7
+00:00:53.280 --> 00:00:58.909
+Godfried Williams: to ensure that level of consistency. When it comes to…
+
+8
+00:00:59.340 --> 00:01:02.510
+Godfried Williams: System development, whether it's an application.
+
+9
+00:01:02.880 --> 00:01:19.429
+Godfried Williams: from a front end, or a back end, or any entire system, you're very particular about what kind of methodologies or tools that you use, because that, in a way, dictates the direction of the development process. So, there's a lot of emphasis on
+
+10
+00:01:19.540 --> 00:01:30.339
+Godfried Williams: Design, development, and evaluating solutions when it comes to extracting the data that is used in the development
+
+11
+00:01:30.450 --> 00:01:39.329
+Godfried Williams: process. So at the end, part of the learning outcomes to ensure that you've gathered the necessary skills and knowledge to be able to
+
+12
+00:01:39.660 --> 00:01:47.629
+Godfried Williams: Implement any kind of system that you may be assigned to develop.
+
+13
+00:01:49.160 --> 00:01:58.249
+Godfried Williams: So, coming to the Dream Home Database Management System, I think the contest of that is… is a property
+
+14
+00:01:58.570 --> 00:02:06.449
+Godfried Williams: Management system for, managing rentals, for, the owners of this,
+
+15
+00:02:06.840 --> 00:02:20.429
+Godfried Williams: the owners of… of properties, and basically to manage the rental system for these owners. But… but having said that, in any kind of…
+
+16
+00:02:20.770 --> 00:02:29.839
+Godfried Williams: development process or system. You have key stakeholders, you know, that form part of the system, and these key stakeholders, one of them.
+
+17
+00:02:30.040 --> 00:02:32.990
+Godfried Williams: Fall into the category of owners.
+
+18
+00:02:33.230 --> 00:02:35.149
+Godfried Williams: But of course, you have staff.
+
+19
+00:02:35.430 --> 00:02:39.800
+Godfried Williams: And then you may have other third parties that might have
+
+20
+00:02:40.120 --> 00:03:00.049
+Godfried Williams: interest in the system that has been developed. So, in looking at the key stakeholders, we have a better understanding of what kind of documentation that they have to manage, or what sort of interaction that takes place in the system. So, to sort of go, one step back.
+
+21
+00:03:00.220 --> 00:03:05.890
+Godfried Williams: Before you get to the point of database development, Usually, you would have…
+
+22
+00:03:06.180 --> 00:03:14.439
+Godfried Williams: looked at the system as a whole, you would have considered different processes that take place in the system.
+
+23
+00:03:14.640 --> 00:03:28.570
+Godfried Williams: and you also have a deeper understanding of the data requirements of the system. So, in system development, there's a lot of emphasis that is placed on both.
+
+24
+00:03:28.650 --> 00:03:37.540
+Godfried Williams: the data requirements, and then the process requirements. So, in this particular contest, The, the focus system
+
+25
+00:03:37.730 --> 00:03:42.389
+Godfried Williams: The data, because you want to be able to elicit the right kind of data.
+
+26
+00:03:42.580 --> 00:03:51.949
+Godfried Williams: And then model the data, and then also plug in the necessary processes that will make the system to function as a whole.
+
+27
+00:03:52.670 --> 00:03:56.080
+Godfried Williams: So, why do we have objectives? You know,
+
+28
+00:03:56.540 --> 00:04:02.180
+Godfried Williams: The objectives here is to be able to formulate some kind of mission statement.
+
+29
+00:04:02.320 --> 00:04:08.340
+Godfried Williams: for any kind of system. So, management will have a mission to create
+
+30
+00:04:08.640 --> 00:04:16.989
+Godfried Williams: Rental management system for the owners of the various properties that they oversee.
+
+31
+00:04:17.089 --> 00:04:30.899
+Godfried Williams: And as part of that, there will be some kind of mission statement that is put together. And the mission statement will serve as a sort of,
+
+32
+00:04:31.090 --> 00:04:43.220
+Godfried Williams: should I say the scope, or the terms of reference for the project that is being worked on in this particular instance, the, the dream home property.
+
+33
+00:04:43.530 --> 00:04:45.789
+Godfried Williams: Rental management system.
+
+34
+00:04:48.460 --> 00:04:53.520
+Godfried Williams: Part of the foundation of a mission statement, we consider fact-finding techniques.
+
+35
+00:04:53.620 --> 00:05:08.830
+Godfried Williams: are used in the database system development cycle, types of facts collected, any stage of the database system development lifecycle. This will feed into the formulation of the mission statement.
+
+36
+00:05:09.010 --> 00:05:18.290
+Godfried Williams: And also figure out what kind of techniques that will be used in the fact-finding process, because the whole idea of
+
+37
+00:05:18.510 --> 00:05:24.909
+Godfried Williams: A mission statement is, the strategic objective, or goal.
+
+38
+00:05:25.160 --> 00:05:42.250
+Godfried Williams: for the business, and then how you attempt to achieve this specific goal. So, for this particular company, the goal is to create a rental management system for the owners, and the overriding mission is to execute that
+
+39
+00:05:42.360 --> 00:05:46.679
+Godfried Williams: Through… An understanding of the tools.
+
+40
+00:05:46.950 --> 00:05:55.980
+Godfried Williams: That are required to be used, you know, or the design techniques that are important to be used in order that the…
+
+41
+00:05:56.310 --> 00:06:00.009
+Godfried Williams: Management are able to achieve that specific goal.
+
+42
+00:06:03.610 --> 00:06:08.279
+Godfried Williams: So, if you narrow things down to the database development life cycle.
+
+43
+00:06:08.850 --> 00:06:15.860
+Godfried Williams: This is a very traditional approach, but there are other times, or methodologies that are using
+
+44
+00:06:16.100 --> 00:06:32.139
+Godfried Williams: in developing systems, you know, they are ones due with extreme programming development, you have the agile style of development, and of course, this is more traditional, and we've used the traditional approach because
+
+45
+00:06:32.140 --> 00:06:39.899
+Godfried Williams: That provides us with a strong basis or understanding of, how to deploy
+
+46
+00:06:39.950 --> 00:06:50.639
+Godfried Williams: an entire database management system that involves the applications and other features that Stanar stakeholders might be interested in. So.
+
+47
+00:06:50.740 --> 00:06:55.629
+Godfried Williams: Anytime you look at a life cycle, traditionally.
+
+48
+00:06:55.830 --> 00:07:08.729
+Godfried Williams: it sort of suggests that it is stepwise. In other words, you go through database planning, you do system definition, look at requirements collection and analysis.
+
+49
+00:07:08.900 --> 00:07:19.719
+Godfried Williams: That is the classic approach, you know. But I have to say that, even as much as we look at database development lifecycle, the… the real life
+
+50
+00:07:19.990 --> 00:07:27.089
+Godfried Williams: development approaches, take a more practical view. In other words, you will have…
+
+51
+00:07:27.310 --> 00:07:38.450
+Godfried Williams: a very dynamic process that has been more adapted in terms of the needs of any kind of system. So if you relate that to this,
+
+52
+00:07:38.900 --> 00:07:45.870
+Godfried Williams: you know, dream property, sorry, dream home property management system, they'll be…
+
+53
+00:07:45.990 --> 00:07:49.430
+Godfried Williams: 7 key things that we like to look at. For instance.
+
+54
+00:07:49.930 --> 00:07:56.429
+Godfried Williams: We're relating to… referring to data to do with staff, so you have something like a staff.
+
+55
+00:07:56.480 --> 00:08:03.159
+Godfried Williams: Registration form. You have other key information, such as the staff listing form.
+
+56
+00:08:03.160 --> 00:08:16.519
+Godfried Williams: And these are the key information to do with this particular case study. You have the property registration form, you have client information about client, so clients must register, add your details, you have,
+
+57
+00:08:16.540 --> 00:08:31.089
+Godfried Williams: property listing, and then you have viewing reports, and you can also have the lease as well, you know, that sort of governs the legality of any transaction that might take place. So you're dealing with a variety of
+
+58
+00:08:31.200 --> 00:08:35.960
+Godfried Williams: data sets in this particular scenario. And this sort of…
+
+59
+00:08:36.000 --> 00:08:55.919
+Godfried Williams: variety of data set requires careful thinking to be able to elicit these requirements, and be able to also model them correctly, such that when they are deployed, there wouldn't be conflicts or duplication or replications.
+
+60
+00:08:56.000 --> 00:09:06.899
+Godfried Williams: I must sort of connect or relate to this to previous discussions on normalization. You know, remember that we did speak about, normalization?
+
+61
+00:09:07.020 --> 00:09:10.740
+Godfried Williams: And as a way of simplifying
+
+62
+00:09:11.320 --> 00:09:27.849
+Godfried Williams: the data complexity of any kind of system. And because we attempt to simplify the data requirements of the dream home property management system, what we attempt to do is to eliminate
+
+63
+00:09:27.900 --> 00:09:39.199
+Godfried Williams: duplications and redundancies, and any outliers that we might find. So, I'll not necessarily walk through this in that sort of step-wide format, but
+
+64
+00:09:39.490 --> 00:09:51.119
+Godfried Williams: discuss this in a more practical way. So, if you have a rental management system, there'll be different perspectives coming from
+
+65
+00:09:51.220 --> 00:09:58.430
+Godfried Williams: different developers. So, let's imagine a scenario where
+
+66
+00:09:58.880 --> 00:10:12.529
+Godfried Williams: different companies are supposed to bid for a contract to develop a database management system for this, for this company. You'll realize that different developers will come
+
+67
+00:10:12.950 --> 00:10:16.890
+Godfried Williams: From different perspectives, and look at the system
+
+68
+00:10:17.080 --> 00:10:27.780
+Godfried Williams: Differently, in terms of requirements, in terms of the challenges that are associated with the system, and how best to deploy that system. So.
+
+69
+00:10:28.420 --> 00:10:39.279
+Godfried Williams: I think it is, as part of the discussion, it's important to sort of get your view. I mean, you're the main person here, so you can
+
+70
+00:10:39.280 --> 00:10:52.299
+Godfried Williams: Maybe share your view, if you have any sort of rental management system, what do you think would be some of the things, data items that will be considered from a user's perspective, and also pretending to be
+
+71
+00:10:52.300 --> 00:11:01.500
+Godfried Williams: let's say, a property, an owner of a property, you know? So, what are some of the things that you think that will be useful?
+
+72
+00:11:01.540 --> 00:11:03.099
+Godfried Williams: In… inside a system.
+
+73
+00:11:03.240 --> 00:11:07.070
+Godfried Williams: What are some of the things? In terms of data, I can… Yeah.
+
+74
+00:11:07.070 --> 00:11:16.459
+sonya: You mean, like, the entities and things? Yes. Such as, like, the home, the address, I guess, the details of the rental, the costs.
+
+75
+00:11:18.230 --> 00:11:21.489
+sonya: The agency, maybe? And the tenants?
+
+76
+00:11:21.770 --> 00:11:22.840
+sonya: Right.
+
+77
+00:11:23.200 --> 00:11:24.480
+sonya: Potentially.
+
+78
+00:11:24.920 --> 00:11:39.240
+Godfried Williams: Right, yes, the tenants and location as a developer, and I'm referring to you as the expert developing the system for a client, and your client want those
+
+79
+00:11:39.420 --> 00:11:53.759
+Godfried Williams: system, and to help the owners to… for the owners to understand what is going on. They can access the system remotely, they can access the financials, the agreements that have been signed.
+
+80
+00:11:53.890 --> 00:12:07.450
+Godfried Williams: But also, I think as a company, you like to help the, the service provider to understand that there are different locations that are dictate different type of properties, correct? Because, I mean.
+
+81
+00:12:07.750 --> 00:12:09.220
+Godfried Williams: companies that…
+
+82
+00:12:09.430 --> 00:12:16.479
+Godfried Williams: I won't refer to the ones that sell properties, but rather rent… if they're solely rent properties.
+
+83
+00:12:16.690 --> 00:12:30.169
+Godfried Williams: there'll be different areas, and different areas will dictate the different prices in any sort of society. That is the reality, that is what happens. So, you'll have to think about
+
+84
+00:12:30.400 --> 00:12:34.770
+Godfried Williams: Additional information to do with location.
+
+85
+00:12:35.010 --> 00:12:41.490
+Godfried Williams: Sometimes renting an accommodation, property.
+
+86
+00:12:41.580 --> 00:12:55.099
+Godfried Williams: You may need to consider the security aspect, you know, the safety aspect of the local community, correct? Right? If you tend to check the crime rates of specific areas, you know, that can
+
+87
+00:12:55.990 --> 00:12:59.319
+Godfried Williams: Help you to make a decision as a potential tenant.
+
+88
+00:12:59.440 --> 00:13:06.099
+Godfried Williams: In the same way, if you are providing a service… as a service provider, you may…
+
+89
+00:13:06.300 --> 00:13:11.210
+Godfried Williams: Do some sort of risk assessment to figure out what sort of
+
+90
+00:13:12.230 --> 00:13:16.849
+Godfried Williams: properties you want to rent out, you know? If you… if you don't have any…
+
+91
+00:13:18.320 --> 00:13:26.329
+Godfried Williams: should I say you don't have any preference in terms of the properties you want to rent out, then one of the things you like to do is
+
+92
+00:13:26.330 --> 00:13:40.240
+Godfried Williams: to also do some risk assessment to see whether you have all the resources to inform potential tenants of the risk that are… I mean, every area, even no matter how affluent the area is, you also have risk.
+
+93
+00:13:40.430 --> 00:13:57.270
+Godfried Williams: I believe that is the case, you know. So, it depends on what sort of risk you're assessing, depends on what aspect of security you're looking at, or safety you're looking at. All these parameters may need to be considered as part of your data modeling. Are you with me?
+
+94
+00:14:01.130 --> 00:14:05.450
+Godfried Williams: Are you with me on this? Yes, okay. So, because you're not only…
+
+95
+00:14:05.560 --> 00:14:21.850
+Godfried Williams: Considering the primary functions of the database management system, but also you are considering other secondary requirements that will enhance the total functionality of the system, or
+
+96
+00:14:21.900 --> 00:14:29.610
+Godfried Williams: have a more, sort of impact on the business, you know, because
+
+97
+00:14:29.640 --> 00:14:40.920
+Godfried Williams: If you can provide detailed information, broader scope of information, in terms of what goes on to owners, then owners will be able to
+
+98
+00:14:40.920 --> 00:14:55.020
+Godfried Williams: even decide where to invest, because you'll be able to draw all kind of inferences from what goes on, or what takes place within that software, within that database management system, and owners can also make some
+
+99
+00:14:55.140 --> 00:15:07.139
+Godfried Williams: strategic decisions. Some of them may be investment-related. You know, they might think that, okay, based on this information, and based on the trends, the demands.
+
+100
+00:15:07.240 --> 00:15:13.469
+Godfried Williams: I think that it'd be useful to invest and maybe acquire new properties in specific areas.
+
+101
+00:15:13.560 --> 00:15:32.529
+Godfried Williams: for, to sort of meet the client needs, or the tenant's needs, that have been expressed through the service provider. So, there are a lot of things that you may need to consider as a developer, and make… that will make your proposal more attractive.
+
+102
+00:15:32.640 --> 00:15:49.069
+Godfried Williams: to the client, that is the service provider, because in this scenario, the service provider is sort of contracting you as a consultant to come up with a database management system, and you have to pitch your proposal as such that
+
+103
+00:15:49.110 --> 00:15:58.990
+Godfried Williams: it takes a variety of things into consideration. So it's not only just… it's not just narrow. You know, when you say narrow system development, you only look at
+
+104
+00:15:59.100 --> 00:16:15.499
+Godfried Williams: basic functions and what a software can do. But if you want to look at the development from a more strategic point of view, then you need to look at other factors, broader factors that should be,
+
+105
+00:16:15.630 --> 00:16:17.249
+Godfried Williams: Should be taken into account.
+
+106
+00:16:17.950 --> 00:16:19.820
+Godfried Williams: Any questions up to this point?
+
+107
+00:16:22.310 --> 00:16:23.330
+sonya: No, no questions.
+
+108
+00:16:23.330 --> 00:16:29.150
+Godfried Williams: No, Chris, they're right. So… So, I mean, part of any system development…
+
+109
+00:16:29.430 --> 00:16:37.699
+Godfried Williams: Traditionally, you approach it in a very classic style, which means that
+
+110
+00:16:38.580 --> 00:16:48.849
+Godfried Williams: I mean, historically, and even now… I mean, these days, there are smarter ways of going about fact-finding, but traditionally, you just walk through
+
+111
+00:16:48.850 --> 00:17:00.619
+Godfried Williams: the organization that you want to work with, or you want to help them develop, like, a system, and you may need to, interact with them, look at their documentations.
+
+112
+00:17:00.790 --> 00:17:03.500
+Godfried Williams: that's examining the limitations that I have.
+
+113
+00:17:03.720 --> 00:17:12.399
+Godfried Williams: And then you can make decisions about whether to keep some of the documentations they have, or to scrap them.
+
+114
+00:17:12.650 --> 00:17:26.450
+Godfried Williams: completely off, because it is just a waste, or it's just a lot of duplications, and you don't want that. And that can be achieved through interviewing and talking to the staff members, management.
+
+115
+00:17:26.530 --> 00:17:37.230
+Godfried Williams: to try to understand what goes on within the, the business or within the organization. So, in this contest, the service provider wants to
+
+116
+00:17:37.270 --> 00:17:51.329
+Godfried Williams: have a system that manages rentals for their owners, that is a dream home company. You need to talk to the staff, and you need to, interact with perhaps potential
+
+117
+00:17:51.590 --> 00:18:06.169
+Godfried Williams: key stakeholders, any tenants, sorry, clients that they might have, and you want to try to have some understanding of the client's view as well. Then you may use some observation techniques as part of
+
+118
+00:18:06.550 --> 00:18:19.680
+Godfried Williams: your understanding of how the enterprise works. You may observe other services, or similar services, competitors within the space, to gain some understanding of how the enterprise
+
+119
+00:18:19.680 --> 00:18:33.990
+Godfried Williams: work within that landscape. And by doing that, there's a lot of knowledge transfer that takes place in that kind of scenario. And you may also choose to conduct research and maybe submit some kind of questionnaires.
+
+120
+00:18:34.210 --> 00:18:37.259
+Godfried Williams: in that process. So that's sort of fact-finding.
+
+121
+00:18:37.420 --> 00:18:40.899
+Godfried Williams: traditional fact-finding. But, I mean, these days.
+
+122
+00:18:40.960 --> 00:18:54.580
+Godfried Williams: you may not necessarily have to go through that route entirely. You may just conduct some of these things through virtual meetings. I mean, a few days ago.
+
+123
+00:18:54.610 --> 00:19:07.150
+Godfried Williams: I happen to be talking to a potential client for, the business side of some of the things that I do, and they, they do something on, on,
+
+124
+00:19:07.660 --> 00:19:11.889
+Godfried Williams: On contract management system for tendering, you know, so they tend to…
+
+125
+00:19:12.030 --> 00:19:20.260
+Godfried Williams: Submit all kind of tenders to all kind of organizations, and they wanted something that is highly intelligent.
+
+126
+00:19:20.390 --> 00:19:26.800
+Godfried Williams: That will eliminate duplications and make the system processes leaner.
+
+127
+00:19:27.000 --> 00:19:33.110
+Godfried Williams: In, in, in that sense, I didn't have to go to the company. I didn't have to…
+
+128
+00:19:33.180 --> 00:19:46.900
+Godfried Williams: meet anyone in a company, you know? I just have to have some sort of meetings on Teams. And by having the meetings on Teams, I gained some understanding. And then the other thing that a company did was
+
+129
+00:19:46.900 --> 00:19:59.779
+Godfried Williams: they had their own meetings, and they recorded the meetings, and they shared with me for me to listen to the meeting, you know, what they've said at the meeting. And from there, I wrote a brief report.
+
+130
+00:19:59.780 --> 00:20:15.389
+Godfried Williams: to the company. So you can… you can… you can see here that the traditional approach has sort of has changed. It's been augmented in different ways and different, styles and approaches of going about these things. Then.
+
+131
+00:20:15.780 --> 00:20:32.690
+Godfried Williams: you have system specification as another traditional approach, but I mean, we're using this route to sort of explain the processes of development and implementation. The development, which will involve design.
+
+132
+00:20:32.800 --> 00:20:41.660
+Godfried Williams: and modeling, and then, deployment and implementation. So, specification is after you've done your…
+
+133
+00:20:42.260 --> 00:20:53.199
+Godfried Williams: elicitation of the requirements, whether it has to do with the data, or it has to do with the processes. You want to specify what you've understood. So…
+
+134
+00:20:53.640 --> 00:21:03.759
+Godfried Williams: using the example that I just mentioned that has to do with a potential client, you know, that sort of providing advice in terms of what needs to be done,
+
+135
+00:21:04.220 --> 00:21:08.830
+Godfried Williams: I could write a specification, not very detailed.
+
+136
+00:21:08.940 --> 00:21:24.439
+Godfried Williams: but high-level specification from what was required, just by having the meeting on Teams, and also listening to the remote meeting, which I was privileged to listen to the recording, listen to the recording. So.
+
+137
+00:21:24.440 --> 00:21:33.340
+Godfried Williams: My sources of information, the primary sources were basically the interaction or meeting on Teams, and then also.
+
+138
+00:21:33.340 --> 00:21:48.319
+Godfried Williams: just watching a video, with a meeting that had already taken place, and by listening to the video, I gained some understanding, and I could write a specification for that. At a high level. That specification usually
+
+139
+00:21:48.350 --> 00:21:56.629
+Godfried Williams: can serve as a basis of further engagement, because there'll be the need for clarity from the client, and they'll need
+
+140
+00:21:56.690 --> 00:21:59.980
+Godfried Williams: For feedback from the client, in other that.
+
+141
+00:22:00.530 --> 00:22:18.410
+Godfried Williams: I could, or you could, also respond to that, any sort of ambiguity that they might see, or if there's something that they cannot understand. So, if we sort of relate the system specification to the,
+
+142
+00:22:18.500 --> 00:22:21.860
+Godfried Williams: The Dream Home Rental Maliban System.
+
+143
+00:22:21.960 --> 00:22:27.909
+Godfried Williams: There are things that we need to take into account in this specific contest, you know, and…
+
+144
+00:22:28.080 --> 00:22:34.289
+Godfried Williams: The things that we take into account primarily has to do with your functional requirements.
+
+145
+00:22:34.490 --> 00:22:38.510
+Godfried Williams: So, I've not really highlighted the functional requirements,
+
+146
+00:22:39.060 --> 00:22:57.149
+Godfried Williams: too much in detail, because initially, I didn't mention some of them. So, some of the functional requirements has to do with the fact that you want to be able to capture staff details through a registration form, you want to be able to list staff, you want to be able to list the properties that
+
+147
+00:22:57.150 --> 00:23:06.160
+Godfried Williams: the business, the business managers. You won't be able to… Have client information… you know, where…
+
+148
+00:23:06.260 --> 00:23:10.020
+Godfried Williams: The, their properties are, something about the clients.
+
+149
+00:23:10.050 --> 00:23:27.840
+Godfried Williams: Sometimes for money laundering purposes and other legal regulatory requirements, you may need to know a little bit more about the client, you know, in terms of whether the property, the legitimate owners or not, you know, because there could be all kinds of things that can happen in the industry. So…
+
+150
+00:23:27.910 --> 00:23:45.840
+Godfried Williams: you will consider all these as part of functional requirements that will constitute the data aspect, and then the process aspect as well for the system. That is, the combination of the data and the process requirements will form the system requirements. Then we have here…
+
+151
+00:23:45.880 --> 00:23:59.769
+Godfried Williams: what we consider to be the non-functional requirements, you know? So, in any system, apart from the functional requirements, and these are very traditional, because when you say functional requirements, I must say that we have sort of shifted
+
+152
+00:24:00.410 --> 00:24:06.079
+Godfried Williams: grants from You know, looking at systems from a functional point of view.
+
+153
+00:24:06.230 --> 00:24:11.850
+Godfried Williams: Because I'm sure that, as part of your learning, you would have come across
+
+154
+00:24:12.190 --> 00:24:14.569
+Godfried Williams: Of course, the use of use cases…
+
+155
+00:24:14.820 --> 00:24:30.410
+Godfried Williams: you know, process modeling, and at the same time, we tend to… it's a bit conflicting. We tend to say that use cases help us to model the functional requirements, but then use cases actually represent processes, right? But it seems that
+
+156
+00:24:30.580 --> 00:24:37.189
+Godfried Williams: The use of the word functional is easier to understand when it comes
+
+157
+00:24:37.510 --> 00:24:49.710
+Godfried Williams: when it comes to business, and how clients interact with, key stakeholders. So, the financial requirements has to do with the business requirements that leads or links
+
+158
+00:24:49.710 --> 00:24:58.599
+Godfried Williams: to the strategic goal of that business or the organization. So, in this contest, we're referring to dream home.
+
+159
+00:24:58.760 --> 00:25:02.360
+Godfried Williams: Company Limited, you know, managing
+
+160
+00:25:02.710 --> 00:25:10.709
+Godfried Williams: the property, for the owners, in terms of the rentals. And anything that has to do with the business process.
+
+161
+00:25:10.950 --> 00:25:18.840
+Godfried Williams: should be considered as part of the functional requirements. The non-functional requirements these.
+
+162
+00:25:18.990 --> 00:25:22.840
+Godfried Williams: Not limited to them, but, like, the initial database size.
+
+163
+00:25:23.040 --> 00:25:31.079
+Godfried Williams: how many clients or owners are you going to deal with? Are you going to deal with 500 owners? Are you going to deal with 1,000?
+
+164
+00:25:31.240 --> 00:25:39.010
+Godfried Williams: Are you going to model your system with the kind of resources such that there's what they call the nth
+
+165
+00:25:39.290 --> 00:25:47.130
+Godfried Williams: number of owners, you know, in a way, you may have honors globally, so your database should accommodate that.
+
+166
+00:25:47.220 --> 00:26:03.299
+Godfried Williams: Then you have your database rate of growth. Again, that relates to the database size, and that's something that you need to take into account as part of your modeling, you know, of the database development process. You cannot just limit yourself to
+
+167
+00:26:03.400 --> 00:26:14.940
+Godfried Williams: Thinking that you're gonna have only 500 owners, and you're gonna have… well, what's the relation between an owner and a client? You may have thousands of clients.
+
+168
+00:26:15.540 --> 00:26:23.780
+Godfried Williams: where your clients, in this context, could be described as the owners, or your clients could be the tenants. So.
+
+169
+00:26:23.900 --> 00:26:31.590
+Godfried Williams: it depends on the wording, depends on which one you consider to be your client. You may need to describe that
+
+170
+00:26:31.690 --> 00:26:46.170
+Godfried Williams: in relation to the owners or the tenants that are renting, you know, the properties. In some instances, or in most instances, you may have to take all of them and describe them as clients, you know, and have a…
+
+171
+00:26:46.170 --> 00:26:56.159
+Godfried Williams: a way of differentiating between the tenants and then the owners, you know, as part of your client database. So that is something that the development team
+
+172
+00:26:56.240 --> 00:27:03.349
+Godfried Williams: And then the contractor, which is the, dream home, property management, she'll…
+
+173
+00:27:03.530 --> 00:27:09.439
+Godfried Williams: Decide how the data modeling is going to be done.
+
+174
+00:27:10.380 --> 00:27:22.039
+Godfried Williams: Right, so that's why you have the data base rate of growth in relation to the data science. There are the types, and I read normal record searches, how many searches are going to be done.
+
+175
+00:27:22.100 --> 00:27:32.059
+Godfried Williams: How would that impact on your system? What sort of database are you going to use? Are you going to use a relational database, or are you going to use a type of,
+
+176
+00:27:32.370 --> 00:27:45.950
+Godfried Williams: Not just a relational, you're gonna use one that is more hierarchical, or a mixed type of database that is able to handle both structured and unstructured data.
+
+177
+00:27:45.960 --> 00:27:57.159
+Godfried Williams: We are not saying that relational database cannot handle unstructured data, except that we believe that it is not too effective when it comes to all kind of data, and that is why
+
+178
+00:27:58.460 --> 00:28:17.850
+Godfried Williams: as part of the discussion for this model and database management systems or data storage, we're not just looking at relational databases such as SQL, but we're also looking at XML, we look at JSON, and we're looking at, comma-serate values, CSVs, as ways of storing data. So…
+
+179
+00:28:17.900 --> 00:28:29.989
+Godfried Williams: the type of search that takes place is something that you have to also take into account, the type of records, how many records you'll be searching. You cannot make that finite.
+
+180
+00:28:30.220 --> 00:28:37.440
+Godfried Williams: from the beginning. So you need to make provision, for, expansion, And for growth.
+
+181
+00:28:37.590 --> 00:28:45.849
+Godfried Williams: The networking and shared access requirements, again, networking and shared access requirements.
+
+182
+00:28:45.970 --> 00:28:56.359
+Godfried Williams: where would your clients be? Both the owners of the properties, and then the tenants, where would it be? You need to make provision as a business
+
+183
+00:28:56.490 --> 00:29:03.970
+Godfried Williams: That you're not going to be the sort of local business where your audience are just within a limited region.
+
+184
+00:29:04.030 --> 00:29:20.209
+Godfried Williams: And that's it. If you're based in Sweden, you're all limited in Sweden. But maybe your business will grow, the company will grow. And if it grows globally, it means that the company will have clients all over the world. And that's the way that a database should be modeled.
+
+185
+00:29:20.210 --> 00:29:25.849
+Godfried Williams: So that, to avoid the necessary cost for
+
+186
+00:29:25.860 --> 00:29:28.749
+Godfried Williams: Maintaining the software in future.
+
+187
+00:29:28.870 --> 00:29:41.710
+Godfried Williams: You know, because maintenance costs of any software-only system can be more expensive than the initial development of a system. So, you need to take all that into account. Take into account the performance.
+
+188
+00:29:41.880 --> 00:29:48.549
+Godfried Williams: Of your system, in terms of when searches are done, the response times, the turnaround times.
+
+189
+00:29:48.640 --> 00:30:05.740
+Godfried Williams: So many things have to be taken into account for your database management to be deployed effectively, you know, and sometimes you may need to run a pilot system to see how the system works before you sort of,
+
+190
+00:30:05.920 --> 00:30:10.560
+Godfried Williams: Scale it up. Then, of course, the security aspect, because you're dealing with…
+
+191
+00:30:10.790 --> 00:30:22.639
+Godfried Williams: personal data of your tenants as clients. You're dealing with personal data of your owners. You're dealing with personal data of your staff as well.
+
+192
+00:30:22.810 --> 00:30:38.350
+Godfried Williams: So, there are compliant obligations here, or regulatory demands in this sort of contest, and those compliant or regulatory demands must be adhered to from a security perspective. So.
+
+193
+00:30:38.410 --> 00:30:54.419
+Godfried Williams: that should be looked into, and the way to do that is not only saying that we're going to comply, or we are… we are ISO, setting standards, 7799, or 2007 compliant.
+
+194
+00:30:54.610 --> 00:31:00.319
+Godfried Williams: How have you enforced that? Is this… is it just… Instead of tick,
+
+195
+00:31:00.360 --> 00:31:20.080
+Godfried Williams: tick box exercise, you know, some organizations do that. Yeah, we are certified, but there's… end of story, because the regulator comes, and the regulator will check, and the business has sort of gone through that certification, but in reality, the business is vulnerable. In reality, the business
+
+196
+00:31:20.310 --> 00:31:28.840
+Godfried Williams: can be compromised in terms of its data security. So, these things must be looked at from a very practical point of view.
+
+197
+00:31:28.980 --> 00:31:42.080
+Godfried Williams: and ensuring that, the real security goals are met, the core security goals are met. You know, depending on the size of the business, if we assume that,
+
+198
+00:31:42.390 --> 00:31:48.190
+Godfried Williams: You know, the, you know, dream home company is going to be global, or it should be global.
+
+199
+00:31:48.200 --> 00:32:03.199
+Godfried Williams: then we may need to look at all the, 13 to 14 core components or requirements of the ISO standard, security standard. If we think that we just want to look at security from
+
+200
+00:32:03.470 --> 00:32:21.260
+Godfried Williams: just the… looking at the essentials of security, then we may just need to limit ourselves to something we call YASPMI, you know, requirements, you know, for small and medium enterprises. So, there are… there are different ways of looking at security. Backup and recovery.
+
+201
+00:32:21.260 --> 00:32:25.459
+Godfried Williams: What sort of contingency plans that we're going to put in place?
+
+202
+00:32:25.920 --> 00:32:34.630
+Godfried Williams: As a consultant, you need to advise your client and ensure that There are recovery…
+
+203
+00:32:34.810 --> 00:32:42.809
+Godfried Williams: strategies and procedures in place, just in case that the business was compromised. It says, in case that your whole network was down.
+
+204
+00:32:42.810 --> 00:32:54.850
+Godfried Williams: So, that's something to think about. You need to think about if a whole building disappears, things like that. You don't think that, will your business still function if all your networks disappear? Do you have…
+
+205
+00:32:54.850 --> 00:33:03.160
+Godfried Williams: some sort of virtual, replicated platform somewhere that holds your data. Is your recovery and your backup
+
+206
+00:33:03.280 --> 00:33:15.480
+Godfried Williams: you know, proceed, real time, that is, as you're working, you're backing up, or do you back up close of the day? So, each… whatever the decision is.
+
+207
+00:33:15.620 --> 00:33:22.559
+Godfried Williams: It comes with cost, it comes with resources, but that must be benchmarked against…
+
+208
+00:33:23.050 --> 00:33:29.300
+Godfried Williams: what a business wants to achieve. You know, at the end of the day, the business has certain, should I say,
+
+209
+00:33:29.910 --> 00:33:36.610
+Godfried Williams: Goals and objectives that I want to achieve, and it must factor all these things into consideration.
+
+210
+00:33:36.670 --> 00:33:55.940
+Godfried Williams: Into account. Then you have distributed nature of the system, concurrent processing legal issues. I've mentioned some of the legal issues. In terms of concurrency processing, if you have several tenants accessing the system remotely to sort of check the state of selling properties.
+
+211
+00:33:56.240 --> 00:34:01.220
+Godfried Williams: Or, potential clients who want to interact with the dream home
+
+212
+00:34:01.520 --> 00:34:06.569
+Godfried Williams: database management system, or entire system. You want to do that through your website.
+
+213
+00:34:06.840 --> 00:34:09.069
+Godfried Williams: And you're doing that all over the world.
+
+214
+00:34:09.949 --> 00:34:16.020
+Godfried Williams: Does your system Has the capacity to cope the demand, you know?
+
+215
+00:34:16.260 --> 00:34:20.700
+Godfried Williams: I've seen systems that sort of crashed when there's high demand.
+
+216
+00:34:20.929 --> 00:34:33.220
+Godfried Williams: And that high demand leads to denial of service, because the system lacks the sort of capacity to be able to handle, the sort of demand.
+
+217
+00:34:33.270 --> 00:34:42.799
+Godfried Williams: And the pressure that is placed on it. And that should not happen, and you as a consultant must take all these into account. So…
+
+218
+00:34:42.900 --> 00:34:46.370
+Godfried Williams: In a nutshell, the dream home
+
+219
+00:34:46.520 --> 00:34:53.309
+Godfried Williams: property management system, of course, the emphasis is on rentals, for the owners. We are…
+
+220
+00:34:54.130 --> 00:35:06.120
+Godfried Williams: several key stakeholders that come to play. So it's not just the owners, you're thinking about the tenants, so the owners are clients, the tenants are clients, but also,
+
+221
+00:35:06.460 --> 00:35:07.380
+Godfried Williams: just…
+
+222
+00:35:08.220 --> 00:35:25.410
+Godfried Williams: ordinary persons that might be interested in the business will visit the site, and you may have a Sarah visit the site with a view of having access to your database management system, and as I mentioned, whether your system has the capacity
+
+223
+00:35:25.540 --> 00:35:33.070
+Godfried Williams: or is robust enough to be able to cope with the demand. So, all these points that I've sort of mentioned here.
+
+224
+00:35:33.390 --> 00:35:36.380
+Godfried Williams: In terms of the non-functional requirements.
+
+225
+00:35:36.630 --> 00:35:43.020
+Godfried Williams: are related. You know, you don't treat one from the other as if they are all isolated, and you treat one
+
+226
+00:35:43.460 --> 00:35:53.759
+Godfried Williams: performance, and you look at, you know, performance has effect on security, depends on the type of security you want, may have effect on the performance, on impact on it.
+
+227
+00:35:53.960 --> 00:35:59.639
+Godfried Williams: The rate of your database growth will have effect on the performance.
+
+228
+00:35:59.820 --> 00:36:07.280
+Godfried Williams: And you need to take all that into account to dictate your database size. So they are related. I think I always say that
+
+229
+00:36:07.550 --> 00:36:24.479
+Godfried Williams: We need to understand systems from a holistic point of view. Holistic point of view. That's the way to understand systems. You know, you can treat systems, looking at one part of the system to lead to what we call sub-optimization. SAP optimization simply means that you just concentrate on one part of the system.
+
+230
+00:36:24.480 --> 00:36:35.200
+Godfried Williams: And that has an invest relationship, or an invest impact which is negative on other parts of the system. So we don't want to do that. We want to understand the system.
+
+231
+00:36:35.300 --> 00:36:41.449
+Godfried Williams: as a whole. Any questions or comments at this stage? Any questions or comments?
+
+232
+00:36:43.210 --> 00:36:45.460
+sonya: No, nothing at the moment, thanks.
+
+233
+00:36:45.460 --> 00:36:46.570
+Godfried Williams: Right, okay.
+
+234
+00:36:46.750 --> 00:36:53.380
+Godfried Williams: So, I think that I've sort of round up my game iron, discussion here.
+
+235
+00:36:53.550 --> 00:36:58.580
+Godfried Williams: And, I look forward to, seeing you once again, that's next week.
+
+236
+00:36:58.820 --> 00:37:04.390
+Godfried Williams: In Seminar 6, and I think that we'll look at the subject, further. So thanks once again.
+
+237
+00:37:04.540 --> 00:37:07.669
+Godfried Williams: For coming, and then look forward to
+
+238
+00:37:07.780 --> 00:37:10.749
+Godfried Williams: To seeing you. So, have a good night.
+
+239
+00:37:11.490 --> 00:37:16.780
+sonya: Yeah, thanks. Actually, I mean, if you have a minute at the end of this, can I just ask about the assignment?
+
+240
+00:37:16.780 --> 00:37:19.840
+Godfried Williams: Right, okay, so let me just, round up.
+
+241
+00:37:20.240 --> 00:37:23.409
+Godfried Williams: I'll just run a pool, please.
+

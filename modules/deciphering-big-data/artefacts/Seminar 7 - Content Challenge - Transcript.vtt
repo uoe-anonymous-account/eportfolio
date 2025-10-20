@@ -1,0 +1,718 @@
+WEBVTT
+
+1
+00:00:10.620 --> 00:00:15.900
+Godfried Williams: Hello, everyone. This is Seminar 7, and this, content
+
+2
+00:00:15.910 --> 00:00:31.100
+Godfried Williams: challenge. I can understand, this week has been quite demanding for all of you, especially when you are submitting your final assignment today. So the content challenge,
+
+3
+00:00:31.520 --> 00:00:45.810
+Godfried Williams: this seminar is supposed to be a form of review of the subject matter, and, have certain questions that I'd like you to look at,
+
+4
+00:00:45.990 --> 00:00:49.299
+Godfried Williams: After the end of this spittler.
+
+5
+00:00:49.300 --> 00:01:09.709
+Godfried Williams: course, but also it could have been before the specular session, and given the opportunity for us to sort of discuss it. So the content challenge is basically a review of the content, and the opportunity to interact and discuss some of the subject areas that we've covered.
+
+6
+00:01:09.780 --> 00:01:13.479
+Godfried Williams: Within the cause and the program.
+
+7
+00:01:13.830 --> 00:01:17.219
+Godfried Williams: So that is what SimNot Sim is about.
+
+8
+00:01:21.960 --> 00:01:30.180
+Godfried Williams: So, in this model, we have, ostensibly covered data wrangling processes. The last seminar,
+
+9
+00:01:30.710 --> 00:01:32.999
+Godfried Williams: As we have this seminar.
+
+10
+00:01:33.250 --> 00:01:45.999
+Godfried Williams: provide this cursive overview of the model, and help with your final reflection and e-portfolio development. Review the content of this week's lecturecast, reflective research activities.
+
+11
+00:01:46.000 --> 00:02:05.780
+Godfried Williams: and the questions, that will be presented in this discussion or this seminar, which you could review that, following this session. You know, so I sort of welcome any comments, because I can understand, as I mentioned earlier on, you have a submission today as well, so I will…
+
+12
+00:02:05.780 --> 00:02:12.010
+Godfried Williams: We have to accommodate the challenge that you face today as part of your submission.
+
+13
+00:02:12.160 --> 00:02:16.930
+Godfried Williams: So, what do we have for the content challenge?
+
+14
+00:02:17.210 --> 00:02:22.559
+Godfried Williams: As part of this, we want to be able to identify many challenges that are…
+
+15
+00:02:23.370 --> 00:02:30.900
+Godfried Williams: security-related, or risk and limitations and opportunities in did or wrongly. In other words, they are
+
+16
+00:02:30.900 --> 00:02:44.249
+Godfried Williams: Challenges that are associated with security and certain risks and limitations when it comes to handling of data, whether right from the beginning, wherever you elicit the data from.
+
+17
+00:02:44.250 --> 00:02:48.310
+Godfried Williams: Or where you extract the data from, and putting the data through
+
+18
+00:02:48.310 --> 00:02:59.379
+Godfried Williams: the data pipeline. So, ultimately, what happens is you have to be able to, deal with or mitigate against those security
+
+19
+00:02:59.380 --> 00:03:10.490
+Godfried Williams: Risk and challenges that you're likely to face. And this session provides this opportunity to expand our understanding in relation to that particular contest.
+
+20
+00:03:10.490 --> 00:03:30.049
+Godfried Williams: And also to critically analyze data wrangling problems and determine appropriate methodologies, tools, and techniques involving preparing, cleaning, exploiting, creating, optimizing, evaluating big data to solve them. This sort of reflects most of the things that we have covered, but of course.
+
+21
+00:03:30.050 --> 00:03:38.920
+Godfried Williams: As part of juggling our understanding and memory in some of the things that we have discussed, the questions that are presented as part of the content challenge.
+
+22
+00:03:38.930 --> 00:03:58.570
+Godfried Williams: this evening's session will be sort of reflective as part of this learning outcome, and also systematically develop and implement the skills required to be an effective member of a developing team in a virtual professional environment. You know, there's that strong emerging trend that most,
+
+23
+00:03:58.570 --> 00:04:14.540
+Godfried Williams: projects are executed remotely, virtually, so the digital landscape is really, you know, changing. The ground is shifting strongly to remote work, which has been
+
+24
+00:04:14.540 --> 00:04:20.149
+Godfried Williams: The trend and virtuality is playing a very key role.
+
+25
+00:04:20.149 --> 00:04:33.599
+Godfried Williams: So, it's also designed to optimize resources for any business or any kind of organization. So, the skills that are necessary to work in teams, especially when you are
+
+26
+00:04:33.810 --> 00:04:48.370
+Godfried Williams: virtual teams is also key of your understanding of how you communicate across those teams in that sort of virtual environment. Skills to make you effective is part of what
+
+27
+00:04:48.370 --> 00:04:54.039
+Godfried Williams: That, should be discussed and should be, sort of, reviewed in this particular session.
+
+28
+00:04:55.550 --> 00:05:03.560
+Godfried Williams: So, this session, you know, it's such that that level of interactivity would have been…
+
+29
+00:05:03.720 --> 00:05:07.680
+Godfried Williams: Key as part of the kind of benefits that
+
+30
+00:05:07.730 --> 00:05:16.750
+Godfried Williams: All of you can gain, you know, especially relating to your various organizations, and how you can relate on this concept to
+
+31
+00:05:16.750 --> 00:05:28.000
+Godfried Williams: particular developments that might be taking place in your businesses or your organizations. But of course, it's something that you need to look at in due course.
+
+32
+00:05:28.000 --> 00:05:30.340
+Godfried Williams: and relay the concepts that I've been…
+
+33
+00:05:30.630 --> 00:05:44.579
+Godfried Williams: reviewed here to any specific situations that you might, experience, or you might be experiencing in a business or within the organization. So, what are some of the review questions that I have here?
+
+34
+00:05:44.580 --> 00:05:57.640
+Godfried Williams: We have question 1, what are the disadvantages of a file-based system, and how are these disadvantages addressed by the database management systems approach? So, historically, most
+
+35
+00:05:57.930 --> 00:06:06.730
+Godfried Williams: data has been stored, in or on flood files, but also in flood files, and that means that
+
+36
+00:06:06.880 --> 00:06:17.459
+Godfried Williams: data access, were either serially made, that is, serially accessed, or sequentially accessed. And that also meant that
+
+37
+00:06:17.580 --> 00:06:21.730
+Godfried Williams: You know, businesses and organizations that kept files
+
+38
+00:06:21.860 --> 00:06:28.919
+Godfried Williams: in… in flood file mode, had to spend so much time to…
+
+39
+00:06:29.110 --> 00:06:44.359
+Godfried Williams: to access different records within the files that they had. In most cases, files were treated individually and conventionally, and then you sort of look at it also from an electronic format, where data can be
+
+40
+00:06:44.360 --> 00:06:52.850
+Godfried Williams: access sequentially or serially. So there are sort of number of disadvantages compared to relational database management systems.
+
+41
+00:06:52.850 --> 00:07:05.409
+Godfried Williams: Now, some of the problem with this one also relates to efficiency and performance. Because you are accessing the records within the file sequentially or serially.
+
+42
+00:07:05.410 --> 00:07:23.779
+Godfried Williams: There's this sort of disadvantage when it comes to randomization, or accessing the data in a random order, and that will require special statements in programming for you to be able to do that, compared to a relational database management system.
+
+43
+00:07:23.780 --> 00:07:34.179
+Godfried Williams: Which stores data in the form of tables, and in the form of tables where you have rows and columns, and therefore you treat one specific
+
+44
+00:07:34.720 --> 00:07:49.099
+Godfried Williams: record in your file system as a whole. And that means that there's more, efficiency, you are able to have direct access based on whatever…
+
+45
+00:07:50.680 --> 00:08:03.450
+Godfried Williams: access that is used as a statement that is used, whether using certain specific selected statement, as introduced within the Strata Query Language or Strata Query Language statements that allows you to be able to
+
+46
+00:08:03.450 --> 00:08:14.290
+Godfried Williams: retrieve data. So, there are numerous disadvantages that we can talk about. The other aspect that can also be seen as a disadvantage
+
+47
+00:08:14.290 --> 00:08:32.719
+Godfried Williams: is scalability. You know, when it comes to flat files, it is challenging to scale the flat files, because there are not files that you can easily replicate, because of the way they have been designed. And therefore, your flat files
+
+48
+00:08:32.720 --> 00:08:47.250
+Godfried Williams: that you have, in other… the way… in order for you to make them more efficient, you have a high level of redundancy and unnecessary repetitions because of the way they've been designed. Compared to
+
+49
+00:08:47.250 --> 00:08:53.310
+Godfried Williams: relational database management systems, you have, that aspect that provides you
+
+50
+00:08:53.310 --> 00:09:14.430
+Godfried Williams: with replication opportunities, and what it does is it allows you to be able to access the data regardless of what… where you deploy the data. So it allows opportunity for scalability, expansion, you're able to roll out different database management systems across different networks, or across different
+
+51
+00:09:14.430 --> 00:09:19.500
+Godfried Williams: part of an organization, whether they're part of local.
+
+52
+00:09:19.500 --> 00:09:26.619
+Godfried Williams: or national, or international. So, the database management systems allow you to be able to
+
+53
+00:09:26.620 --> 00:09:35.780
+Godfried Williams: effectively do that. And there are all kinds of opportunities that we can look at when it comes to relational database management systems. The other
+
+54
+00:09:36.400 --> 00:09:55.470
+Godfried Williams: advantage when it comes to relational database management systems is the fact that you… it can be more robust. You know, compared to a flat file, flat files are prone to errors because of the way that they have been designed, because you're more likely to
+
+55
+00:09:55.490 --> 00:10:07.660
+Godfried Williams: be rudimental in terms of the way you edit the file and all that. It requires more human intervention, and therefore, application of logic is really
+
+56
+00:10:07.660 --> 00:10:16.439
+Godfried Williams: highly restricted compared to relational database management systems. So when it comes to the DVMS, you realize that
+
+57
+00:10:16.440 --> 00:10:33.360
+Godfried Williams: it's more robust, you can have internal validation processes, or internal security, which is embedded within the database management system, and allows… that allows it to be more robust. Now, what does it mean
+
+58
+00:10:33.360 --> 00:10:41.589
+Godfried Williams: for it to be more robust. One of the key features of robustness is fault tolerance. It means that if a system fails.
+
+59
+00:10:41.590 --> 00:10:55.520
+Godfried Williams: it is able to cope with that, and is able to ensure that there's efficient recovery of the process. Unlike flat files, when it faces any fault or any form of
+
+60
+00:10:55.520 --> 00:11:03.399
+Godfried Williams: attack. You know, it's not… it's not able to recover easily because you're dealing with,
+
+61
+00:11:03.610 --> 00:11:12.599
+Godfried Williams: you know, different files across your system, and therefore it is vulnerable. You can insert rogue.
+
+62
+00:11:12.640 --> 00:11:24.890
+Godfried Williams: data, you're able to also manipulate aspects of the data from different places. When it comes to database management system, relational database management system, it's more robust, it has
+
+63
+00:11:25.070 --> 00:11:33.650
+Godfried Williams: internal validation and security, and then makes it, to be efficient. So, this is…
+
+64
+00:11:33.720 --> 00:11:52.489
+Godfried Williams: key to question one, in terms of some of the disadvantages that I've mentioned here, and in comparison to the advantages that comes with relational database management assistance, it is obvious that there are immense challenges when it comes to
+
+65
+00:11:52.490 --> 00:12:05.329
+Godfried Williams: flood… the use of flat files. The other aspect of relational database management systems, which we can look into, is the fact that you have the feature
+
+66
+00:12:05.400 --> 00:12:08.490
+Godfried Williams: of, Strata Query.
+
+67
+00:12:08.490 --> 00:12:15.329
+Godfried Williams: language. So, generally speaking, when it comes to DVMS, you have what you call
+
+68
+00:12:15.330 --> 00:12:37.760
+Godfried Williams: the data definition language component, and then you have the data manipulation language component of your DBMS system. And what that does is that you're able to define all kinds of specifications, you're able to define all kinds of requirements, and then the manipulation is when you apply your query language
+
+69
+00:12:37.760 --> 00:12:45.160
+Godfried Williams: We're able to extract data the way you want, and you can even extend the query into procedural
+
+70
+00:12:45.160 --> 00:13:00.390
+Godfried Williams: construct, where you can write routines or short programs that are very powerful, and that shows procedural logic and allows you to be able to manipulate the data in any form
+
+71
+00:13:00.390 --> 00:13:09.279
+Godfried Williams: that you like. So the, as I mentioned, the DBMS system is, very, holistic.
+
+72
+00:13:09.280 --> 00:13:27.529
+Godfried Williams: It is whole, it has all kind of inherent… inherent qualities and features that allows it to be… for one to cope in any kind of environment. That cannot be said when it comes to the flat file system. The flat file system
+
+73
+00:13:27.530 --> 00:13:36.229
+Godfried Williams: It's, it's, it's vulnerable, and it's inefficient the way it should be, in terms of, when you're accessing.
+
+74
+00:13:36.230 --> 00:13:50.319
+Godfried Williams: records, and also selling challenges when it comes to error management of the flat file system. So that is very key as well. So, question two, you look at the consistency and reliability aspect of transactions.
+
+75
+00:13:50.690 --> 00:14:03.210
+Godfried Williams: and how, they are reflected in the principle of acidity. You know, there's atomicity, consistency, isolation, and durability. So, some aspect of
+
+76
+00:14:03.210 --> 00:14:11.839
+Godfried Williams: those questions, I've sort of answered that in question one, but I'm going to go a bit more detail over here. So…
+
+77
+00:14:11.840 --> 00:14:25.659
+Godfried Williams: In any form of transaction, the feature of atomicity simply describes the fact that any transaction should be a whole, it should be a block, it should be complete. You cannot have transactions
+
+78
+00:14:25.660 --> 00:14:35.290
+Godfried Williams: that are half complete. So, a good example could be in a banking system. When looking at banking system, you can have a single transaction when you withdraw
+
+79
+00:14:35.290 --> 00:14:53.630
+Godfried Williams: money, an account should be debited. And when you draw money, the account is debited, and therefore, there should be another aspect that, should show if you're paying the money into an account, the account is credited. So that will reflect in two ways. Whether you withdraw the money, or you paid…
+
+80
+00:14:53.710 --> 00:15:01.260
+Godfried Williams: money into an account, the transaction should be complete. You know, there should not be any form of
+
+81
+00:15:01.350 --> 00:15:15.140
+Godfried Williams: interference, or it cannot be half completed. And that's what Automacy is about. So, when you withdraw funds from any account, whether from an ATM, cash point, as you may describe it.
+
+82
+00:15:15.260 --> 00:15:31.249
+Godfried Williams: it means that that account is debited, but there's another side of the account that will show that money has been withdrawn, and then there should be an update of the current balance. So, withdrawing the money is one activity, or one
+
+83
+00:15:31.250 --> 00:15:47.149
+Godfried Williams: task, and also updating the records on the account show that money has been withdrawn. It's another tax, or another activity, and therefore, those should happen at the same time, and that is what Atomicity is about. There are several examples
+
+84
+00:15:47.170 --> 00:15:48.929
+Godfried Williams: That we may be able to…
+
+85
+00:15:49.290 --> 00:15:53.329
+Godfried Williams: Give as well, or one can, can,
+
+86
+00:15:53.510 --> 00:16:05.219
+Godfried Williams: Can also mention, for instance, buying an airline ticket. You know, so when you buy an airline ticket, the… the sales take place at the other end. There will be… that aspect will show that
+
+87
+00:16:05.220 --> 00:16:21.310
+Godfried Williams: you've sort of bought a ticket, and therefore, you receive evidence of the transaction that took place. But also, at the same time, whether you use a debit card, a credit card, that transaction should reflect in real time, so that
+
+88
+00:16:21.310 --> 00:16:27.910
+Godfried Williams: If, for instance, the only money that you had on your account was whether, 500.
+
+89
+00:16:27.920 --> 00:16:45.020
+Godfried Williams: pounds or $500, what it means is that if the ticket cost 500 pounds or 500 dollars, then at the same time, the, your account should be debited to show that that money has been used. So that is atomicity. Consistency
+
+90
+00:16:45.020 --> 00:16:49.170
+Godfried Williams: Has to do with the fact that every aspect of your
+
+91
+00:16:49.430 --> 00:17:04.689
+Godfried Williams: database should have the same characteristics as any transaction takes place. You know, so, for instance, we cannot say that, within the banking or the… that example that was given, you…
+
+92
+00:17:04.700 --> 00:17:15.489
+Godfried Williams: redo money from an account. An account is updated, and certain features that have to do with the characteristics of the customer change during the time.
+
+93
+00:17:15.560 --> 00:17:26.990
+Godfried Williams: of the transaction that was happening. That is… should not be made possible. Immediately that is made possible, it means that the database management system is corrupt.
+
+94
+00:17:27.040 --> 00:17:40.920
+Godfried Williams: or it is vulnerable, and it is also compromised. And because it's compromised, it's not fit for paper. So, consistency is very important. Features, characteristics of the transaction should be consistent across the board.
+
+95
+00:17:40.920 --> 00:17:52.160
+Godfried Williams: Whether you are a customer interacting with a bank account, or you're a customer purchasing an airline ticket, that should reflect, there should be that form of consistency
+
+96
+00:17:52.160 --> 00:17:58.459
+Godfried Williams: across in terms of the features of the data that is central to the transaction. Isolation.
+
+97
+00:17:58.530 --> 00:18:02.440
+Godfried Williams: has to do with concurrency processing. So…
+
+98
+00:18:02.790 --> 00:18:18.069
+Godfried Williams: in any sort of system, the main resource that's been handled here is data, but that's not the only resource, you know, but I mentioned the main resource is data, but there are the resources as well. This comprise,
+
+99
+00:18:18.280 --> 00:18:34.130
+Godfried Williams: memory, and also processes. So you have processes, and you have memory that needs to be managed in any sort of system. So you have your data, you have memory, and you have… you have processes that's taking place. So isolation relates more to concurrent
+
+100
+00:18:34.170 --> 00:18:50.000
+Godfried Williams: processing. Now, what do I mean by concurrent processing? Concurrent processing is that you may have several processes that are taking place, and that are being handled by your database management system, and process one could be…
+
+101
+00:18:50.190 --> 00:18:58.010
+Godfried Williams: For instance, the withdrawal that was used as an example, and that will debit an account.
+
+102
+00:18:58.010 --> 00:19:10.710
+Godfried Williams: Two could show that there's been an update that reflects that money's been taken out from an account, and process three could be that other payments can be taking place at the same time, such as
+
+103
+00:19:10.710 --> 00:19:27.569
+Godfried Williams: you've sort of set up specific direct debits on your account, or you've set up specific standing orders on your account, and that… those are all different processes taking place, and they should not interfere with other processes. So that sort of isolation…
+
+104
+00:19:27.750 --> 00:19:39.740
+Godfried Williams: feature is what is being described here. Even though there are concurrent processes taking place, these concurrent processes also
+
+105
+00:19:39.780 --> 00:19:54.989
+Godfried Williams: perform or function as if that they are individual processes, as if that they are the only processes that are taking place on the system. And that is fundamental when it comes to database management. That is really key. So isolation.
+
+106
+00:19:54.990 --> 00:20:00.959
+Godfried Williams: That is what it's about. Anytime you see… you hear about isolation, or it's more relates to
+
+107
+00:20:00.960 --> 00:20:05.000
+Godfried Williams: Concurrent processing, because they are,
+
+108
+00:20:05.000 --> 00:20:11.679
+Godfried Williams: several projects taking place. Or in some part of the literature, we see multi-processing.
+
+109
+00:20:12.020 --> 00:20:14.620
+Godfried Williams: Sometimes you can, you know.
+
+110
+00:20:14.830 --> 00:20:34.009
+Godfried Williams: say multitasking, but multitasking is slightly different. You know, the subject matter this evening is about multiprocessing, which is relating to concurrent processing, and that means that these individual processes should function, or should perform, as if that they were the only processes that were being handled
+
+111
+00:20:34.010 --> 00:20:35.739
+Godfried Williams: within the system.
+
+112
+00:20:36.330 --> 00:20:48.559
+Godfried Williams: durability, key feature for acidity. So, what is durability? I mentioned about robustness in the first part of the question, and durability has to do with
+
+113
+00:20:49.180 --> 00:20:50.250
+Godfried Williams: the…
+
+114
+00:20:51.000 --> 00:21:00.349
+Godfried Williams: capability of any database management system to handle faults. So if, it should be fault-tolerant, if there are
+
+115
+00:21:00.940 --> 00:21:10.999
+Godfried Williams: if there are any faults that happen, the errors that happen, it should be fault-turrent. This sort of feature is really critical when it comes to
+
+116
+00:21:11.040 --> 00:21:24.579
+Godfried Williams: safety-critical systems. So you're looking at aviation systems, you're looking at, critical infrastructure, such as energy, so database management systems that are handling, energy consumption in
+
+117
+00:21:24.710 --> 00:21:32.179
+Godfried Williams: particular locations, whether it's in a country, wherever you may describe that. But because
+
+118
+00:21:32.780 --> 00:21:39.860
+Godfried Williams: critical infrastructure is handling data. You don't want the data to be compromised, and even e…
+
+119
+00:21:40.570 --> 00:21:55.809
+Godfried Williams: something happens to the database, it should have a mechanism which is inherent within that DBMS that allows it to be able to be fault-tolerant. So, durability should be a key feature.
+
+120
+00:21:55.810 --> 00:22:05.619
+Godfried Williams: when it comes to the property of transactions. So, for instance, in a typical critical infrastructure, for an energy…
+
+121
+00:22:05.660 --> 00:22:06.950
+Godfried Williams: Oh…
+
+122
+00:22:07.770 --> 00:22:16.399
+Godfried Williams: you know, system, what could happen? And you may have customers that will use energy remotely, whether they are purchasing.
+
+123
+00:22:16.400 --> 00:22:34.719
+Godfried Williams: that by plug-in, that to support your electricity system, or they get it directly from a particular grid, in that sense. Whichever way that you look at it, you know, whether pay-as-you-go, or you are billed monthly because you are using energy.
+
+124
+00:22:34.740 --> 00:22:53.909
+Godfried Williams: you are interacting as a customer, you're interacting with a critical infrastructure. The same with the service provider or the supplier is also managing a critical infrastructure. And therefore, the idea of robustness is key, durability is key, and as I mentioned, all kind of
+
+125
+00:22:53.910 --> 00:22:59.530
+Godfried Williams: Features that allows you to be able to tolerate folds and fill more
+
+126
+00:22:59.530 --> 00:23:07.770
+Godfried Williams: should be embedded and should be part of the system. Because the lack of these can cause very serious havoc.
+
+127
+00:23:08.040 --> 00:23:09.900
+Godfried Williams: or may impact
+
+128
+00:23:09.920 --> 00:23:29.609
+Godfried Williams: on the business in question, and another example could be the health service. You know, when I talk about the health service, if you're providing health service, your critical infrastructure cannot fail, and it shouldn't fail. And any attempt for data which is being managed
+
+129
+00:23:29.610 --> 00:23:42.380
+Godfried Williams: by that particular provider, can be catastrophic. So it cannot happen in any sense, and therefore should not be… should not be allowed to happen. Now, in order for that to happen, there should be
+
+130
+00:23:42.380 --> 00:23:53.369
+Godfried Williams: very strict planning, energy firm, contingency planning as part of managing the system. So, key feature of your data is durability.
+
+131
+00:23:53.370 --> 00:24:05.290
+Godfried Williams: As I've mentioned. A number of examples that can be given. So, in those situations, I've given examples, or scenario, I've given examples for the, the health service, the energy.
+
+132
+00:24:05.290 --> 00:24:27.660
+Godfried Williams: system, and the other area could be aviation as well, you know, and even the banking system has some level of criticality, because if your financial system crashes, and nothing's working, you cannot withdraw money, you cannot make transactions, everything comes to a halt, because we are living in the digital economy, and because you're living in the digital economy.
+
+133
+00:24:27.660 --> 00:24:35.110
+Godfried Williams: These, aspects of running any community, town, city, or nation.
+
+134
+00:24:35.930 --> 00:24:40.130
+Godfried Williams: They are all critical, and they have to be, handled with that.
+
+135
+00:24:40.240 --> 00:24:46.290
+Godfried Williams: kind of response. So, these are points that you need to take notice of.
+
+136
+00:24:46.810 --> 00:25:03.199
+Godfried Williams: We look at question 3, and we talk about what are the privileges that are commonly granted to database users? You know, so what sort of privileges that could be granted to database users? So.
+
+137
+00:25:04.380 --> 00:25:10.629
+Godfried Williams: When you have any database system, I mentioned the…
+
+138
+00:25:10.990 --> 00:25:25.020
+Godfried Williams: The data definition language helping to define specifics of the data features, characteristics, and the manipulation language doing the same, and that allows query interruption, the application of your
+
+139
+00:25:25.180 --> 00:25:30.960
+Godfried Williams: SQL, and it's, direct implementation of the database.
+
+140
+00:25:31.330 --> 00:25:43.990
+Godfried Williams: But in any system, there are privileges. That is, the different users of that database system, and because they are different users of the database system.
+
+141
+00:25:44.150 --> 00:25:56.210
+Godfried Williams: there should be different access rights, and access controls should be implemented. So, different access rights simply means that within any business or within organization.
+
+142
+00:25:56.210 --> 00:26:16.150
+Godfried Williams: There should be different levels of credentials in terms of what kind of users can have access to what kind of data, and what kind of users shouldn't have access to what kind of data. So these are described as privileges, and that cannot be violated or compromised. So this is very key.
+
+143
+00:26:16.290 --> 00:26:27.470
+Godfried Williams: And as a result of that, the commonly granted privileges could be read-write, so there could be people within a business or within an organization.
+
+144
+00:26:27.560 --> 00:26:41.469
+Godfried Williams: or even stakeholders or customers that interact with a business organization that can only read certain information. They cannot edit that information, they cannot write onto that information, so their privilege is just to read.
+
+145
+00:26:41.470 --> 00:26:48.840
+Godfried Williams: And that's, Oliver really right. And then you can have other persons or entities, stakeholders that can have
+
+146
+00:26:48.870 --> 00:27:01.190
+Godfried Williams: privileges to do read-write access, you know, so they have privileges to do read-write, and then you have the third one that can be read-write, and executable access. So, you have
+
+147
+00:27:01.320 --> 00:27:16.989
+Godfried Williams: persons or individuals within a business organization that can have read, write, and executable access or privileges when it comes to the database management system. And that means that they are different.
+
+148
+00:27:16.990 --> 00:27:33.340
+Godfried Williams: database users, and because they're different database users, as I mentioned, depending on the role that they play within the organization, what it means is they'll have different type of privileges. That's sort of key to question four.
+
+149
+00:27:33.340 --> 00:27:38.270
+Godfried Williams: Which says that what restrictions are needed to ensure that a view is
+
+150
+00:27:38.450 --> 00:27:55.109
+Godfried Williams: updatable. So, the restrictions, again, has to relate to question three, as I did mention, in terms of privileges. So, who can update and who cannot update? Who has the right access privilege, and who…
+
+151
+00:27:55.110 --> 00:27:59.560
+Godfried Williams: Also have, both write and executable, and then you can have
+
+152
+00:27:59.740 --> 00:28:15.100
+Godfried Williams: individuals that DR writes, sort of restricted to only read-read access or read-writes, and that is very key. So, when these restrictions are implemented, that will differentiate between
+
+153
+00:28:15.440 --> 00:28:27.289
+Godfried Williams: persons or individuals that can update a database view, or that may not be able to update a database view. So, that's something you need to bear in mind, and…
+
+154
+00:28:27.500 --> 00:28:42.359
+Godfried Williams: part of the literature, we describe them as access controls. You know, so access controls, access rights, privileges, security credentials, these are sort of some of the common terms that I use when it comes to the, the industry.
+
+155
+00:28:42.390 --> 00:28:49.220
+Godfried Williams: Of managing, data in any kind of business, or any kind of…
+
+156
+00:28:49.270 --> 00:29:06.739
+Godfried Williams: environment. Now, question 5 is something that you need to spend time to look at yourselves. That's considered a flooring table, part… part number contract, and part cost. So, the table name is part… it has these characteristics.
+
+157
+00:29:06.740 --> 00:29:17.570
+Godfried Williams: part number contract and part cost, which represent the cost negotiated under each contract for a part. A part may have a different price under each
+
+158
+00:29:17.660 --> 00:29:24.750
+Godfried Williams: contract. Now, consider the following view. Expensive parts, which contains the distinct part numbers.
+
+159
+00:29:25.260 --> 00:29:44.929
+Godfried Williams: parts that cost more than £1,000. So, that will require the creating of the field for expensive parts, where you have a feature for part number to allow you to access the expensive parts, and you have a select extinct.
+
+160
+00:29:45.100 --> 00:29:59.070
+Godfried Williams: part number, part of your query construct, from part, where part cost is greater than £1,000. So, you can tell that the query itself directed to meeting the requirement that has been stated
+
+161
+00:29:59.210 --> 00:30:09.249
+Godfried Williams: from the onset, or at the beginning of this question, but that's something you need to implement practically, you know, so when it comes to the application or the understanding of
+
+162
+00:30:09.290 --> 00:30:26.339
+Godfried Williams: of queries, I mean, it's not something you can just read and tell yourself that you know how to write queries. You need to do it yourself, you need to implement that, and see how it works. So I'm going to strongly recommend that that is done as part of putting together your ePortfolio. So.
+
+163
+00:30:26.530 --> 00:30:38.110
+Godfried Williams: You have this, aspect of how would you… how you will maintain this as a materialized view, and under what circumstances you will be able to maintain the view without having to access the underlying
+
+164
+00:30:38.290 --> 00:30:50.510
+Godfried Williams: base table part, you know. So, it means all depends on the way your query is constructed, you know. So, as I mentioned, you have to
+
+165
+00:30:50.570 --> 00:31:01.239
+Godfried Williams: look at this from a practical point, you need to implement that practically. And of course, it doesn't end here. You have to share that information on the forum.
+
+166
+00:31:01.430 --> 00:31:14.589
+Godfried Williams: or sort of arrange for some kind of discussion to take place by putting your statement. I mean, I prefer that any statement that you're going to construct, or whatever you've been able to implement.
+
+167
+00:31:14.590 --> 00:31:26.580
+Godfried Williams: at this stage should be shared on the forum, and that allows your colleagues and your peers to be able to also make certain necessary comments. And it also means that
+
+168
+00:31:26.590 --> 00:31:46.560
+Godfried Williams: some of you, or most of you, or all of you, will be able to do that, and it will create some sort of engagement in the process of doing so. But sometimes, you can only have a few that are able to do that, but what it does is it creates the opportunity for other persons that might be finding that
+
+169
+00:31:46.750 --> 00:31:51.740
+Godfried Williams: Process challenging to be able to also observe and learn from
+
+170
+00:31:51.850 --> 00:31:56.690
+Godfried Williams: the other peers what they have done. So, this is,
+
+171
+00:31:56.950 --> 00:32:13.869
+Godfried Williams: what is key to this part of the content challenge, especially question 5, which requires some practical implementation, I will, sort of indulge you and encourage you to be able to do that, to sort of,
+
+172
+00:32:14.010 --> 00:32:23.070
+Godfried Williams: create that opportunity for yourselves to test your capability and your scale in this area. So.
+
+173
+00:32:23.070 --> 00:32:35.489
+Godfried Williams: This comes to the end of this part of the seminar, but as I mentioned, it doesn't end here, because I'm aware that you're having submissions today, and because of that, I sort of…
+
+174
+00:32:35.590 --> 00:32:52.909
+Godfried Williams: can accommodate that situation where you need to concentrate on that. However, please review what is being presented, and if you have any comments or questions, feel free to share that on the forum or personally to me. So once again, I want to thank you
+
+175
+00:32:52.950 --> 00:33:08.230
+Godfried Williams: for listening, and I encourage you to review what has been recorded, and you to make the initial comments and questions as you may consider fit. So, good night, and all the best to you and the rest of your
+
+176
+00:33:08.320 --> 00:33:13.320
+Godfried Williams: your course. I'll be providing feedbacks in terms of
+
+177
+00:33:13.470 --> 00:33:15.620
+Godfried Williams: The assignments that you've done
+
+178
+00:33:15.920 --> 00:33:24.709
+Godfried Williams: just submit it, and if there are any review or comments that need to take place, I'll let you know as well. So thank you once again, and good night.
+
+179
+00:33:24.890 --> 00:33:25.610
+Godfried Williams: Bye.
+

@@ -1,0 +1,23 @@
+Seminar 7, led by Dr. Godfried Williams, served as a review and reflection session for the module. It coincided with the final assignment deadline, acknowledging the heavy workload students faced. The “content challenge” was designed to consolidate learning by revisiting the key topics covered across the course—particularly data wrangling, data security, risks, and limitations in data handling processes.
+
+Focus: Reviewing course content and reflecting on learning progress.
+
+Key Points:
+
+Session aligned with the final assignment submission and e-portfolio development.
+
+Review of core topics: data wrangling, data security, risks, and limitations.
+
+Encouraged synthesis of theory and practice through reflective discussion.
+
+Designed to consolidate knowledge from the entire module.
+
+Learning Outcomes:
+
+Critically reflect on personal learning and applied skills.
+
+Integrate previous research activities into the e-portfolio.
+
+Identify strengths and areas for improvement in data handling.
+
+Demonstrate holistic understanding of data wrangling and system development concepts.

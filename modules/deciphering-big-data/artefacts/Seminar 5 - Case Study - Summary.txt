@@ -1,0 +1,23 @@
+Seminar 5 – Dream Home Case Study (Dr. Godfried Williams)
+
+Focus: Understanding database development through a practical property management example.
+
+Key Points:
+
+The “Dream Home” case study illustrates requirements for designing a real-world database system.
+
+Emphasis on system methodologies, front-end and back-end integration, and evaluation of design solutions.
+
+Stakeholders include property owners, agents, and clients—each with distinct data needs.
+
+Discussion on consistency between tools, data models, and user requirements during system development.
+
+Learning Outcomes:
+
+Identify requirements for database-driven applications.
+
+Apply design and development methodologies to real scenarios.
+
+Evaluate system effectiveness and stakeholder alignment.
+
+Build foundational understanding for subsequent SQL and DBMS topics.

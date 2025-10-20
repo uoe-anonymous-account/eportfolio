@@ -1,0 +1,970 @@
+WEBVTT
+
+1
+00:00:03.470 --> 00:00:07.630
+Godfried Williams: Hello, everyone, and good evening. Thank you for…
+
+2
+00:00:07.790 --> 00:00:11.270
+Godfried Williams: Coming this evening, this seminar.
+
+3
+00:00:11.390 --> 00:00:18.860
+Godfried Williams: It's on data investigations and case studies acquiring and storing, data.
+
+4
+00:00:22.260 --> 00:00:25.100
+Godfried Williams: So, there's an assignment, which is, do you…
+
+5
+00:00:25.400 --> 00:00:30.540
+Godfried Williams: on the 8th of September, and that is… team…
+
+6
+00:00:30.800 --> 00:00:38.480
+Godfried Williams: work as a project work. Are there two parts, which is the group work, and then there's an individual submission
+
+7
+00:00:38.790 --> 00:00:39.930
+Godfried Williams: As well.
+
+8
+00:00:42.340 --> 00:00:47.010
+Godfried Williams: Right, so the general… learning outcomes…
+
+9
+00:00:47.530 --> 00:00:55.610
+Godfried Williams: Mainly to understand the challenges. There's a risk and limitations associated with…
+
+10
+00:00:55.730 --> 00:01:03.169
+Godfried Williams: data wrangling, and the concept of wrangling is how we manipulate data or handle
+
+11
+00:01:03.590 --> 00:01:09.830
+Godfried Williams: Big data, you know, and the complexities that are, intrinsic or inherent
+
+12
+00:01:10.040 --> 00:01:19.080
+Godfried Williams: with, data, especially when the data becomes large, so we want to try to understand the challenges
+
+13
+00:01:19.330 --> 00:01:28.530
+Godfried Williams: The security issues and limitations associated with the data, but as well as the opportunities that come with
+
+14
+00:01:28.840 --> 00:01:38.190
+Godfried Williams: Wrongling the data, or manipulating the data. And also, critically, analyze… the… data.
+
+15
+00:01:38.640 --> 00:01:48.319
+Godfried Williams: And understand the problems and determine appropriate methodologies and tools that can be used in, addressing
+
+16
+00:01:48.750 --> 00:02:03.009
+Godfried Williams: Some of the challenges in terms of the noise that comes with the data, to be able to clean the data, explore the data, and optimize the value of the data within the business context.
+
+17
+00:02:03.330 --> 00:02:19.659
+Godfried Williams: Or within an organization, and also be able to design and develop, evaluate appropriate solutions using the data sets that might be available to your organization or your business, and be able to deploy
+
+18
+00:02:20.080 --> 00:02:27.710
+Godfried Williams: That, or any system, effectively, by applying some of the data modeling concepts.
+
+19
+00:02:29.810 --> 00:02:33.430
+Godfried Williams: So, when it comes to data investigation.
+
+20
+00:02:33.920 --> 00:02:42.369
+Godfried Williams: The idea is that we want to determine the source, or the sources of data.
+
+21
+00:02:42.540 --> 00:02:50.069
+Godfried Williams: And establish the credibility or the integrity of the data, because, if we're to go back to…
+
+22
+00:02:50.280 --> 00:02:53.599
+Godfried Williams: Perhaps, refresh our memory.
+
+23
+00:02:53.730 --> 00:03:05.749
+Godfried Williams: With respect to the characteristics of large data, We could, remember… Things like… features such as…
+
+24
+00:03:05.810 --> 00:03:20.230
+Godfried Williams: the veracity of the data, which I'll do the quality of the data, the velocity, that's the four Vs, and the variety as well. You know, but the veracity here is very important in the sense that
+
+25
+00:03:20.230 --> 00:03:30.260
+Godfried Williams: the emphasis of veracity of data has to do with the quality of the data, that's the integrity of the data. So, when you are carrying out any data investigations.
+
+26
+00:03:30.370 --> 00:03:36.230
+Godfried Williams: You want to focus on credibility of sources, of the data.
+
+27
+00:03:36.550 --> 00:03:37.790
+Godfried Williams: And…
+
+28
+00:03:38.390 --> 00:03:48.299
+Godfried Williams: Credibility on the sources will help you to do some fact-checking, making the sources verifiable, doing your cross-reference, and…
+
+29
+00:03:48.420 --> 00:03:53.860
+Godfried Williams: and also being able to contact original source. So, we've listed some.
+
+30
+00:03:54.370 --> 00:04:05.970
+Godfried Williams: Credible sources when you're carrying out data investigations, and these comprise, like, government, international agencies, research institutions,
+
+31
+00:04:05.970 --> 00:04:17.339
+Godfried Williams: And, you know, like, the WHO reports, you know, which are meant to be independent, reporting and reflect some real facts, you know.
+
+32
+00:04:18.230 --> 00:04:22.730
+Godfried Williams: And also, when we have extracted these sources.
+
+33
+00:04:22.930 --> 00:04:27.619
+Godfried Williams: We want to be able to present the data in a manner which is readable.
+
+34
+00:04:27.900 --> 00:04:40.359
+Godfried Williams: Regardless of the format in which we extracted the data, because data may be extracted in different formats, depending on where they are kept or where they are stored.
+
+35
+00:04:40.470 --> 00:05:00.040
+Godfried Williams: And as a result, we should have tools or data management, or data storing formats, that allows us to be able to store the data regardless of the way we have extracted the data from these different sources. So, readability is key.
+
+36
+00:05:00.120 --> 00:05:16.629
+Godfried Williams: that's why we have an extended markup language, you know, you have also the JavaScript objectnotation, you have common separate values, CSV, and you have SQL for relational, data baseline assistance. So, these sort of data formatting
+
+37
+00:05:16.970 --> 00:05:21.780
+Godfried Williams: should I say, models, allows us to be able to
+
+38
+00:05:21.870 --> 00:05:38.800
+Godfried Williams: present the data in different ways, but also allows us to store the data in a variety of formats, regardless of how we extract it, how we extracted these data. So the cleanliness
+
+39
+00:05:38.980 --> 00:05:48.099
+Godfried Williams: As well, an important aspect of acquiring and storing the data. You know, when we extract any data, there should be data claims sent.
+
+40
+00:05:48.410 --> 00:06:04.519
+Godfried Williams: Through the data pipeline, where data is clean, because you may have duplications, you may have redundancies, there could be human errors, you can also have after lies, and, …
+
+41
+00:06:04.740 --> 00:06:08.509
+Godfried Williams: you know, Aspect of the data, which…
+
+42
+00:06:08.780 --> 00:06:27.160
+Godfried Williams: creates unnatural ambiguity, and because it creates unnatural ambiguity, you want to be able to clean the data and have a more refined, should I say, output that can be used more effectively. Then, of course, the longevity, how long can we
+
+43
+00:06:27.240 --> 00:06:33.339
+Godfried Williams: Keep data, and that is something that has to do more with, …
+
+44
+00:06:34.330 --> 00:06:46.630
+Godfried Williams: regulation, you know, so when it comes to how long we can… we can store the data, that has to do with regulation, so we can relate that to GDPR. When it comes to that, different…
+
+45
+00:06:46.940 --> 00:06:53.080
+Godfried Williams: countries in Europe and other parts of the world may, have different…
+
+46
+00:06:53.290 --> 00:07:00.000
+Godfried Williams: regulatory requirements for storing the data, but in particular reference to GDPR,
+
+47
+00:07:00.140 --> 00:07:16.829
+Godfried Williams: you may store the data as long as it is relevant. You know, in some areas, for instance, the financial data might take between 6 to 7 years, and you may… you could sort of release that sort of data, you know, when… especially when
+
+48
+00:07:16.840 --> 00:07:27.970
+Godfried Williams: financial reporting has been done comprehensively. When it comes to medical data, for instance, that might take longer, and in… in some aspects,
+
+49
+00:07:28.300 --> 00:07:34.289
+Godfried Williams: Depending on the organization, and for the purposes which the data is stored, it might be
+
+50
+00:07:34.370 --> 00:07:50.239
+Godfried Williams: practically almost indefinite, because you might need the data for future references, or maybe for security purposes, and therefore, the data may take long. So, here are some of the sources of the data, …
+
+51
+00:07:50.400 --> 00:08:09.160
+Godfried Williams: how data can be captured, in terms of the, veracity, the quality of the data. We've mentioned all the NGOs with government agencies, scientific data, international organizations, all serve as credible sources of,
+
+52
+00:08:09.350 --> 00:08:20.429
+Godfried Williams: extracting the data. So, if I may ask, Sonia, for example, you don't necessarily have to disclose that, you know, in detail, but in your organization, where are some of…
+
+53
+00:08:20.430 --> 00:08:32.000
+Godfried Williams: How do you verify the veracity, the quality of data that you obtain from different sources? How do you know that the data you're processing
+
+54
+00:08:32.010 --> 00:08:33.419
+Godfried Williams: is, ….
+
+55
+00:08:35.730 --> 00:08:50.299
+Sonya Jackson: Yeah, I mean, it's a good question. We obviously have internal data from scientific studies, but we also tap into a lot of, open source science data as well, and you have to understand how that data was collected, where it was collected from.
+
+56
+00:08:50.300 --> 00:08:56.189
+Sonya Jackson: How it's been formatted, how it's been transformed, potentially, because this can affect
+
+57
+00:08:56.440 --> 00:09:10.309
+Sonya Jackson: your sort of analysis that you do with it, and what you get from your readouts. So I think it's really important to understand, especially when you're using secondary data, what's happened to that data previously, and I think that's something that we
+
+58
+00:09:10.500 --> 00:09:13.989
+Sonya Jackson: Sort of make sure it's done thoroughly to understand.
+
+59
+00:09:15.250 --> 00:09:22.130
+Godfried Williams: Right, thank you for that. So, have there been any instance where… …
+
+60
+00:09:23.090 --> 00:09:34.359
+Godfried Williams: you questioned, not necessarily you, but I'm referring to the organization, questioned the… the integrity of a certain data set.
+
+61
+00:09:34.540 --> 00:09:39.879
+Godfried Williams: And I said, I said, are you aware of any instance like that? Or it's not something that.
+
+62
+00:09:39.880 --> 00:09:40.470
+Sonya Jackson: Hmm.
+
+63
+00:09:40.470 --> 00:09:42.510
+Godfried Williams: You're, ….
+
+64
+00:09:43.670 --> 00:09:50.280
+Sonya Jackson: I mean, nothing specifically, but there have been cases where we've reached out to, like, primary authors to
+
+65
+00:09:50.420 --> 00:09:57.489
+Sonya Jackson: Ask them very direct kind of questions related to the data that they're presenting, or that they've published, or that we can access.
+
+66
+00:09:57.490 --> 00:10:00.170
+Godfried Williams: Right. So, we've definitely had examples of that.
+
+67
+00:10:00.170 --> 00:10:00.630
+Sonya Jackson: Yeah.
+
+68
+00:10:00.630 --> 00:10:02.879
+Godfried Williams: Okay, so you needed more, sort of.
+
+69
+00:10:02.880 --> 00:10:03.810
+Sonya Jackson: More information.
+
+70
+00:10:03.810 --> 00:10:05.409
+Godfried Williams: on that, okay.
+
+71
+00:10:05.430 --> 00:10:06.600
+Sonya Jackson: Exactly, yeah.
+
+72
+00:10:06.600 --> 00:10:10.970
+Godfried Williams: Right, okay. So, based on what I mentioned,
+
+73
+00:10:11.960 --> 00:10:18.880
+Godfried Williams: They are, of course, investigative methods that are used to extract data
+
+74
+00:10:18.990 --> 00:10:25.849
+Godfried Williams: From a variety of sources, checking all the facts, that I extracted from these sources.
+
+75
+00:10:25.990 --> 00:10:30.239
+Godfried Williams: Can be critical in respect of the quality
+
+76
+00:10:30.680 --> 00:10:35.900
+Godfried Williams: Process that is used, and this, usually involves verification.
+
+77
+00:10:36.030 --> 00:10:40.769
+Godfried Williams: Ensuring the sources can be trusted, validation, which is ensuring the data
+
+78
+00:10:40.870 --> 00:11:00.010
+Godfried Williams: it's what it meant to be, because there's one thing, the data could be misleading. I've heard all kinds of comments from statisticians, you know, and that's a very… very interesting one, that, you know, another statistician will say that, well, depends on what you're looking for, you know, you can…
+
+79
+00:11:00.010 --> 00:11:12.950
+Godfried Williams: actually analyze the data in a certain way to arrive at a certain conclusion, you know. There's some element of perhaps truth in that, but of course, you cannot
+
+80
+00:11:13.040 --> 00:11:13.910
+Godfried Williams: …
+
+81
+00:11:14.360 --> 00:11:33.639
+Godfried Williams: should I say, cheat the data? The data is what it is. Even though they are figures, it is what they are. You know, so it's subject to interpretation. I guess that it has to do with the interpretation of data, or perhaps the sources. I mean, if you use certain secondary sources.
+
+82
+00:11:33.640 --> 00:11:40.799
+Godfried Williams: then you may need to go one step further to verify these secondary sources, and if you did use
+
+83
+00:11:40.860 --> 00:11:46.820
+Godfried Williams: primary sources as part of research, then there's also the need to
+
+84
+00:11:47.000 --> 00:11:51.319
+Godfried Williams: Validate your primary sources in terms of…
+
+85
+00:11:51.350 --> 00:12:04.010
+Godfried Williams: Whether the sources you obtained the data from were coming from experts or were coming from, depends on the purpose of the investigation, they will come from ordinary citizens.
+
+86
+00:12:04.010 --> 00:12:12.709
+Godfried Williams: In communities as well, you know? So, I guess it depends on what the research is for, what the data is going to be used for.
+
+87
+00:12:12.900 --> 00:12:18.620
+Godfried Williams: That is… that is what will serve as the benchmark for evaluating or validating
+
+88
+00:12:18.660 --> 00:12:35.619
+Godfried Williams: the credibility or the integrity of the data. So, there are a number of key points here, which I've sort of highlighted. Of course, you ask certain questions whether the data source is verifiable, should be able to carry out validation.
+
+89
+00:12:35.740 --> 00:12:49.140
+Godfried Williams: To eliminate redundancies, you should be able also to look at the frequency of the data, update an error check, you know, because you may have… you could be reporting about, …
+
+90
+00:12:49.520 --> 00:12:53.909
+Godfried Williams: In medical research, you could be reporting about a certain type of
+
+91
+00:12:54.100 --> 00:13:08.060
+Godfried Williams: Maybe you'll be in a better position to give an example, but there's a type of… of… of condition, you know, condition, right? And… and the characteristics of the condition
+
+92
+00:13:08.170 --> 00:13:13.450
+Godfried Williams: Could be subject to change depending on other external factors as well.
+
+93
+00:13:13.560 --> 00:13:25.770
+Godfried Williams: You know, whether they are influenced by economics, or they're influenced by environmental changes, they're influenced by government policy.
+
+94
+00:13:26.310 --> 00:13:29.320
+Godfried Williams: May… they may all influence the way
+
+95
+00:13:29.520 --> 00:13:38.359
+Godfried Williams: the data is captured, or the data reflects in specific instances, right? So…
+
+96
+00:13:38.660 --> 00:13:43.740
+Godfried Williams: I mean, how would you describe that kind of scenario, where…
+
+97
+00:13:43.850 --> 00:13:55.999
+Godfried Williams: You look at the frequency of data updates, you know, why data updates is important within medical research, or something to do with the health sector, and as a result, if
+
+98
+00:13:56.090 --> 00:14:03.920
+Godfried Williams: the… the data is obsolete, or it's sort of outdated, then we can… one can suggest that
+
+99
+00:14:04.360 --> 00:14:15.010
+Godfried Williams: that data is not really credible, or the quality has been compromised. I mean, how would you… what sort of scenario can you relate to?
+
+100
+00:14:19.460 --> 00:14:33.449
+Sonya Jackson: I mean, yeah, I've had examples of this in clinical trials, especially when you mention government policy and funding and things, because you find that the data is collected in different ways in different countries.
+
+101
+00:14:33.470 --> 00:14:40.049
+Sonya Jackson: And that can be very important, because certain drugs can be funded and others aren't, so you have inaccurate data.
+
+102
+00:14:40.090 --> 00:14:46.229
+Sonya Jackson: For a medicine that's given that's actually aligned to a different condition than the patient actually has, because
+
+103
+00:14:46.280 --> 00:14:50.770
+Sonya Jackson: In that country, they get funding for a certain condition and not for something else.
+
+104
+00:14:50.770 --> 00:14:51.570
+Godfried Williams: Right, okay.
+
+105
+00:14:51.570 --> 00:14:54.149
+Sonya Jackson: Yeah, it's just an example, ….
+
+106
+00:14:54.150 --> 00:14:54.800
+Godfried Williams: Right.
+
+107
+00:14:55.080 --> 00:14:58.590
+Godfried Williams: Right, so the data could be misleading.
+
+108
+00:14:58.590 --> 00:15:05.480
+Sonya Jackson: Yeah, it's misleading. You have to go back to the source and kind of question the source to understand it very clearly.
+
+109
+00:15:05.480 --> 00:15:12.279
+Godfried Williams: Sure. All right, thanks. So, so this is a very important process. Of course, the data should be
+
+110
+00:15:12.320 --> 00:15:25.820
+Godfried Williams: Readable, cleanliness is important, longevity is something I mentioned, so readability, updates, errors are misreported, you can have methods that can be questioned.
+
+111
+00:15:25.870 --> 00:15:45.599
+Godfried Williams: You have how clean is your data. As we mentioned, there could be all sort of reasons or factors that could impact on the cleanliness of the data, and then the longevity of the data as well. You know, the point is, if data is stored at different places.
+
+112
+00:15:45.600 --> 00:15:58.420
+Godfried Williams: and they port it from other sources, no, other storage to different storage places. The question is, do they get affected or not? You know, and that's something that
+
+113
+00:15:58.490 --> 00:16:09.519
+Godfried Williams: One up to evaluate as well, because you want to, to be confident about the wholeness, the integrity of the data, because you may be using the data for other
+
+114
+00:16:09.600 --> 00:16:12.849
+Godfried Williams: Purposes such as formulating policy.
+
+115
+00:16:13.000 --> 00:16:27.169
+Godfried Williams: And… or it can inform your strategy, your planning, and therefore, you need to go further to, you know, carry out some kind of not just verification, but also validation, and an evaluation of
+
+116
+00:16:27.300 --> 00:16:32.070
+Godfried Williams: The, the data that has been stored at different places.
+
+117
+00:16:32.630 --> 00:16:35.750
+Godfried Williams: Any questions up to that point? Please, any questions?
+
+118
+00:16:37.030 --> 00:16:38.689
+Godfried Williams: No question, right, okay.
+
+119
+00:16:39.140 --> 00:16:49.680
+Godfried Williams: So, I mean, data storage is very important, because as I mentioned, Data storage can impact
+
+120
+00:16:50.200 --> 00:16:56.300
+Godfried Williams: or influence the quality of the data. That's the veracity of the data.
+
+121
+00:16:56.480 --> 00:17:14.870
+Godfried Williams: And also, that can lead to all kinds of challenges or problems. So you can look at it from a security point of view. If you look at it in a security contest, or even in a safety contest, you know, whether within medical research or aviation.
+
+122
+00:17:15.170 --> 00:17:29.510
+Godfried Williams: or you look at the banking sector, you look at finance, you realize that where data is stored is very important, and how data is stored as well. So where is stored, how data is stored?
+
+123
+00:17:29.750 --> 00:17:40.600
+Godfried Williams: If the data is not actually stored properly, you may lose some part of the data when the data is being transported. So, here we look at cloud.
+
+124
+00:17:40.790 --> 00:17:41.700
+Godfried Williams: Oz…
+
+125
+00:17:42.720 --> 00:17:52.859
+Godfried Williams: a concept… I'll use the… I mean, the term cloud is more… more of a marketing jargon, rather than something meant to be…
+
+126
+00:17:52.970 --> 00:18:07.010
+Godfried Williams: what it actually means, in terms of what it does. You know, clouds are just distributed databases that are deployed remotely. So, in the past, you may have databases that were
+
+127
+00:18:07.080 --> 00:18:26.679
+Godfried Williams: deployed remotely, and this could be relational databases, you could… it could be just flat files, and you may be able to connect to those files remotely based on what sort of program that you're using. So, that sort of concept, sort of developed into
+
+128
+00:18:26.750 --> 00:18:44.700
+Godfried Williams: wider, should I say, wider application where the remote database is not just accessible by individual businesses or organizations. So the idea of distributed databases were just restricted to
+
+129
+00:18:44.760 --> 00:18:53.839
+Godfried Williams: The individual businesses, organizations, where, you know, whether employees or customers, other stakeholders.
+
+130
+00:18:53.990 --> 00:19:03.559
+Godfried Williams: That passed through the business or the organization's security credentials were able to access the data remotely.
+
+131
+00:19:03.630 --> 00:19:15.069
+Godfried Williams: So that is how, you know, the whole concept of cloud developed. Developed from distributed databases. Now, but then when you look at cloud, we look at it beyond distributed databases in terms of
+
+132
+00:19:16.080 --> 00:19:28.320
+Godfried Williams: remote access globally, you know, so you can have your server sitting somewhere in London, and someone in the United States having access to that.
+
+133
+00:19:28.460 --> 00:19:34.589
+Godfried Williams: Provided that your organization, allows that, you know, and that is…
+
+134
+00:19:34.840 --> 00:19:45.170
+Godfried Williams: dependent on the security policy of your organization, you know, or business, you know, that… are they going to allow that to, someone to…
+
+135
+00:19:45.220 --> 00:19:56.669
+Godfried Williams: connect through VPN, Virtual Private Network, and, have remote access. You know, but when you shift away from just
+
+136
+00:19:56.910 --> 00:20:11.469
+Godfried Williams: the technicality of the… of accessing the data. You can look at it from a wider perspective, where ordinary persons, customers trying to buy a product will sort of connect to clouds.
+
+137
+00:20:11.470 --> 00:20:25.780
+Godfried Williams: and make an order, and that is seen on, let's say, Amazon platforms. You know, that's very common on Amazon platforms, you know, where you have the AWS and other, you know, databases that I use. So these are some sort of examples
+
+138
+00:20:25.780 --> 00:20:36.470
+Godfried Williams: of cloud, enablists, I'll call them, database management systems, that allows, the concept of cloud to be effectively deployed. So, you look at the…
+
+139
+00:20:36.480 --> 00:20:39.970
+Godfried Williams: Hierarchical database format,
+
+140
+00:20:40.010 --> 00:20:48.539
+Godfried Williams: organized in a structure that enables the storage of live data set in a tree-like, you know, manner, you know, so…
+
+141
+00:20:48.540 --> 00:21:05.090
+Godfried Williams: just… the way it's organized as well, it's hierarchical, the data structure allowing the data to be stored in that manner. You look at IBM Watson, Watson as an example, that provides a sort of cloud framework for data accessibility.
+
+142
+00:21:05.090 --> 00:21:08.950
+Godfried Williams: As well as modeling additional functions designed to…
+
+143
+00:21:08.990 --> 00:21:25.840
+Godfried Williams: enable the management of the big data remotely, you know. So, these are some examples, that exist in terms of, different type of formats. You look at Hadoop as well. That is also a way of organizing the…
+
+144
+00:21:25.920 --> 00:21:42.040
+Godfried Williams: what they call the data, and allowing complex data to be managed remotely by users. You know, so the cloud provides a very effective backbone when it comes to data management,
+
+145
+00:21:42.040 --> 00:21:56.690
+Godfried Williams: By businesses or organizations. And that is something that we need to always take into account when we are formatting the data, or when we're looking at how data is being formatted, because we need to realize that
+
+146
+00:21:56.850 --> 00:21:57.960
+Godfried Williams: data…
+
+147
+00:21:58.100 --> 00:22:15.709
+Godfried Williams: formatting, or the way data is formatted, has a kind of relationship with the way the data is stored, or the way the data can be stored. And as an analyst, or a manager, or head of department, you must have that
+
+148
+00:22:15.910 --> 00:22:20.399
+Godfried Williams: Overriding understanding of the nature of your data.
+
+149
+00:22:20.560 --> 00:22:32.250
+Godfried Williams: how the data was collected, which formats the data were also collected, and how they can be stored. Because if you don't have the kind of resources that allows you to support
+
+150
+00:22:32.350 --> 00:22:51.540
+Godfried Williams: the data format, what it means is that you have issues with your data storage, and in terms of performance, in terms of effectiveness of data retrieval, for what kind of… what sort of purposes that you have within your business or within your organization.
+
+151
+00:22:53.480 --> 00:22:58.339
+Godfried Williams: There are certain concepts that, we have to…
+
+152
+00:22:58.470 --> 00:23:04.479
+Godfried Williams: understand, or try to understand, maybe research further. And these are programming
+
+153
+00:23:04.700 --> 00:23:13.259
+Godfried Williams: components and concepts. Because we need to look at… going back to the subject, let's go back a little further.
+
+154
+00:23:13.520 --> 00:23:26.190
+Godfried Williams: We need to look at data as an asset. So, data as an asset. Data is being acquired from different sources through investigative processes.
+
+155
+00:23:26.470 --> 00:23:32.400
+Godfried Williams: And we think about the credibility of how the data has been,
+
+156
+00:23:32.980 --> 00:23:45.159
+Godfried Williams: extracted from these credible sources. We've done our fact-finding and checking, and all the data pipeline processes has also been implemented.
+
+157
+00:23:45.160 --> 00:23:54.549
+Godfried Williams: and taking into account how long we can store the data. And then, of course, we come to the data storage strategy.
+
+158
+00:23:54.580 --> 00:24:02.899
+Godfried Williams: strategies that exist, and one of them is cloud storage. But what is also very important is looking at the architectural
+
+159
+00:24:03.300 --> 00:24:06.680
+Godfried Williams: Nature of data…
+
+160
+00:24:07.230 --> 00:24:16.689
+Godfried Williams: not just storage, but deployment, and how we manipulate the data within the business or within the organization. So.
+
+161
+00:24:17.230 --> 00:24:26.070
+Godfried Williams: It doesn't sort of make us really think about the data in terms of only the sources and only the story, but also think about the data
+
+162
+00:24:26.100 --> 00:24:42.010
+Godfried Williams: from a manipulation point of view. So how do you manipulate the data? How do we move the data from one source to another source? How do you move the data from one storage to another storage? And that's why this programming concept comes in.
+
+163
+00:24:42.120 --> 00:24:49.780
+Godfried Williams: It's not required of any of you to be able to implement them, but it's important to…
+
+164
+00:24:50.060 --> 00:25:05.029
+Godfried Williams: understand the way these concepts work. So, one of them is web scraping, the process of collecting and passing raw data from a website. So, what is a website? A website… a website is a client
+
+165
+00:25:05.130 --> 00:25:06.870
+Godfried Williams: Program, you know?
+
+166
+00:25:07.090 --> 00:25:15.139
+Godfried Williams: It's a client program, because you look at the… the architectural framework, or nature, of
+
+167
+00:25:15.560 --> 00:25:21.830
+Godfried Williams: a web-based system. You have a website, Which is a Klein program.
+
+168
+00:25:21.850 --> 00:25:41.499
+Godfried Williams: that interact with, or may interact with the database. So, that is what we call one tier, or in some part of the literature, can be described as two-tier. So, I'll go for one tier, because that's the interface is one tier. That is the client, the web page, and then the database. So, you do…
+
+169
+00:25:41.620 --> 00:25:48.510
+Godfried Williams: one direct connection between your client and your database, and that is also enabled
+
+170
+00:25:48.650 --> 00:25:53.349
+Godfried Williams: using some sort of middleware, and I'll come to that as part of the discussion.
+
+171
+00:25:53.540 --> 00:25:56.719
+Godfried Williams: You know, so the web scraping idea is that
+
+172
+00:25:56.840 --> 00:26:01.160
+Godfried Williams: We have data on the website, which is a client, but then…
+
+173
+00:26:01.280 --> 00:26:15.700
+Godfried Williams: In some instances, you may want to analyze the data on your website. You know, for example, within the medical environment or the health sector, you like to know how many people visited your website.
+
+174
+00:26:15.700 --> 00:26:22.290
+Godfried Williams: How many people are clicking on particular buttons on the website? What's sort of, where…
+
+175
+00:26:22.320 --> 00:26:40.670
+Godfried Williams: these persons or entities are located, and when I use entities, because I'm not referring to other persons. You can have a program that can be interacting with your website, so you need to bear that in mind as well. So, you want to have a sort of program that is able to
+
+176
+00:26:40.850 --> 00:26:44.900
+Godfried Williams: Script the content, on the surface.
+
+177
+00:26:45.010 --> 00:26:58.080
+Godfried Williams: of your website, and that could be a crawler or a scraper. And by doing that, it sort of scrapes the test data, it could be not just tests, it could be sound, it could be image.
+
+178
+00:26:58.160 --> 00:27:05.989
+Godfried Williams: and then co-port that data into a different story for further analysis. So that's the role of the web scraper.
+
+179
+00:27:06.800 --> 00:27:12.899
+Godfried Williams: Then you come to pause and deposit. Do you have any questions due to the web scraping?
+
+180
+00:27:13.660 --> 00:27:26.359
+Godfried Williams: Right, okay. So, so the parser and parser a parser analyzes a string of tests using, you know, lexical analyzer to determine whether
+
+181
+00:27:26.360 --> 00:27:36.769
+Godfried Williams: The test confirms grammatical or syntax structure of the source language. Now, this is a very interesting aspect, because this forms the foundation of natural language
+
+182
+00:27:36.770 --> 00:27:47.689
+Godfried Williams: processing. So they saw my talk about… I mean, everybody talking about AI, but they're talking about AI from a language perspective. You know, that is 67%
+
+183
+00:27:47.690 --> 00:27:57.479
+Godfried Williams: of artificial intelligence, in terms of the subject matter, right? So, when it comes to the sort of AI that has been rolled out from
+
+184
+00:27:57.760 --> 00:28:09.869
+Godfried Williams: DeepSeek, and all this, ChatGBT, and all that. These are artificial intelligence constructed modeling around natural language processing using
+
+185
+00:28:09.960 --> 00:28:18.729
+Godfried Williams: large language models. So that's not the subject matter of this evening, but it's just a way for us to appreciate the role of the parser.
+
+186
+00:28:19.570 --> 00:28:36.809
+Godfried Williams: and what Parzel does. You know, so the parser helps us to analyze the logical structure, which is the grammatical structure of whatever test that, you know, we have. You know what I mean, it could be in any kind of language as well. You know, so for us, you have
+
+187
+00:28:36.810 --> 00:28:56.049
+Godfried Williams: the right kind of framework, you're able to do that. The parser tree is what, you know, organizes how the parser works in terms of, you know, manipulating the string of data being transmitted in an organized format, within that particular framework.
+
+188
+00:28:56.210 --> 00:28:59.910
+Godfried Williams: Then, of course, I mentioned the web.
+
+189
+00:29:00.050 --> 00:29:08.710
+Godfried Williams: scraping, you know, where now we can relate that to the web page, or the client program, where this is the calling or request program. So…
+
+190
+00:29:08.710 --> 00:29:21.929
+Godfried Williams: What a web page does is that when you go, when you type in a web address, what you're doing is that you are making a request through that web page, or through whatever search engine.
+
+191
+00:29:21.930 --> 00:29:36.110
+Godfried Williams: But that is through the web page you're interacting through a client. So the web page will call, will make a request of where a document is stored. So you say maybe www.
+
+192
+00:29:36.160 --> 00:29:44.770
+Godfried Williams: University of Essex online, you know, .uk, just as an example. And…
+
+193
+00:29:45.020 --> 00:29:51.530
+Godfried Williams: That set of domain name will pass that reference, through the, …
+
+194
+00:29:52.000 --> 00:30:11.439
+Godfried Williams: Universal Resource Locator, and then connect to where the document is stored, on a server. And that server could be anywhere, right? So, the web page plays a role of a client, it's a request program, it's a calling program, and that's something that we need to appreciate its role.
+
+195
+00:30:11.440 --> 00:30:27.330
+Godfried Williams: Because by doing that, we understand how data is manipulated, or how the data is shared across different parts of any particular technology… technological framework. You know, so you only… you don't only look at the data from
+
+196
+00:30:27.330 --> 00:30:46.769
+Godfried Williams: a database management point of view, or how data is stored, you know, so it's stored, you know, on an Oracle database, it's stored using SQL, it's stored using XML, or other formats, you know, and you don't only look at the data from that perspective, but you also look at the data
+
+197
+00:30:46.910 --> 00:30:58.729
+Godfried Williams: Through the lens of manipulation of the data, the lens of how the data is shared across different parts of any infrastructure.
+
+198
+00:30:58.760 --> 00:31:08.389
+Godfried Williams: So, then we look at the API. What's the role of the API? This application, programming interface, this enables inter-process communication.
+
+199
+00:31:08.600 --> 00:31:28.069
+Godfried Williams: This comprises functions such as parsing, concurrent, or multiprocessing, data communication, interconnectivity. Why do we have all these facets when it comes to API? Because the application program interface is enabling different applications
+
+200
+00:31:28.410 --> 00:31:41.300
+Godfried Williams: i.e, software to talk to each other, to be able to interact with each other. And this could be sharing data, this could be sharing processes, because, you know, there's something…
+
+201
+00:31:41.320 --> 00:31:56.430
+Godfried Williams: in distributed processing at a low level called threaded. You know, when you want to sort of achieve high performance on systems, there's something called threading. You know, so you thread the process so that you can obtain high speed.
+
+202
+00:31:56.460 --> 00:32:10.750
+Godfried Williams: You know, and the APIs all allows us to be able to sort of do that very effectively. And of course, then you have your middleware, there's the framework and application resource that enables a variety of
+
+203
+00:32:10.950 --> 00:32:19.999
+Godfried Williams: programming tools to interconnect. So… within your, should I say, all the resources you have on an infrastructure.
+
+204
+00:32:20.440 --> 00:32:31.979
+Godfried Williams: Middle-wide is also very important, because, you know, different tools, programming tools, you'll be able to talk to one another, communicate with one another, share, programs.
+
+205
+00:32:31.980 --> 00:32:43.879
+Godfried Williams: And because for that to happen, you need a sort of middleware that will play the role of a bridge between, let's say, an operating system, such as Windows.
+
+206
+00:32:43.930 --> 00:32:57.870
+Godfried Williams: and Linux, or Unix, and allow them to be able to interact effectively. So, these are very important concepts that we need to understand. And as I mentioned, we don't have to
+
+207
+00:32:58.080 --> 00:33:05.489
+Godfried Williams: be able to implement them, but we need to be able to understand their relevance on an infrastructure, you know.
+
+208
+00:33:05.510 --> 00:33:13.010
+Godfried Williams: If you play the role of a data analyst, you know, a manager, head of department.
+
+209
+00:33:13.010 --> 00:33:28.110
+Godfried Williams: any senior person or business analyst, you want to be able to understand the architectural landscape of your organization or your business, because that, in a way, positions you, strongly
+
+210
+00:33:28.110 --> 00:33:36.020
+Godfried Williams: With respect to how things are done, how your organization interacts with different stakeholders.
+
+211
+00:33:36.020 --> 00:33:51.579
+Godfried Williams: And also, I appreciate the security, you know, requirements that usually should be in place when you have these sort of things, being deployed, or these sort of resources being deployed, MSC. So, of course, I mentioned data storage, which we've already discussed that.
+
+212
+00:33:51.580 --> 00:34:02.750
+Godfried Williams: in terms of storing data in different formats, there's examples, SQL, JSON, XML, and our examples of, of different,
+
+213
+00:34:02.990 --> 00:34:17.059
+Godfried Williams: data storage formats. Then we have the IDE, Integrated Development Environment. So these are all resources that actually powers your infrastructure. You know, so IDE, you have, you know.
+
+214
+00:34:17.670 --> 00:34:24.540
+Godfried Williams: platforms that enable you to, you know, construct or write codes, should I say, very…
+
+215
+00:34:24.820 --> 00:34:34.139
+Godfried Williams: you know, microscripts, I'll call them, that allows you to perform routine tasks within the organization without necessarily
+
+216
+00:34:34.210 --> 00:34:46.609
+Godfried Williams: contracting some external stakeholder to do that, you know, because sometimes you're dealing with very sensitive data, and because you're dealing with very sensitive data, you want to rely on your in-house
+
+217
+00:34:46.790 --> 00:34:54.420
+Godfried Williams: You know, personnel who, you know, might have gone through, all kind of checks, sometimes security clearance.
+
+218
+00:34:54.840 --> 00:35:04.000
+Godfried Williams: Depending on the business or the organization, to be able to, you know, write certain codes to handle certain type of data.
+
+219
+00:35:04.400 --> 00:35:08.530
+Godfried Williams: So, that is the IDE, in terms of the resources that
+
+220
+00:35:10.990 --> 00:35:15.530
+Godfried Williams: are made available. So, any questions after this point, please? Any questions?
+
+221
+00:35:15.810 --> 00:35:17.030
+Godfried Williams: Other comments?
+
+222
+00:35:18.220 --> 00:35:21.039
+Godfried Williams: Any questions, comments you share?
+
+223
+00:35:21.990 --> 00:35:24.770
+Sonya Jackson: No, I don't have any questions at the moment, thanks.
+
+224
+00:35:24.770 --> 00:35:33.919
+Godfried Williams: Alright, thank you, Sonny. So, I think, these are the main points for this evening. This is an example script that I want you to play with.
+
+225
+00:35:34.060 --> 00:35:38.660
+Godfried Williams: And if you have any challenges, just let me know. I can just run.
+
+226
+00:35:38.770 --> 00:35:43.910
+Godfried Williams: One of the things I do, I have a, should I say recorded…
+
+227
+00:35:44.240 --> 00:35:56.159
+Godfried Williams: you know, tutorial for this one. I'll just also share that, and then you can follow that if you're facing any kind of challenges, you know. So, this is the end of this evening's
+
+228
+00:35:56.440 --> 00:36:02.199
+Godfried Williams: seminar. This script is just an example of.
+
+229
+00:36:03.430 --> 00:36:06.570
+Godfried Williams: what do you call, interacting?
+
+230
+00:36:07.430 --> 00:36:08.680
+Godfried Williams: with different…
+
+231
+00:36:08.990 --> 00:36:25.610
+Godfried Williams: making different requests on your platform where I use a resource such as Beautiful Soup to be able to do that, you know, in terms of how you… you can sort of manipulate the data from a website, you know, like this website, we have
+
+232
+00:36:25.810 --> 00:36:39.060
+Godfried Williams: for this publication, you can manipulate the data from this website, you know. So here we have the data come from the Ebola virus disease, you know, from this website. You would extract that, and you would port it
+
+233
+00:36:39.150 --> 00:36:42.080
+Godfried Williams: To a different table storage as well.
+
+234
+00:36:42.120 --> 00:36:59.909
+Godfried Williams: You know, so I'll just urge you to, you know, play around with it. And also, we've also made available, the other data as well, that you can have access to through the platform, you know, that you can also manipulate the data and play with that data as well.
+
+235
+00:36:59.980 --> 00:37:03.459
+Godfried Williams: what I'd like to do, I'll just end the seminar this evening.
+
+236
+00:37:03.650 --> 00:37:06.950
+Godfried Williams: And, and hope to see you, the following…
+
+237
+00:37:07.580 --> 00:37:10.969
+Godfried Williams: 7 as well. So, thank you for coming,
+
+238
+00:37:11.070 --> 00:37:12.840
+Godfried Williams: And look forward to seeing you.
+
+239
+00:37:12.950 --> 00:37:13.780
+Godfried Williams: Right?
+
+240
+00:37:14.600 --> 00:37:16.690
+Sonya Jackson: Thanks very much. Thank you, good night.
+
+241
+00:37:16.690 --> 00:37:18.249
+Godfried Williams: Alright, good night. Thank you.
+
+242
+00:37:18.610 --> 00:37:19.340
+Godfried Williams: Bye.
+

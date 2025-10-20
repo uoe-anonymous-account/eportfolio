@@ -1,0 +1,15 @@
+Seminar 1 – Deciphering Big Data (Dr. Godfried Williams)
+
+Introductions & Module Outline: Overview of the course structure: introduction to data concepts, case study on data investigations, applications of data pipelines, database management systems, and deriving intelligence from data.
+
+Assignments & Deadlines:
+
+Team project (initial submission 8 Sept).
+
+Individual project with executive summary (due 10 Oct).
+
+Individual e-portfolio (due one week later).
+
+All assignments are connected phases of the same context.
+
+Big Data Rationale: Importance of understanding, investigating, and applying big data. The seminar sets the foundation for why "deciphering" is necessary—data is vast, complex, and requires structured methods.

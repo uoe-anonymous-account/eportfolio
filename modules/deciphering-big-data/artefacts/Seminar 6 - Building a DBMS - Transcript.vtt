@@ -1,0 +1,1022 @@
+WEBVTT
+
+1
+00:00:01.350 --> 00:00:10.719
+Godfried Williams: Right, good evening, and thank you once again for coming to Seminar 6, Building Data Base, or Building…
+
+2
+00:00:11.180 --> 00:00:16.970
+Godfried Williams: database is… On database management systems.
+
+3
+00:00:17.070 --> 00:00:22.320
+Godfried Williams: So, when it comes to building of databases.
+
+4
+00:00:22.740 --> 00:00:26.179
+Godfried Williams: It has to relate to some kind of…
+
+5
+00:00:26.360 --> 00:00:29.920
+Godfried Williams: application, some sort of practical environment, and we can…
+
+6
+00:00:30.260 --> 00:00:40.830
+Godfried Williams: create a sort of link between the previous discussions that we have… we had in the seminar, where we looked at the, dream home.
+
+7
+00:00:41.310 --> 00:00:48.739
+Godfried Williams: Property management, you know, case study, you know, where the company, you know.
+
+8
+00:00:48.840 --> 00:01:06.939
+Godfried Williams: try to create a system for letting the homes to different clients, you know? So that is an application environment, and that kind of application environment requires the deployment of, or the development of a database management system.
+
+9
+00:01:07.080 --> 00:01:15.910
+Godfried Williams: The rationale, of course, for any database management system is to store data
+
+10
+00:01:16.060 --> 00:01:30.529
+Godfried Williams: manipulate the data, have access to the data regardless of where users could be. So, the users, could be local, and the users could be remote or global.
+
+11
+00:01:30.530 --> 00:01:41.450
+Godfried Williams: And that is the whole idea, to make the database that is created accessible everywhere, Any person can be.
+
+12
+00:01:41.690 --> 00:01:43.860
+Godfried Williams: I.e, the end user.
+
+13
+00:01:44.080 --> 00:01:49.830
+Godfried Williams: Right, so the learning outcomes in our chain, again, has to do with
+
+14
+00:01:50.410 --> 00:02:10.039
+Godfried Williams: develop our understanding of using tools for development and implementation of database management systems and other applications that can enable us to run systems. So, in this evening, there's a little emphasis on
+
+15
+00:02:10.120 --> 00:02:18.980
+Godfried Williams: Quite a few types of, database management systems, specifically relational database management systems.
+
+16
+00:02:19.180 --> 00:02:26.989
+Godfried Williams: where we look into, SQL, MySQL, which is an open source, then you have,
+
+17
+00:02:27.300 --> 00:02:38.780
+Godfried Williams: you know, the SQL Server, Microsoft SQL Server, and then you have, SQLite, you know, as it may be described. So we looked at these
+
+18
+00:02:38.960 --> 00:02:58.629
+Godfried Williams: individual, databases, but I think the focus would be on SQLI, because it's been more used for light applications, mobile-based applications, and for systems that are ubiquitous, also for systems that
+
+19
+00:02:58.640 --> 00:03:04.169
+Godfried Williams: enable… Cross-platform interaction.
+
+20
+00:03:04.360 --> 00:03:15.849
+Godfried Williams: And that is why we want to familiarize ourselves with SQLite. Have you sort of installed that on your system? Do you have that on your system? Or not? Or not yet?
+
+21
+00:03:15.850 --> 00:03:23.460
+Sonya Jackson: Yeah, I have, the SQL… it's my SQL that I have, actually, but I have used SQLite as well, yeah.
+
+22
+00:03:23.790 --> 00:03:25.230
+Godfried Williams: Okay, you do have the one, too.
+
+23
+00:03:25.510 --> 00:03:26.370
+Sonya Jackson: Yeah.
+
+24
+00:03:26.370 --> 00:03:35.830
+Godfried Williams: Right, okay, so that is… that sounds good to me, yeah. So, I think the next phase is just, for me, when it comes to any…
+
+25
+00:03:35.940 --> 00:03:39.130
+Godfried Williams: kind of, implementation.
+
+26
+00:03:39.210 --> 00:03:42.660
+Godfried Williams: You have to be hands-on, you need to try your hands.
+
+27
+00:03:42.720 --> 00:04:02.399
+Godfried Williams: by just creating simple tables and populating the tables. So those are the basic steps in any database development. So you create the tables, you populate the tables, and then you try to manipulate the tables in relation to what the case is, or in relation to what the application
+
+28
+00:04:02.400 --> 00:04:05.530
+Godfried Williams: environment. So there's that sort of strong connection
+
+29
+00:04:05.650 --> 00:04:15.199
+Godfried Williams: between the case environment and then the application which has been developed. You know, you cannot just decide to
+
+30
+00:04:15.200 --> 00:04:26.279
+Godfried Williams: roll out a database mining system without having an application environment in mind. Both do work hand-in-hand, so it's really critical that we think along
+
+31
+00:04:26.310 --> 00:04:38.479
+Godfried Williams: those lines. So here we have database development life cycle. I think we've touched on this before. This, try to reiterate the discussions here.
+
+32
+00:04:38.530 --> 00:04:48.420
+Godfried Williams: I must say that as much as this is a cycle, I sort of treat this from a more of a theoretical context, rather than
+
+33
+00:04:48.490 --> 00:04:53.999
+Godfried Williams: practical and application context, because as I mentioned previously, in…
+
+34
+00:04:54.660 --> 00:05:06.420
+Godfried Williams: system development or application development. There is, the approach that adopts agile methodologies, stream development.
+
+35
+00:05:06.420 --> 00:05:17.819
+Godfried Williams: And makes the process more, dynamic, you know, rather than in some kind of stepwise approach. But this helps us to gain
+
+36
+00:05:17.820 --> 00:05:35.880
+Godfried Williams: some insight of what is required to build any kind of database system. So, there should be some sort of planning involved when it comes to database development, planning to understand the requirements, and here I can relate that to the dream home.
+
+37
+00:05:36.050 --> 00:05:51.789
+Godfried Williams: management system, home management system. We need to understand all the stakeholders that have specific needs in that environment. Now, this can be related to, you know, the medical
+
+38
+00:05:52.140 --> 00:05:54.689
+Godfried Williams: Environment, health, systemic, and…
+
+39
+00:05:54.810 --> 00:06:04.600
+Godfried Williams: be related to automobile, or aviation, or, you know, retail. So, where data is needed? Where data is stored?
+
+40
+00:06:04.710 --> 00:06:21.080
+Godfried Williams: we have to do some planning. We cannot just zoom in and begin to write a program, or write a, you know, develop a software for the sake of just having a software that can be used, because by using that kind of approach.
+
+41
+00:06:21.310 --> 00:06:29.730
+Godfried Williams: We'll go about the development process in a manner which is not in sync with our understanding of the entire
+
+42
+00:06:29.730 --> 00:06:41.930
+Godfried Williams: system environment. So, in order for us to understand and entice the environment, we need to, carry out some planning, you know, understanding who are the stakeholders, what are your needs.
+
+43
+00:06:41.950 --> 00:06:50.330
+Godfried Williams: What's sort of… data requirements, these individual stakeholders need, and, and also
+
+44
+00:06:50.330 --> 00:07:05.870
+Godfried Williams: what sort of processes or functions that we need to address. You know, so sometimes you need to go the path of modeling, doing some sort of database modeling, and through the database modeling, you, employ tools such as
+
+45
+00:07:05.870 --> 00:07:24.420
+Godfried Williams: entity relation diagrams, or you may employ tools such as, use cases to help you model, the data requirements and the process requirements. So, that all sort of involves the planning. But also, there is an aspect of the planning that,
+
+46
+00:07:24.460 --> 00:07:39.020
+Godfried Williams: requires our understanding of the non-functional requirements of the system. I did mention previously about functional and non-functional requirements of any system development process. The functional requirements has to do with
+
+47
+00:07:39.210 --> 00:07:53.540
+Godfried Williams: you know, the actual commercialized… the commercial aspect of the application. So, are we creating something to do with, you know, the Latin dream home?
+
+48
+00:07:53.650 --> 00:08:02.000
+Godfried Williams: management system, are you creating something to do with health, a health database, or something to do with automobile, right? So…
+
+49
+00:08:02.640 --> 00:08:15.940
+Godfried Williams: We need to look at it from that point of view, that these constituted functional requirements and, these functional requirements dictate or relate to the business logic of that specific
+
+50
+00:08:16.030 --> 00:08:34.260
+Godfried Williams: company or organization. So, when you looked into the functional requirements, then we need to think about the non-functional requirements. And this all comes as part of the planning process, because you want to have some clear understanding of what will be required to deploy
+
+51
+00:08:34.460 --> 00:08:42.970
+Godfried Williams: your database. So, not only thinking about creating the software, but also Having the capacity
+
+52
+00:08:43.070 --> 00:08:56.919
+Godfried Williams: all the resources to run the software. There's no point creating new software, and at the end, you find out that your computational resources are highly diminished. You know, you have very low CP… low processing.
+
+53
+00:08:56.920 --> 00:09:07.380
+Godfried Williams: CPUs, and then you need to handle some sort of data, which the quantification of the data is in petabytes, right? And you have
+
+54
+00:09:07.380 --> 00:09:18.149
+Godfried Williams: created some database that can only handle up to gigabytes, you know? So, these are non-functional requirements that we look at. So, in terms of volume, the size.
+
+55
+00:09:18.160 --> 00:09:21.100
+Godfried Williams: The capacity, performance.
+
+56
+00:09:21.110 --> 00:09:31.070
+Godfried Williams: You want to look at robustness. Robustness in terms of how your system can deal with high pressure demand.
+
+57
+00:09:31.080 --> 00:09:45.250
+Godfried Williams: in terms of responding to, you know, client requests and end-user requests, because you may be deploying a system that is not only used locally in your environment, but is used globally, you know, so you may have
+
+58
+00:09:45.270 --> 00:10:04.189
+Godfried Williams: distributed system requirements that you may need to look at. There could be also security requirements that may be involved at that stage as well. So, the planning process allows you to have some insight and some understanding of not just the commercial demands.
+
+59
+00:10:04.190 --> 00:10:16.199
+Godfried Williams: That links to the business objective, but also the non-factual requirements that constitute the system needs that have to be put in place for your database to eventually run.
+
+60
+00:10:16.590 --> 00:10:30.839
+Godfried Williams: Then you… you come to your system definition. You know, that's the basic, what is… what… what is the objective of the system? You just want to create something that will satisfy, clients that…
+
+61
+00:10:30.940 --> 00:10:33.380
+Godfried Williams: 1 to 777s from…
+
+62
+00:10:33.440 --> 00:10:48.669
+Godfried Williams: you know, delight in their homes, so they can know information about Green Bay. Now, in this scenario, I'm linking that to the Dream Home case study, but you can relate that, or you can make it more… make it more personal, you know, in terms of
+
+63
+00:10:48.670 --> 00:10:54.450
+Godfried Williams: whatever environment that you find yourself. So the system definition helps you to come up with some sort of…
+
+64
+00:10:54.500 --> 00:11:04.390
+Godfried Williams: scope, terms of reference in a very crisp manner, in a manner which is more concise, which is more precise. Then look at the
+
+65
+00:11:04.390 --> 00:11:15.359
+Godfried Williams: the requirements collection and analysis. So, here I'll find out. If you wanted to carry out any requirements collection in your work environment.
+
+66
+00:11:15.410 --> 00:11:32.900
+Godfried Williams: How would you approach… what are some of the tools that you use? Do you do that remotely? Do you talk to potential stakeholders? Or do you, you know, design some questionnaires, and do you share… or share the questionnaires around?
+
+67
+00:11:32.970 --> 00:11:47.519
+Godfried Williams: to specific persons or organizations for those entities or stakeholders to respond? How do you treat that, if we're to carry out some requirements collection for any system that has been designed?
+
+68
+00:11:49.320 --> 00:11:54.770
+Sonya Jackson: I mean, I don't actually know how it's done. My thinking would be that you would want to speak.
+
+69
+00:11:54.810 --> 00:12:03.999
+Sonya Jackson: I mean, thinking about my business, kind of, in the clinical trial situation, you would want to understand what people want in terms of, like, the end users, but you also
+
+70
+00:12:04.000 --> 00:12:15.109
+Sonya Jackson: have to work with what's actually required, for example, from regulatory authorities, so, like, legal requirements and restrictions and things like this, so it's a combination to me with
+
+71
+00:12:15.480 --> 00:12:20.369
+Sonya Jackson: What you have to have, and what you'd like to have, if that kind of makes sense.
+
+72
+00:12:20.370 --> 00:12:31.110
+Godfried Williams: Yeah, I mean, what he's saying is very right. You need to look at a requirement from a broader perspective, and again, that's why I mentioned that you just don't look at requirements from
+
+73
+00:12:31.300 --> 00:12:49.099
+Godfried Williams: the functional aspect in terms of specific goals that have to be met, or specific tasks that… or routines that the software has to sort of perform. But in doing so, you need to, consider
+
+74
+00:12:49.130 --> 00:13:08.349
+Godfried Williams: other stakeholders their requirements in terms of the regulatory aspect, and then sometimes there are security requirements that you may need to look at, and so you need to look at that in a more broader context. And that will sort of direct your design approach. One element which
+
+75
+00:13:09.090 --> 00:13:15.839
+Godfried Williams: used to be missing, but these days, I think it's been well, sort of, taken into consideration, captured, had to deal with
+
+76
+00:13:15.910 --> 00:13:31.610
+Godfried Williams: you know, accessibility, you know, in terms of your usability… your usability requirements and all the accessibility, you know. So, how accessible is your system for persons who need… who have special needs, you know, or who…
+
+77
+00:13:31.610 --> 00:13:43.779
+Godfried Williams: will need some sort of additional ability in order for you to use the system. You know, historically, systems have been designed, later on, and then
+
+78
+00:13:43.920 --> 00:13:59.949
+Godfried Williams: consider that as an afterthought. You know, they sort of designers to stand and think about, oh, no, I think we need all these features to satisfy that one. But these days, because that major issue has been addressed so rigorously.
+
+79
+00:13:59.950 --> 00:14:04.479
+Godfried Williams: It is fundamental and primary that, right from the onset.
+
+80
+00:14:04.480 --> 00:14:21.300
+Godfried Williams: You have to take all these into account, you know, as far as your requirements collection, and analysis, because you may have persons that are partially sighted, you know, and then whether you're going to use some voice.
+
+81
+00:14:21.300 --> 00:14:38.270
+Godfried Williams: recognition systems and other things to augment, you know, the capabilities of the system, something you take into account. Then, of course, comes the database design. So, you can feel that I'm going through this in a very stepwise way, in a very…
+
+82
+00:14:38.270 --> 00:14:49.790
+Godfried Williams: methodical, structured way, but I'll say that in reality, you can approach the development process, you know, instead of using
+
+83
+00:14:49.860 --> 00:14:55.610
+Godfried Williams: A multi-layered approach. In other words, you have
+
+84
+00:14:55.800 --> 00:15:01.899
+Godfried Williams: Different teams looking at design, different teams looking at requirements, and that…
+
+85
+00:15:02.900 --> 00:15:21.829
+Godfried Williams: then following that, you can have some discussions to evaluate what the designers might be thinking about, and then those that will look at the requirements will use the requirements to evaluate the design, and allow some flexibility to happen. So, but as I mentioned, this is just,
+
+86
+00:15:21.830 --> 00:15:27.749
+Godfried Williams: It provides us with a sort of theoretical understanding of what
+
+87
+00:15:27.860 --> 00:15:37.830
+Godfried Williams: we need to do to be able to deploy a comprehensive system. Then it comes to application design. So, you're not only looking at a database with application, because
+
+88
+00:15:37.960 --> 00:15:40.610
+Godfried Williams: Databases, or any…
+
+89
+00:15:40.690 --> 00:15:55.279
+Godfried Williams: system that you're deploying that's not… it's not deployed in a vacuum, you know, it has to deploy on a platform, and it has different features. So, the database management system holds the data.
+
+90
+00:15:55.280 --> 00:16:09.780
+Godfried Williams: You are able to access the data from DBMS, and then manipulate the data from the DBMS as well. But in doing so, you have applications that allows you to do that effectively.
+
+91
+00:16:09.880 --> 00:16:17.529
+Godfried Williams: Of course, you know, when you use, let's say, SQL, any form of SQL to
+
+92
+00:16:18.150 --> 00:16:21.560
+Godfried Williams: Create any database management system
+
+93
+00:16:22.840 --> 00:16:35.219
+Godfried Williams: by virtue of the nature of the DVMS, it comes with queries, you know, what we described as queries. And the queries allows you to perform certain set of instructions.
+
+94
+00:16:35.290 --> 00:16:51.699
+Godfried Williams: on the database management system, but in most cases, that's not enough. That is not adequate. And because that is not enough, you have specific applications that are written in different languages. So, for the sake of
+
+95
+00:16:51.830 --> 00:17:09.389
+Godfried Williams: our understanding, and for the, the way the subject is sort of evolving, we say that our application, let's assume it's written in Python, or we write our application in Python. So you have application design, what the Python program will do.
+
+96
+00:17:09.510 --> 00:17:25.060
+Godfried Williams: to enhance the capabilities of the database management system, and then, you know, be able to improve its performance as well. Then, of course, you have DDMS selection. This is where it comes to what sort of
+
+97
+00:17:25.960 --> 00:17:45.430
+Godfried Williams: system are you going to use? Are you going to use relational? In this particular seminar, we're looking at relational databases for all kinds of reasons, because it's very robust, it's been used for many applications, and it sort of helps to handle structured data. But of course.
+
+98
+00:17:45.600 --> 00:18:02.009
+Godfried Williams: There are demands of data requirements that are not necessarily structured, that are either unstructured or mixed, and you may have your database behind your system needing to cope or support that kind of data.
+
+99
+00:18:02.290 --> 00:18:15.459
+Godfried Williams: In some instances, relational databases, such as SQL, will be inadequate as well, so you may need to complement that with other data storage facilities, and that could be where you bring in XMLs.
+
+100
+00:18:15.460 --> 00:18:23.289
+Godfried Williams: you ring in JSON, and then sometimes flat files, including, like, comma, separate files, CSVs.
+
+101
+00:18:23.290 --> 00:18:31.970
+Godfried Williams: to help you, complement your relational database management system. So… a game…
+
+102
+00:18:32.240 --> 00:18:48.319
+Godfried Williams: These are all dictated by the requirements of the system. They're dictated by the requirements of the system. That is, what does the business need? What does the organization need? What does stakeholders need? Or what does clients…
+
+103
+00:18:48.320 --> 00:19:06.880
+Godfried Williams: need in order for us to come up with that kind of system. So, you realize that whatever is being built is highly dependent on the needs of the stakeholders and the other interested parties within the system environment. Then it comes to prototyping.
+
+104
+00:19:07.080 --> 00:19:20.500
+Godfried Williams: testing the idea, you know, you can choose to do it in a direct way, which is very unusual. Most cases would be a pilot, part of the implementation, after you've come up with your prototype.
+
+105
+00:19:20.500 --> 00:19:32.769
+Godfried Williams: You look at your implementation from a pilot point of view, or sometimes you do the parall run. So you do a parallel run with the existing system, and you see how your new system
+
+106
+00:19:32.780 --> 00:19:46.590
+Godfried Williams: will function, then there are requirements of maintenance as well. There are different types of maintenance that takes place when it comes to software tools or packages.
+
+107
+00:19:46.600 --> 00:20:02.280
+Godfried Williams: such as your deployment or DVMS. You can have corrective maintenance that corrects, you know, what has already been created. You may have adaptive maintenance so that the system will adapt to
+
+108
+00:20:02.280 --> 00:20:12.029
+Godfried Williams: new, sort of, new sort of requirements as well. So, there are kind of maintenance… pressure maintenance strategies that you can, put
+
+109
+00:20:12.090 --> 00:20:16.459
+Godfried Williams: in place. Any questions up to that point? Any questions?
+
+110
+00:20:16.590 --> 00:20:17.810
+Godfried Williams: That's the point.
+
+111
+00:20:17.810 --> 00:20:19.429
+Sonya Jackson: No, no questions since.
+
+112
+00:20:19.430 --> 00:20:20.990
+Godfried Williams: Right, okay, so…
+
+113
+00:20:22.370 --> 00:20:36.120
+Godfried Williams: here, we sort of look at open source MySQL, but of course, we can look at, as I mentioned earlier on, we look at the SQL Server, we can look at SQLite.
+
+114
+00:20:36.120 --> 00:20:49.340
+Godfried Williams: For mobile-type applications, because very container-based and cross-platform-based, and because of that, it allows all kinds of flexibility. But…
+
+115
+00:20:49.430 --> 00:20:55.230
+Godfried Williams: The… The nature of database binary system
+
+116
+00:20:55.430 --> 00:21:05.239
+Godfried Williams: It's not just having a system which is localized, you know? Because we can… we can focus our understanding on the local…
+
+117
+00:21:05.360 --> 00:21:18.159
+Godfried Williams: deployment of a database, that is, our local organization, or our local business. But anytime you design or deploy any database, you need to think
+
+118
+00:21:18.300 --> 00:21:30.169
+Godfried Williams: you need to think through, that your database at some point will be shared, and will be shared by different stakeholders at different locations, and…
+
+119
+00:21:30.380 --> 00:21:45.159
+Godfried Williams: It'll also be shared not just by persons located at different places, but the entire database could be split into parts. And when I say split into parts, I'm not referring to
+
+120
+00:21:45.160 --> 00:21:59.869
+Godfried Williams: a physical split, you know, because you cannot actually split data in that sense, because data is a logical construct. And because it's a logical construct, the idea of splitting it is purely logical. So…
+
+121
+00:21:59.870 --> 00:22:12.029
+Godfried Williams: What it means is that when you enforce in any database, there are different access rights. There are different, you know.
+
+122
+00:22:12.550 --> 00:22:20.240
+Godfried Williams: access control… controls that are implemented depending on the users. So.
+
+123
+00:22:20.570 --> 00:22:38.360
+Godfried Williams: Let's say the CEO of an organization may have access rights to every part of a database management system. Someone at the operational level may not. They will only have that part, which is related to their job, and that is part of…
+
+124
+00:22:38.620 --> 00:22:57.489
+Godfried Williams: deploying a database in a distributed form. So, it may surprise you that, for instance, the banking system, when we go to an ATM or a cash point, yes, we have access to our account, but there's the same database that has been,
+
+125
+00:22:57.860 --> 00:23:08.740
+Godfried Williams: deployed as part of the banking system. So, in other words, there's part of the system that is only accessible by the
+
+126
+00:23:09.420 --> 00:23:10.560
+Godfried Williams: the customer.
+
+127
+00:23:11.100 --> 00:23:25.250
+Godfried Williams: Right? And then there are other parts that are also accessible by auditors, accountants, managers, and security persons. You know, so depending on the access rights.
+
+128
+00:23:25.780 --> 00:23:32.360
+Godfried Williams: specific access controls are implemented, and it's for this reason for…
+
+129
+00:23:32.930 --> 00:23:42.640
+Godfried Williams: having different access rights, and different access controls being implemented. That is why you have, or we have, a distributed
+
+130
+00:23:43.120 --> 00:23:46.159
+Godfried Williams: database management system.
+
+131
+00:23:46.310 --> 00:23:47.869
+Godfried Williams: So, you can have…
+
+132
+00:23:47.970 --> 00:24:00.750
+Godfried Williams: cause here more… multiple client-server interaction. And multiple client-server interaction simply means that you have several clients, but you're a different type of clients. So you may have,
+
+133
+00:24:01.410 --> 00:24:20.439
+Godfried Williams: How best to business clients. You may have ordinary retail clients like, you know, myself and others, and they can have some business tycoons that they have a specific, should I say, portfolio with a bank, you know, and they may need to
+
+134
+00:24:20.460 --> 00:24:23.770
+Godfried Williams: have special access rights. So…
+
+135
+00:24:23.850 --> 00:24:33.740
+Godfried Williams: this is part of what we need to have in mind in terms of designing any database management system. So, what is distributed database?
+
+136
+00:24:33.890 --> 00:24:39.570
+Godfried Williams: So, I've described the distributor database in a logical sense to say that because
+
+137
+00:24:39.690 --> 00:24:49.199
+Godfried Williams: we have different requirements as users of a database. It cannot be that all the users
+
+138
+00:24:49.740 --> 00:24:51.849
+Godfried Williams: Or, all the clients.
+
+139
+00:24:52.540 --> 00:25:04.880
+Godfried Williams: how you describe users or clients in an specific environment should have access to the entire database. That would be entirely ridiculous, you know, because what you're saying is that anyone
+
+140
+00:25:04.900 --> 00:25:23.440
+Godfried Williams: regardless of the status in the organization, regardless of the opposition, or the functional needs that are related to the organization or the business, they can have access to every part of the business. That will defy any business policy, or any sort of,
+
+141
+00:25:23.440 --> 00:25:39.310
+Godfried Williams: the entire structure of any business or organization. And because there are different access rights, you enforce different access controls, but that is possible because your database is distributed, and is distributed.
+
+142
+00:25:39.310 --> 00:25:46.349
+Godfried Williams: There are interesting key features of a distributed database. One of them is called transparency.
+
+143
+00:25:46.560 --> 00:26:03.870
+Godfried Williams: Now, the principle of transparency. Transparency simply means, you know, you sort of access the database, and it looks as if that you're the only one that is using the database, right? So that's the principle of transparency. Or you may think that
+
+144
+00:26:03.870 --> 00:26:10.519
+Godfried Williams: The database is modeled or designed just to meet your needs.
+
+145
+00:26:10.900 --> 00:26:26.829
+Godfried Williams: So, that's the principle of transparency. In other words, the database may have other features, several features, meeting the needs of different clients, different, you know, users, but that is transparent to you.
+
+146
+00:26:26.830 --> 00:26:36.849
+Godfried Williams: privy to what you need, and your needs, and your requirements. So that's the principle of transparency. Then you also have the principle of concurrency.
+
+147
+00:26:36.910 --> 00:26:55.540
+Godfried Williams: These are principles or concepts we need to understand in order for us to design a comprehensive database management system. And as I mentioned, sometimes we just launch ourselves into writing a program, you know, and that's why you have those principles that when you write a program, the program could be working
+
+148
+00:26:55.540 --> 00:26:59.789
+Godfried Williams: but it might not be meeting the needs of the business. So you can have a very smart.
+
+149
+00:26:59.790 --> 00:27:02.739
+Godfried Williams: program, it generates this report.
+
+150
+00:27:02.740 --> 00:27:13.769
+Godfried Williams: It's compiled, error-free program, but it does not meet the needs of the business or the organization, because, we haven't actually
+
+151
+00:27:13.780 --> 00:27:26.139
+Godfried Williams: address, you know, model the database or the application to suit the specific needs, right? So, transparency is one I've mentioned. Concurrency
+
+152
+00:27:26.470 --> 00:27:39.350
+Godfried Williams: different You can access… have multiple access to the database. You can have… 100,000 people accessing the database.
+
+153
+00:27:39.480 --> 00:27:44.409
+Godfried Williams: All over the world, such as the banking system, or you can look at
+
+154
+00:27:44.550 --> 00:28:03.590
+Godfried Williams: maybe the aviation systems is a good example. You know, you can have, you know, you go, you buy your ticket online, and it's a database, but you have a certain front end, and then I bet you the staff of the airline might use the same
+
+155
+00:28:03.590 --> 00:28:08.429
+Godfried Williams: interface, but they have to log in, right? So, if you come to
+
+156
+00:28:08.430 --> 00:28:25.079
+Godfried Williams: let's say even the university website, you know, they are… we have access to, you know, a certain part of the system, our staff, and then the learners also have specific access, too. The learners can have the same
+
+157
+00:28:25.080 --> 00:28:37.609
+Godfried Williams: access as the teachers, you know, that's not the case. You know, there are areas where there is what? Commonality. You know, we have access to the same
+
+158
+00:28:37.770 --> 00:28:38.760
+Godfried Williams: data.
+
+159
+00:28:38.950 --> 00:28:47.249
+Godfried Williams: or database, and that is distributed, and that allows you distributed, should I say, concurrency to take place, because you haven't…
+
+160
+00:28:47.310 --> 00:28:59.649
+Godfried Williams: multiple access, you know, so this can be accessed everywhere. We have learners based in the United States, some in South America, some in Europe, different parts of the world.
+
+161
+00:28:59.650 --> 00:29:08.360
+Godfried Williams: accessing the same database. So that's the principle of concurrency. Now, if your database design
+
+162
+00:29:08.480 --> 00:29:21.289
+Godfried Williams: It's not designed in a very… in a robust manner that is taking into account the pressure that might be placed on a database for it to respond to the client needs.
+
+163
+00:29:21.290 --> 00:29:34.190
+Godfried Williams: then you're gonna have the database that can face all kinds of problems. You know, you can have congestion, it could crush, your system can crash, because there's a lot of high traffic, you're dealing with big data.
+
+164
+00:29:34.230 --> 00:29:46.520
+Godfried Williams: exponential growth of data comes in here. That is why we cannot afford to have a database that is incapable of handling big data. And here.
+
+165
+00:29:46.590 --> 00:29:58.909
+Godfried Williams: We're referring to big data as data in, what, petabytes, petrobes, and not megabytes, and all the megabytes is very small. So, you're looking at
+
+166
+00:29:59.000 --> 00:30:07.569
+Godfried Williams: you know, gigabytes even small, so you're looking at petabytes, petabytes, and rates. That is why you turn on big data. And you must have…
+
+167
+00:30:08.040 --> 00:30:20.759
+Godfried Williams: Database design that accommodates very, very large data, which we refer here as big data, because sometimes the big data has sort of grown exponentially without
+
+168
+00:30:20.770 --> 00:30:29.459
+Godfried Williams: we've been able to control it at all. So, that leads to large data transfer, traffic.
+
+169
+00:30:29.490 --> 00:30:33.029
+Godfried Williams: And then also you look at repositories, you know, how you…
+
+170
+00:30:33.100 --> 00:30:39.169
+Godfried Williams: you… well, how many databases you have on your system. You may have databases designed
+
+171
+00:30:39.320 --> 00:30:48.939
+Godfried Williams: in structured for handling structured data, and then you may have database designed for handling non-structured data as well. So.
+
+172
+00:30:49.290 --> 00:30:56.359
+Godfried Williams: Some features here for SQLite, I mentioned them earlier on, designing embedded applications.
+
+173
+00:30:56.630 --> 00:31:02.400
+Godfried Williams: websites that require faster response time. So, embedded applications.
+
+174
+00:31:02.760 --> 00:31:15.600
+Godfried Williams: are applications where, you write them to embed them in devices, you know, so certain devices will come with your own internal applications, and
+
+175
+00:31:16.130 --> 00:31:22.689
+Godfried Williams: And that needs very small, compressed, Contained type of database.
+
+176
+00:31:22.830 --> 00:31:24.710
+Godfried Williams: So, escrow lies.
+
+177
+00:31:25.090 --> 00:31:38.500
+Godfried Williams: helps us to achieve that. Some of the mobile devices that we buy will have these compressed, contained databases that handle, should I say, auxiliary programs, or…
+
+178
+00:31:38.700 --> 00:31:40.240
+Godfried Williams: Ow…
+
+179
+00:31:40.530 --> 00:31:54.559
+Godfried Williams: selling programs that brings, should I say, excitement or enjoyment to the client, you know, because there are other features that comes to the phone. It could be your laptop, it could be your tablet.
+
+180
+00:31:54.660 --> 00:31:59.740
+Godfried Williams: in our devices. Sometimes you may have them in… in other…
+
+181
+00:32:00.020 --> 00:32:07.280
+Godfried Williams: ubiquitous type of devices that interact with other systems. So.
+
+182
+00:32:07.820 --> 00:32:27.759
+Godfried Williams: SQLite allows us to do that, because of the nature of the database. The database structure is designed using a C language, or C++, but the C language is fundamental to it as well, and that allows you to have very fast
+
+183
+00:32:27.760 --> 00:32:39.569
+Godfried Williams: files, you know, files that are efficient, and files that are not, necessarily, should I say, huge in size, you know, very well compressed.
+
+184
+00:32:39.660 --> 00:32:46.640
+Godfried Williams: You now have mixed data files, temporal storage and memory management, training, deployment, large.
+
+185
+00:32:46.880 --> 00:32:56.500
+Godfried Williams: systems and handling different file, formats. So, temporal storage and memory management makes it very effective, because…
+
+186
+00:32:57.460 --> 00:33:09.300
+Godfried Williams: You know, data… because data grows exponentially, and data can be large, you must… you must have a very effective way of managing your system resources. So…
+
+187
+00:33:09.420 --> 00:33:12.759
+Godfried Williams: Fundamentally, there are three assistant resources. One of them
+
+188
+00:33:12.860 --> 00:33:29.660
+Godfried Williams: has to do with your files. The second one has to do with your processes. The third one has to do with your memory. So these three areas, I call them the diamond model. These three areas are the key resources that your system should
+
+189
+00:33:29.780 --> 00:33:32.520
+Godfried Williams: Manage, that your system should handle.
+
+190
+00:33:32.800 --> 00:33:33.710
+Godfried Williams: Now…
+
+191
+00:33:33.930 --> 00:33:46.450
+Godfried Williams: if you employ some effective algorithm for managing your memory, there are memory management strategies such as load sharing, you know, load sharing. So, where you sort of,
+
+192
+00:33:46.860 --> 00:34:04.939
+Godfried Williams: sort of share the load. Again, use the word split the load into parts, and then pass it on during part of the system. So, load sharing can make your system very efficient. And there are other techniques, such as garbage collection, that comes in to also free the memory.
+
+193
+00:34:04.940 --> 00:34:16.900
+Godfried Williams: There are techniques such as buffer management of your temporal storage area, and that allows you to just handle data where it's supposed to handle it, and later on, just free that memory.
+
+194
+00:34:16.900 --> 00:34:30.420
+Godfried Williams: for other purposes. So there are kind of strategies that come into place when it comes to temporal storage memory management. And SQLite, is quite, effective or efficient when it comes to handling
+
+195
+00:34:30.429 --> 00:34:43.819
+Godfried Williams: temporal memory management, and also training, deploying large systems as well. There are some additional features here. Any questions before I proceed? Any questions? Right, okay.
+
+196
+00:34:43.830 --> 00:34:53.549
+Godfried Williams: Right, so there are additional features here for SQLite. As I mentioned, retaining C language, library for small, fast, self-contained applications.
+
+197
+00:34:53.679 --> 00:35:08.059
+Godfried Williams: the C language is… I like the sea language, it's a very beautiful language, you know, because it's historically, or in the past, been used for communications, you know, where you have software written to support
+
+198
+00:35:08.350 --> 00:35:28.130
+Godfried Williams: you know, communications across, whether it is wide networks or sometimes wireless, but it's certainly more to do wired communications. So the C language can be very efficient because of the way it's designed, you know, because you write a program in C,
+
+199
+00:35:28.230 --> 00:35:38.049
+Godfried Williams: you have… what you have is an executable program after it's been compiled, you know, so instead of… you want to compare that to, like, Java.
+
+200
+00:35:38.050 --> 00:35:57.079
+Godfried Williams: and Python and the rest, especially Python, they're called interpreter-based languages, you know. Yeah, they can all do a great job, but, you know, they're not compiled programs where you run the executable file for the ESE file, the executable file.
+
+201
+00:35:57.080 --> 00:36:13.340
+Godfried Williams: When you run a seed language which is already compiled, you have faster results, you have efficient results, and also, it can be very robust. You know, it's very difficult to compromise any program that is written
+
+202
+00:36:13.350 --> 00:36:14.560
+Godfried Williams: in C.
+
+203
+00:36:14.610 --> 00:36:23.470
+Godfried Williams: You know, so, there's a… there's a common knowledge that operating systems, that run
+
+204
+00:36:23.500 --> 00:36:43.280
+Godfried Williams: on the Apple Mac machines are all written in C, you know, because of the Linux operating system, you know. So, these are some of the things that you have to know. It's suitable for mobile-based applications, as I said, it's cross-platform based.
+
+205
+00:36:43.340 --> 00:36:51.680
+Godfried Williams: That allows ubiquitous computing. It allows, interactivity, interconnectivity.
+
+206
+00:36:51.830 --> 00:36:56.499
+Godfried Williams: And… and it's very suitable for complex type of…
+
+207
+00:36:56.700 --> 00:36:59.459
+Godfried Williams: Applications, you know, where you need to
+
+208
+00:36:59.530 --> 00:37:09.519
+Godfried Williams: use limited resources. So, this, in a nutshell, is what we have to know from a concept point of view.
+
+209
+00:37:09.530 --> 00:37:18.179
+Godfried Williams: And, I'll sort of encourage you, if you've already installed this on your, on your computer, to…
+
+210
+00:37:18.180 --> 00:37:32.019
+Godfried Williams: execute a few applications. Sometimes you don't need to write the application yourself. You can use an existing application, and run the application, and get a feel of how the application works. You know, by doing that.
+
+211
+00:37:32.080 --> 00:37:44.030
+Godfried Williams: With the underlying explanation, you'll be in a position to appreciate and understand the benefits that comes with deploying a database management system using
+
+212
+00:37:45.110 --> 00:37:59.649
+Godfried Williams: SQLite, you know. So, that's the… I think that's the end of the… of the seminar. That's where I'm going to end. There are some essential components here, that I'd like to…
+
+213
+00:38:00.020 --> 00:38:10.070
+Godfried Williams: walkthrough, and that is just, based on the essential programming components or concepts. I think we've discussed this in the past, haven't we?
+
+214
+00:38:12.250 --> 00:38:15.580
+Sonya Jackson: Yeah, I think maybe last week or the week before.
+
+215
+00:38:15.580 --> 00:38:25.130
+Godfried Williams: Right, okay, so yeah, we're looking at the Python in terms of these features, you know, that… because I brought them here back because that's the connection between
+
+216
+00:38:25.140 --> 00:38:43.869
+Godfried Williams: Python program and your database binding system, because Python is very data-friendly, and because it's data-friendly, I thought about, sort of, discussing or reiterating some of these, programming concepts, the web scraping, just how you, you sort of,
+
+217
+00:38:44.110 --> 00:38:56.089
+Godfried Williams: collect data from your website using the parser, and the parser technique, and all that. So, I brought this here to sort of reinforce that kind of discussion, you know, so I think that
+
+218
+00:38:56.090 --> 00:39:06.230
+Godfried Williams: I also encourage you to look at that as well, again. You know, so to be able to connect your database to your Python application.
+
+219
+00:39:06.320 --> 00:39:11.340
+Godfried Williams: And this is… these are some of the fundamental… Should I say…
+
+220
+00:39:12.290 --> 00:39:16.499
+Godfried Williams: Components, or libraries that you have to invoke.
+
+221
+00:39:16.540 --> 00:39:22.300
+Godfried Williams: You know, so you need to ensure that you can install your MySQL connection model.
+
+222
+00:39:22.300 --> 00:39:37.220
+Godfried Williams: And this to do with the MySQL, but the same… they are similar to SQLite as well, you know, because they're the same methods that you need, or similar methods that you need. But I said, as a general principle, I thought of using these ones to…
+
+223
+00:39:37.370 --> 00:39:49.900
+Godfried Williams: guide you, if you were to go that further or be bold, to try to connect your Python application to your SQL program. I think…
+
+224
+00:39:50.100 --> 00:39:58.499
+Godfried Williams: whichever way that you choose, whether you want to use the open source MySQL, or SQL Server, or SQL-like.
+
+225
+00:39:58.680 --> 00:40:00.850
+Godfried Williams: I, I think that you're not…
+
+226
+00:40:01.070 --> 00:40:11.380
+Godfried Williams: find it too, difficult. It might be a bit challenging, but it won't be difficult. So, the strategy is to create your database first.
+
+227
+00:40:11.520 --> 00:40:24.809
+Godfried Williams: And then have a very simple program that connects to your database using a method, because you can't have your… you cannot have your program connecting to your database without a method, you know, because
+
+228
+00:40:25.000 --> 00:40:29.120
+Godfried Williams: The whole idea of your application program
+
+229
+00:40:29.160 --> 00:40:40.090
+Godfried Williams: And your database program is to establish what we call, or what we described, as client-server interaction. Client-server
+
+230
+00:40:40.090 --> 00:40:55.069
+Godfried Williams: communication, and the client-server communication is based on the principle of the called and the call-in program. So, your application program is the call-in program, and then your
+
+231
+00:40:55.080 --> 00:40:57.869
+Godfried Williams: server or your database is the cold
+
+232
+00:40:57.890 --> 00:41:12.050
+Godfried Williams: program, because you invoke it, you establish a connection, and that is enabled through the method that you use. It is enabled through, for instance, the sort of API that you're using.
+
+233
+00:41:12.050 --> 00:41:28.119
+Godfried Williams: or the middleware that you might use. So, these are very fundamental. These aspects are very fundamental if you were to connect your database to your application program, which is Python. One of the things I think I'd like to do
+
+234
+00:41:28.120 --> 00:41:40.259
+Godfried Williams: Prior to the submission of your work is to provide you with some model program for you to run it and see, you know, with some sort of guidance instruction as well.
+
+235
+00:41:40.260 --> 00:41:52.450
+Godfried Williams: Right? So you run it, because this is very important, this one step further. I'm not turning all of you into… into programmers or developers, but I think that being able to deploy a simple
+
+236
+00:41:52.770 --> 00:42:09.290
+Godfried Williams: database Python program, basic one, will be very useful, because that will allow you to actually familiarize yourself with the process and relate the concepts that we have discussed this evening in
+
+237
+00:42:09.400 --> 00:42:28.920
+Godfried Williams: with the practical aspect as well. So I'm going to do that, I mean, today's Tuesday, I think by the end of the week, I'll release some programs, and then I'll post them on the announcement board, and anytime any of you want to attempt to run it.
+
+238
+00:42:29.160 --> 00:42:41.779
+Godfried Williams: or implement it, you know, I'm happy to receive feedback, or any comments, or any guidance that you might need. So that's something I'll be doing, right? So, do you have any questions now?
+
+239
+00:42:41.890 --> 00:42:43.020
+Godfried Williams: Any questions?
+
+240
+00:42:43.700 --> 00:42:46.349
+Sonya Jackson: No, no questions, but that would be really useful if that was.
+
+241
+00:42:46.350 --> 00:42:53.700
+Godfried Williams: Right, okay. Yeah, because I think that would be very useful, because then you can relate to that, and you can use that to shadow your own
+
+242
+00:42:53.840 --> 00:43:04.660
+Godfried Williams: attempt in their own application, right? I think that would be very useful. So I'm going to provide that, by the end of the week, and I'll post that information on the
+
+243
+00:43:04.940 --> 00:43:22.660
+Godfried Williams: the announcement board, because, I mean, this session does not allow us to do that, but with that information, you can do that in your spare time, take your time, you see how it works, and then you see the demo, and if having any problems with the…
+
+244
+00:43:22.660 --> 00:43:26.770
+Godfried Williams: implementation, I'll be happy to respond to that, yeah?
+
+245
+00:43:30.460 --> 00:43:37.579
+Godfried Williams: Right, okay, so, I think that, that's come to the end of the seminar, and, look forward to…
+
+246
+00:43:37.720 --> 00:43:42.309
+Godfried Williams: Seeing you, again, in the next seminar, which,
+
+247
+00:43:42.480 --> 00:43:49.599
+Godfried Williams: I guess that should be somewhere… it's on the 13th of October, or 14th? I think it's 14th of October, I think.
+
+248
+00:43:49.920 --> 00:43:50.710
+Godfried Williams: Yeah.
+
+249
+00:43:51.250 --> 00:43:54.810
+Godfried Williams: Yeah, so that, that sort of allows you to focus on…
+
+250
+00:43:55.000 --> 00:43:56.890
+Godfried Williams: The other part of the assignment.
+
+251
+00:43:57.000 --> 00:44:00.770
+Sonya Jackson: And, we also upload the feedback, you know.
+
+252
+00:44:00.920 --> 00:44:04.479
+Godfried Williams: Of the recent one for the individual wife as well.
+
+253
+00:44:04.720 --> 00:44:07.800
+Godfried Williams: So you can have that. So, thank you once again for coming.
+
+254
+00:44:07.990 --> 00:44:10.790
+Godfried Williams: And, I look forward to seeing you at a time.
+
+255
+00:44:12.580 --> 00:44:14.629
+Godfried Williams: Thank you. Good night. Alright, good night.
+

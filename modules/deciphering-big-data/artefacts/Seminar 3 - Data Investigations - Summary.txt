@@ -1,0 +1,23 @@
+Seminar 3 – Data Investigations & Case Studies (Dr. Godfried Williams)
+
+Admin Note: Reminder of upcoming team and individual assignment (8 Sept).
+
+Focus: Acquiring, storing, and investigating data through case studies.
+
+Key Points:
+
+Data wrangling: manipulating, cleaning, and handling large, complex datasets.
+
+Challenges: risks, limitations, and security issues in working with big data.
+
+Opportunities: extracting value from noisy data, improving business intelligence.
+
+Learning outcomes:
+
+Critically analyze datasets.
+
+Identify problems and apply suitable tools/methodologies.
+
+Clean, explore, and model data for business/organizational solutions.
+
+Deploy effective systems using data modeling concepts.

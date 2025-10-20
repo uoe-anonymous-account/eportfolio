@@ -1,0 +1,1262 @@
+WEBVTT
+
+1
+00:00:01.260 --> 00:00:06.819
+Godfried Williams: Right, thank you for coming this evening, once again, to Seminar 4.
+
+2
+00:00:07.110 --> 00:00:11.719
+Godfried Williams: It's about SQL and, normalization.
+
+3
+00:00:11.870 --> 00:00:19.120
+Godfried Williams: Now… the idea of treating SQL as a dedicated topic is because
+
+4
+00:00:20.020 --> 00:00:25.970
+Godfried Williams: Traditionally, database management systems has been…
+
+5
+00:00:26.300 --> 00:00:35.000
+Godfried Williams: Has been on, sort of, relational basis, and there's been a lot of… Historical discussions.
+
+6
+00:00:35.190 --> 00:00:41.370
+Godfried Williams: In relational databases from the days of flat files.
+
+7
+00:00:41.470 --> 00:00:51.969
+Godfried Williams: to having a more enhanced way of… of keeping records. So, we believe, or I thought that it's very important to treat…
+
+8
+00:00:52.190 --> 00:01:04.859
+Godfried Williams: SQL within, relation of the base management systems, and, because it plays a significant role in industry, and also the concept of
+
+9
+00:01:04.989 --> 00:01:17.639
+Godfried Williams: Normalization. So, this evening, We look at, relational database management system with emphasis on structured query language.
+
+10
+00:01:17.880 --> 00:01:29.059
+Godfried Williams: Now, the learning outcomes does not shift from the previous. The idea is to… Understand the use of
+
+11
+00:01:29.730 --> 00:01:38.440
+Godfried Williams: Necessary tools and methodologies for, enhancing the way data is stored, managed.
+
+12
+00:01:38.490 --> 00:01:54.230
+Godfried Williams: And deployed in systems. And also be able to model and design the data in abstract form, which eventually can be, you know, deployed or implemented.
+
+13
+00:01:54.380 --> 00:02:03.800
+Godfried Williams: instead of real-life sense. And of course, the skills that are required to be able to do that. So, a bit of background here, we have
+
+14
+00:02:04.050 --> 00:02:11.750
+Godfried Williams: SQL, our structured query language, the de facto standard from the American National
+
+15
+00:02:11.960 --> 00:02:19.569
+Godfried Williams: Stanley Institute that defines it as the standard language for relational database
+
+16
+00:02:19.680 --> 00:02:23.990
+Godfried Williams: management systems. So, what are relational databases?
+
+17
+00:02:26.140 --> 00:02:33.849
+Godfried Williams: when you say relational databases, there are two things that comes… that come to mind. One of them is to do with…
+
+18
+00:02:34.350 --> 00:02:51.509
+Godfried Williams: rows of records, and then columns, where you have the columns as representing the fields. So, normally, when you store data, and you have that sort of intersection or relationship between your rows and columns.
+
+19
+00:02:51.510 --> 00:02:59.890
+Godfried Williams: we can say that that's relational, or that's relational database. You know, so that's an enhanced form of…
+
+20
+00:02:59.930 --> 00:03:17.370
+Godfried Williams: records storage… storing your records, or records management system, compared to flat files, you know, which, historically is being just storing records in… in single rows, without any
+
+21
+00:03:17.460 --> 00:03:18.700
+Godfried Williams: Do you…
+
+22
+00:03:18.920 --> 00:03:32.860
+Godfried Williams: emphasis on the relationship between the individual records. So, when it comes to relational databases, there is that emphasis on the, relationship between
+
+23
+00:03:33.690 --> 00:03:47.860
+Godfried Williams: you know, rows and columns, and normally you organize them in the form of tables. So the tables are the, you know, the structure for organizing the data.
+
+24
+00:03:48.000 --> 00:04:00.390
+Godfried Williams: base, and also bearing in mind that within the tables, you can have specific keys, sometimes described as primary keys or secondary keys, depending on how
+
+25
+00:04:00.470 --> 00:04:09.700
+Godfried Williams: the individual records within specific tables relate to other tables within the database management system. So…
+
+26
+00:04:09.860 --> 00:04:18.779
+Godfried Williams: In a typical sense, we have the relational, sort of, database management system, but others…
+
+27
+00:04:18.880 --> 00:04:35.889
+Godfried Williams: it's… it's what drives the relational database. So, there are two things we need to appreciate or understand here. We have the relational databases, or database, and then we have the relational database management system, which is the software for managing or manipulating
+
+28
+00:04:35.950 --> 00:04:39.640
+Godfried Williams: the relational database file.
+
+29
+00:04:39.710 --> 00:04:48.750
+Godfried Williams: The relational database management system will comprise, things like the data description.
+
+30
+00:04:48.870 --> 00:05:01.629
+Godfried Williams: Aspect, so normally we have what we call the data description language, and then you have the data manipulation language, you know, so that helps us to interact with the database… database file.
+
+31
+00:05:01.890 --> 00:05:07.929
+Godfried Williams: We have to also realize that when we talk about interaction, we are…
+
+32
+00:05:08.010 --> 00:05:27.890
+Godfried Williams: looking at the role of the SQL, the Strata Query language, so the query allows the user of the database to be able to manipulate the data which is stored, or be able to interact with the database file.
+
+33
+00:05:28.030 --> 00:05:32.679
+Godfried Williams: The example here… Relates to…
+
+34
+00:05:32.940 --> 00:05:43.160
+Godfried Williams: you know, you have an, you know, this example here is a particular person called John, and John,
+
+35
+00:05:43.540 --> 00:05:57.089
+Godfried Williams: you know, may be a friend of yours. He has black hair, works at the New York Times. In his spare time, he likes to go dancing to food and teach people how to code. If I had a database of my friends.
+
+36
+00:05:57.600 --> 00:06:07.090
+Godfried Williams: and use SQL to represent the attributes, I might break it down like so. So, in other words, yes, you have a friend called John with all, sort of.
+
+37
+00:06:07.430 --> 00:06:13.529
+Godfried Williams: functional attributes where John works. You want to be able to store
+
+38
+00:06:13.840 --> 00:06:20.909
+Godfried Williams: information about John's friends, and that means that you will need to…
+
+39
+00:06:21.090 --> 00:06:31.389
+Godfried Williams: look at John's friends, friend as a table, and you need to look at, John as a friend with the occupation. Now, that is…
+
+40
+00:06:31.490 --> 00:06:38.649
+Godfried Williams: it's consistent with whether it's John or whether it's John's friends. You know, at the end of the day, we're referring to…
+
+41
+00:06:38.680 --> 00:06:52.279
+Godfried Williams: the friend table, and you have an occupation table, and there's a link, or there's a relationship between the friend table, and then the occupation table. And you may have, for instance, the friend ID,
+
+42
+00:06:52.280 --> 00:07:04.199
+Godfried Williams: as a primary key that allows you to relate to the occupation table, the friend occupation table. So, you have tables as the
+
+43
+00:07:04.310 --> 00:07:11.990
+Godfried Williams: The, framework for organizing the data within your database…
+
+44
+00:07:12.220 --> 00:07:22.829
+Godfried Williams: management system in relation to the databases. So when you organize your database, you organize the database as, records, and the records has intersection.
+
+45
+00:07:22.830 --> 00:07:38.929
+Godfried Williams: between your rows and your columns. But of course, you bear in mind that, these are also put in tables form, and you have a primary key, and you may have a secondary key in a different table that will
+
+46
+00:07:39.450 --> 00:07:43.239
+Godfried Williams: inversely relate to the…
+
+47
+00:07:43.430 --> 00:07:53.480
+Godfried Williams: primary key as well, all the other tables, so you can have multiple tables in any database management system. Any questions up to this point, please?
+
+48
+00:07:55.940 --> 00:07:57.170
+Godfried Williams: Any questions?
+
+49
+00:07:57.170 --> 00:07:59.169
+Sonya Jackson: Yeah, no, no questions at the moment.
+
+50
+00:08:00.270 --> 00:08:05.310
+Godfried Williams: Right, so… I, I mentioned earlier on that,
+
+51
+00:08:06.170 --> 00:08:24.639
+Godfried Williams: We're sort of focus in on relational databases because of its classic nature, and the fact that in industry, it still plays a significant role, you know, even with the sort of emergence of big data, and the fact that the other data
+
+52
+00:08:25.090 --> 00:08:41.849
+Godfried Williams: storage facilities, whether you're talking about Hadoop, or you're talking about XML, you're looking at JSON, all the different types of data storage facilities, relational databases is still prominent. And it's prominent because in industry.
+
+53
+00:08:42.150 --> 00:08:51.990
+Godfried Williams: They… they are parts of… operational activities, daily routines, validator.
+
+54
+00:08:53.010 --> 00:08:57.849
+Godfried Williams: is structured, or the data that are stored are structured. And because…
+
+55
+00:08:57.940 --> 00:09:01.880
+Godfried Williams: Data that is handled, or managed, or processed within
+
+56
+00:09:01.940 --> 00:09:21.940
+Godfried Williams: business or within the industry, different types of industry, whether it's to do with financial services or to do with medical services. You know, any kind of service that data requires structured management. You know, you want some level of precision.
+
+57
+00:09:22.210 --> 00:09:27.069
+Godfried Williams: Relational databases fits that bill, you know, it's very effective.
+
+58
+00:09:27.230 --> 00:09:36.950
+Godfried Williams: You know, there's certain parts of the industry where data might not be necessarily, required to be stored in structured format.
+
+59
+00:09:37.120 --> 00:09:38.120
+Godfried Williams: And…
+
+60
+00:09:38.410 --> 00:09:47.590
+Godfried Williams: We can discuss that aspect as well, in the different part of the subject matter, but in this particular seminar, the emphasis is on
+
+61
+00:09:47.970 --> 00:09:54.329
+Godfried Williams: Structured ways of organizing data and relational database plays a very significant role.
+
+62
+00:09:54.520 --> 00:10:11.879
+Godfried Williams: Now, the certain general concepts that we have to understand here, because when you store data, I always say that data is not something physical. Data is a logical construct, is a logical construct, you know, that is, describes a certain instance.
+
+63
+00:10:11.990 --> 00:10:22.860
+Godfried Williams: And maybe describing an item. So you may have data, specific data, and then you go down the line of a data type.
+
+64
+00:10:22.970 --> 00:10:28.160
+Godfried Williams: And then you go another dimension, looking at different data structures.
+
+65
+00:10:28.300 --> 00:10:41.350
+Godfried Williams: That means how data is organized. So you can have data organized in either… in array form, or in some other form as well. So.
+
+66
+00:10:41.880 --> 00:10:47.899
+Godfried Williams: Certain key concepts are vital when it comes to the way
+
+67
+00:10:47.930 --> 00:11:06.669
+Godfried Williams: the data is organized, and the way the data is manipulated, the way the data is managed, and how our SQL, our query language, interacts with the database file through the database management system. So you need to, sort of.
+
+68
+00:11:06.670 --> 00:11:11.099
+Godfried Williams: picture that in your mind, in pictorial form. You can have the…
+
+69
+00:11:11.280 --> 00:11:15.800
+Godfried Williams: That level of… that structure that depicts your database file.
+
+70
+00:11:15.930 --> 00:11:25.539
+Godfried Williams: In the middle, you have your database management system, and then you, as the user, Understand how to…
+
+71
+00:11:26.030 --> 00:11:40.999
+Godfried Williams: implement your queries, and your queries enable you to interact with your database file. You need to bear in mind that within your database management system, you have a schema, and the schema, of course.
+
+72
+00:11:41.120 --> 00:11:45.270
+Godfried Williams: You know, helps you to construct the…
+
+73
+00:11:45.630 --> 00:11:55.249
+Godfried Williams: the different data types and the descriptors that goes with… or the different features that goes with the data types. Now, why am I dwelling on this?
+
+74
+00:11:55.310 --> 00:12:11.060
+Godfried Williams: I'm sort of dwelling on this, because I feel that's very, very important to understand the structure of… or the architecture of a database management system vis-a-vis the database file, you know, because sometimes
+
+75
+00:12:11.200 --> 00:12:17.210
+Godfried Williams: The Assettin, should I say, end users, that might think that
+
+76
+00:12:17.420 --> 00:12:32.719
+Godfried Williams: The database file, is part of the database management system. You know, of course, you can use the database management system to create your database file, but you have to also bear in mind that you may have
+
+77
+00:12:32.790 --> 00:12:50.070
+Godfried Williams: database files that have already been created in your business or in your organization, you know? And your business organization may need to introduce a new database management system that you will use to interact
+
+78
+00:12:50.070 --> 00:13:07.620
+Godfried Williams: with your database files that already exist within the business or within the organization. And selling general concepts, these ones come to play, like functions, tables, data types, items, clauses, queries, and operators. So functions…
+
+79
+00:13:07.820 --> 00:13:12.330
+Godfried Williams: We say that, constitutes, or is made up of.
+
+80
+00:13:12.720 --> 00:13:17.729
+Godfried Williams: An individual operation, or set of operations that will… that…
+
+81
+00:13:17.970 --> 00:13:30.689
+Godfried Williams: you know, acts together. You can describe them as a function. And usually, a function will… will receive, or take in what they call parameters, and the parameters may be inputs.
+
+82
+00:13:30.690 --> 00:13:38.330
+Godfried Williams: or maybe describe as arguments as well. So, depending on which part of the literature you're looking at, you can look at a function taken in…
+
+83
+00:13:38.450 --> 00:13:49.539
+Godfried Williams: parameters as inputs, or taking in arguments as inputs. And then when the operations act on those parameters or arguments.
+
+84
+00:13:49.970 --> 00:14:06.689
+Godfried Williams: an output is generated, and that output that is generated comes out as a single unit. So you may have different type of functions that you see in due course. And of course, I've already spoken about the tables as a way of organizing your data, you know, and you can… you may have
+
+85
+00:14:06.700 --> 00:14:15.910
+Godfried Williams: multiple tables. And these multiple tables, in a typical business or organizational situation.
+
+86
+00:14:16.120 --> 00:14:23.009
+Godfried Williams: Will represent the different data sets that you have, and the different data sets that you have.
+
+87
+00:14:23.210 --> 00:14:28.970
+Godfried Williams: In a way, reflects what sort of business goals, or what sort of business logic.
+
+88
+00:14:29.020 --> 00:14:43.520
+Godfried Williams: that you have within the business or within the organization. Or it may also reflect the kind of commercial activities that might be taking place within the business or within the organization. Data types, very important.
+
+89
+00:14:43.520 --> 00:14:50.099
+Godfried Williams: and data items, very important. I did mention that in a typical database file, you have
+
+90
+00:14:50.260 --> 00:15:05.719
+Godfried Williams: your rec… your records in rows, so you have an intersection between rows and fields, and your fields are the… sorry, your columns are the fields, you know, so your columns are the fields, those are the fields and the types.
+
+91
+00:15:05.720 --> 00:15:12.520
+Godfried Williams: and all the different items, and they have clauses. The clauses are conditional statements that
+
+92
+00:15:12.640 --> 00:15:22.009
+Godfried Williams: allow you to, sort of, implement your queries, and the operators might be, oh, it's usually
+
+93
+00:15:22.010 --> 00:15:33.420
+Godfried Williams: the, what enables functions to, to work, or that enable you to implement your functions. So you need your operators as well. So this general concept
+
+94
+00:15:33.530 --> 00:15:51.890
+Godfried Williams: are very, very important. So, category of functions, you have arithmetic functions, creative functions, date functions, and, and aggregate, functions. So, the arithmetic functions, mainly for computational purposes, and…
+
+95
+00:15:51.990 --> 00:16:06.680
+Godfried Williams: sometimes they may be part of your system functions, or your internal functions. In other words, you have functions within your database management systems that are already part of the… of the system, so it's not something you create.
+
+96
+00:16:06.710 --> 00:16:20.369
+Godfried Williams: as a user, or someone that is creating a new database file, or someone that is using your SQL to interact with your database. So you may have algorithm functions.
+
+97
+00:16:20.500 --> 00:16:27.849
+Godfried Williams: For computational purposes than your character functions that allows you to define specific
+
+98
+00:16:28.040 --> 00:16:41.610
+Godfried Williams: characters within your system. Then you have your date and time functions, and of course, your aggregate functions has to do with, usually, combining certain inputs, and, and, and…
+
+99
+00:16:41.610 --> 00:16:55.690
+Godfried Williams: Ensuring that those inputs, that they combine, you can act on them, and usually that is done through your aggrade functions. So here you have minimum, you have maximum, conditioner, you have sum, that is more computational.
+
+100
+00:16:55.690 --> 00:17:04.470
+Godfried Williams: But of course, the… there's this sort of similarity between it being described as aggregate, because you're looking at two
+
+101
+00:17:04.470 --> 00:17:21.939
+Godfried Williams: parameters are you looking at to arguments that you need to compute, and that is why it's suitable to describe it as an aggregate function. You may consider that to be a rigid function as well. The same thing applies to count, which is also
+
+102
+00:17:21.940 --> 00:17:36.620
+Godfried Williams: and agreed function. So, familiarizing yourself with these functions are very important, or these concepts, I'm going to go back, sort of fundamental to your understanding of creating your databases, or for your understanding.
+
+103
+00:17:36.860 --> 00:17:52.100
+Godfried Williams: of interacting with your database files using your database management system. And I keep on sort of placing emphasis on both, because it is very likely that you'll look at them
+
+104
+00:17:52.610 --> 00:17:58.750
+Godfried Williams: Databases as where the query takes place, but always bear in mind that in, in…
+
+105
+00:17:59.060 --> 00:18:02.820
+Godfried Williams: Number of instances, you may have your databases
+
+106
+00:18:03.240 --> 00:18:06.519
+Godfried Williams: Not necessarily part of your database, but in your system.
+
+107
+00:18:06.700 --> 00:18:11.049
+Godfried Williams: And sometimes you may have it also as part, because if you have…
+
+108
+00:18:11.140 --> 00:18:30.560
+Godfried Williams: let's say an Oracle database management system, you can use an Oracle database management system to create a database file, or many database files, the same way if you're using MySQL, or using SQL Server. So, in that sense, it's integrated, but then you need to also bear in mind that
+
+109
+00:18:30.820 --> 00:18:44.470
+Godfried Williams: You may be introduced to a new database management system or software that you may be required to use it to manipulate or handle an existing
+
+110
+00:18:44.580 --> 00:18:55.439
+Godfried Williams: database file, or many database files that already exist within your organization, and that might have been created using a different software. So.
+
+111
+00:18:55.650 --> 00:19:04.829
+Godfried Williams: We have to understand the entirety of how the systems work, so that when we're faced with that kind of scenario.
+
+112
+00:19:04.830 --> 00:19:19.969
+Godfried Williams: that kind of situation, we're not thinking that, oh, no, this is not going to be possible, because the files that I have, have been created using a different, database management system. So, typical example, you may have a database
+
+113
+00:19:19.990 --> 00:19:25.180
+Godfried Williams: file, or there are these files created using MySQL,
+
+114
+00:19:25.400 --> 00:19:35.349
+Godfried Williams: And then you may require to use Oracle database management system to manipulate that. So, by understanding the architecture of the framework.
+
+115
+00:19:35.680 --> 00:19:41.029
+Godfried Williams: Of the way the entire system works, we'll be able to implement
+
+116
+00:19:41.270 --> 00:19:50.319
+Godfried Williams: a very comprehensive SQL to be able to manipulate the data from the database files. I've described
+
+117
+00:19:50.460 --> 00:20:03.110
+Godfried Williams: what the, of course, the aggregate functions for the different type of functions. Of course, the tables, I've mentioned them also explain that as well, so I don't have to repeat myself, you know, but…
+
+118
+00:20:03.710 --> 00:20:13.179
+Godfried Williams: you know, if we look at tables, it's interesting to hear the explanation, that I have here as objects that contain data sets. So the data sets…
+
+119
+00:20:13.360 --> 00:20:23.690
+Godfried Williams: Normally describes, you know, it's a reflection of what the organization… organizational or business policy, in terms of
+
+120
+00:20:23.690 --> 00:20:42.369
+Godfried Williams: what is kept within the business, or within the organization, or what is processed within the organization. And when I say what is processed, what is kept, I'm referring to data. So your data set is a reflection of the organization policy, the type of business that you're involved in. If you involve
+
+121
+00:20:42.610 --> 00:20:52.009
+Godfried Williams: in the health service, your data sets will reflect something to do with the health service. If you deal with the financial services, the same will apply.
+
+122
+00:20:52.090 --> 00:21:07.849
+Godfried Williams: in this instance. And that's a reflection of the relationship between your data sets and the business, organizational policy, as well as the commercial activity that might be taking place here.
+
+123
+00:21:07.930 --> 00:21:15.170
+Godfried Williams: But I was throwing a bit more light on the word object, an object that contains data sets.
+
+124
+00:21:15.750 --> 00:21:22.110
+Godfried Williams: You know, because in… Database management systems that
+
+125
+00:21:22.240 --> 00:21:26.170
+Godfried Williams: are not relational. They are instances that
+
+126
+00:21:26.270 --> 00:21:43.489
+Godfried Williams: you can deploy a database management system in object form. So, if you're not careful here, the use of object might create a little bit of confusion, because you have database management systems that are object-based.
+
+127
+00:21:43.620 --> 00:21:48.929
+Godfried Williams: Which means that you have, you know, several objects in…
+
+128
+00:21:49.060 --> 00:21:51.779
+Godfried Williams: in a class, so you have the class…
+
+129
+00:21:52.210 --> 00:21:55.109
+Godfried Williams: As a way of modeling your data.
+
+130
+00:21:55.300 --> 00:22:00.550
+Godfried Williams: And then within the class deck… within the classes, you have your…
+
+131
+00:22:00.720 --> 00:22:14.510
+Godfried Williams: objects as instances, and that is OO, Object Orientation thinking, object orientation thinking, or Object Orientation Database Management System. And then you have relational database…
+
+132
+00:22:14.620 --> 00:22:28.209
+Godfried Williams: sorry, relational database management system. So, in this instance, we're dealing with two types of DBMS, you know, but then the word object here is used to represent both.
+
+133
+00:22:28.210 --> 00:22:37.880
+Godfried Williams: It is… it shouldn't create confusion, or it's not… it's not confusion, because the object is… Here to,
+
+134
+00:22:38.120 --> 00:22:55.179
+Godfried Williams: depict entity, the representation of an entity. So here, the choice of the word object is of an entity, and that entity contains datasets, and that is what is used here. And you may have multiple entities represented as objects, and that
+
+135
+00:22:55.220 --> 00:23:07.329
+Godfried Williams: are interlinked, and they're interlinked by either primary keys or by some kind of secondary keys in different tables, because if you have a single table.
+
+136
+00:23:07.680 --> 00:23:10.939
+Godfried Williams: That you've created as your,
+
+137
+00:23:11.130 --> 00:23:22.159
+Godfried Williams: part of your database file, I'll say that in your database system is very… is very basic. You know, in most cases, you may have 3 or 4 tables. That is the most…
+
+138
+00:23:22.250 --> 00:23:36.119
+Godfried Williams: should I say, you know, the most basic type of database binary system will have 3 or 4 tables. Typical example, your work environment, give me some of the data sets that you have.
+
+139
+00:23:36.120 --> 00:23:47.969
+Godfried Williams: I mean, I can give you some from… maybe from a student's records point of view. You can have a student as a data set, you may have accommodation of the student, you may have course.
+
+140
+00:23:47.990 --> 00:23:49.430
+Godfried Williams: As a data set.
+
+141
+00:23:49.520 --> 00:24:04.969
+Godfried Williams: Right? So you can have course, you can have accommodation if the student is on campus, and you can have the student details in itself. So in this instance, you have 3 tables that you can create. You can create a course table, you can create accommodation table if the student lives on campus.
+
+142
+00:24:04.970 --> 00:24:11.840
+Godfried Williams: And you can create a student table as well. And you may create other tables that, depending on
+
+143
+00:24:11.840 --> 00:24:25.400
+Godfried Williams: what you want to manage, what sort of data you want to manage within that organization. So, in your organization, what would you consider to be the key data sets or data items that you have?
+
+144
+00:24:26.150 --> 00:24:41.589
+Sonya Jackson: Yeah, so I suppose where I'm working with medical trials and things, we would have patients, so you'd have patient demographics, you'd have their medical history, potentially, as a separate table with their various conditions they have, and medicines that they're on.
+
+145
+00:24:41.710 --> 00:24:47.339
+Sonya Jackson: The trial that they're on, and the doctors that they're interacting with, potentially.
+
+146
+00:24:48.590 --> 00:24:54.740
+Godfried Williams: So you have the patient, let me write it. So you have the patient table.
+
+147
+00:24:55.470 --> 00:24:58.850
+Godfried Williams: And then you have… it's a medicine table, right?
+
+148
+00:24:58.850 --> 00:25:03.520
+Sonya Jackson: Yeah, so they're medical conditions, any medical conditions that they have.
+
+149
+00:25:04.520 --> 00:25:09.119
+Sonya Jackson: Another table would be any medicines that they're taking for these conditions.
+
+150
+00:25:10.050 --> 00:25:22.559
+Godfried Williams: Right, so these are three tables, so patient, medicines, and conditions, you know, sort of, that they may have. You'll deal with set…
+
+151
+00:25:22.730 --> 00:25:26.290
+Godfried Williams: you're dealing with 7 stakeholders as well, I believe.
+
+152
+00:25:26.520 --> 00:25:27.080
+Sonya Jackson: Yeah.
+
+153
+00:25:27.080 --> 00:25:30.839
+Godfried Williams: You need to keep some… some… some data about them. Yeah.
+
+154
+00:25:30.840 --> 00:25:35.659
+Sonya Jackson: Exactly. So, for example, the trial center that they attend.
+
+155
+00:25:35.770 --> 00:25:40.509
+Sonya Jackson: And the physician details that they see there, as well.
+
+156
+00:25:41.320 --> 00:25:43.839
+Godfried Williams: So you may have a physician table as well.
+
+157
+00:25:43.840 --> 00:25:44.480
+Sonya Jackson: Yeah.
+
+158
+00:25:45.830 --> 00:25:50.429
+Godfried Williams: Yeah, so here you can have… do you have instances where there's a relationship between
+
+159
+00:25:50.610 --> 00:25:57.390
+Godfried Williams: I suppose, but you may need to correct me for, relation between efficiency and patient.
+
+160
+00:25:57.790 --> 00:25:59.130
+Godfried Williams: Yes. Relationship.
+
+161
+00:25:59.130 --> 00:25:59.930
+Sonya Jackson: Yes.
+
+162
+00:25:59.930 --> 00:26:09.949
+Godfried Williams: Yeah, so you may have a patient number or ID as a primary key, and you may have another key within the physician data set.
+
+163
+00:26:09.950 --> 00:26:12.029
+Sonya Jackson: That will create that relationship.
+
+164
+00:26:12.280 --> 00:26:21.689
+Sonya Jackson: Yeah, and then a physician would have so many different patients that they're responsible for, so you need to have a number of different patient IDs under that position.
+
+165
+00:26:21.940 --> 00:26:34.220
+Godfried Williams: Right. So, so that is why, if you're modeling, that's why the modeling of… because when it comes to relational database, you model use entity relation diagrams, you know, so you'll be able to…
+
+166
+00:26:34.220 --> 00:26:52.159
+Godfried Williams: create the relationship, whether it's one-to-many, one-to-one, or many-to-many relationships at a high-level part of your modeling, and based on that, because you need to model that before you do any implementation. You model, do the design, and then you do your implementation, and…
+
+167
+00:26:52.160 --> 00:27:02.750
+Godfried Williams: And I believe that, you know, your understanding of the system in terms of what sort of data sets are relevant is what will determine the way
+
+168
+00:27:02.750 --> 00:27:14.319
+Godfried Williams: you go about identifying your key data sets. That's how it sort of… sort of looks like. But, I mean, there are many examples that we can look at. We can look at the financial services.
+
+169
+00:27:14.410 --> 00:27:31.169
+Godfried Williams: You take something like the banking industry, you can have a customer, you can have an account, so you can have a customer table, an account table, you may have the loans, the loan tables can have a different type of loan table, different type of…
+
+170
+00:27:31.460 --> 00:27:42.569
+Godfried Williams: tables, within the loan space. You know, you can have a mortgage, you can have different type of loans, you can have a savings table as well, you know, and that'll come under account.
+
+171
+00:27:42.710 --> 00:28:01.419
+Godfried Williams: You know, so different environments, your understanding, or anyone's understanding of the environment is key to sort of eliciting the right kind of data requirements. You know, so this is very critical in the process.
+
+172
+00:28:01.610 --> 00:28:14.379
+Godfried Williams: So, here we have some examples of the times, items, here you have a string, you know, there's a joker here, there's an example, there's a string integer, another 2, float.
+
+173
+00:28:14.380 --> 00:28:29.370
+Godfried Williams: And you have approximation, you have variables that you may be able to store animal names, because you have different type of names, and you have a list of items, and you may have, or you can have a dictionary as well. You know, we sort of define specific
+
+174
+00:28:30.420 --> 00:28:37.099
+Godfried Williams: items, you know, set of items. They may have the same kind of attributes, or similar attributes, you know.
+
+175
+00:28:37.200 --> 00:28:52.610
+Godfried Williams: So, here, clauses, as I mentioned, are normally conditional as part of your query. So, the key thing is here, if you want to write a query, you're looking at, your functions, you're looking at
+
+176
+00:28:52.690 --> 00:29:09.369
+Godfried Williams: you know, parameter functions, you're looking at your classes, because your classes provide the necessary conditions, you know, so where, having, using, from, you know, help you to… so normally you say, you say things like select items.
+
+177
+00:29:09.510 --> 00:29:26.040
+Godfried Williams: these items from the database, then you can provide a condition, depends on what you want to perform, or what sort of query you want to implement, and then you can apply some of these clauses. You know, so one other clause that is sort of
+
+178
+00:29:26.720 --> 00:29:36.140
+Godfried Williams: comes to mind, yeah, there's two types, you know, the union and join, you know, and I get people saying, what's the difference, you know, because the rest are…
+
+179
+00:29:36.510 --> 00:29:46.079
+Godfried Williams: quite explicit, you know, in terms of creating all the… but join and union, join has to do with input, union has to do with output, you know, normally.
+
+180
+00:29:46.080 --> 00:29:57.630
+Godfried Williams: When you've done your query, you do the selection, you can join, different fields, you know, in terms of what you want to look for, and then the union has to do with the output, you know, if you want to.
+
+181
+00:29:57.640 --> 00:30:17.270
+Godfried Williams: produce or reproduce certain output from your selection, then the unit comes in here. And then you can group by different features, or similar features, and then you can order in terms of ranking as well, or in terms of kind of sequencing. So these clauses are important, and familiarize yourself with
+
+182
+00:30:17.370 --> 00:30:25.930
+Godfried Williams: The clause is very important. Have you… have you… are you familiar with, the SQL? Have you…
+
+183
+00:30:26.400 --> 00:30:28.550
+Godfried Williams: Use it yourself, in any form.
+
+184
+00:30:28.550 --> 00:30:36.310
+Sonya Jackson: Yeah, we did a little bit of that with the last module, so a small amount just through this course. I haven't used it in my professional life.
+
+185
+00:30:36.550 --> 00:30:51.719
+Godfried Williams: Right, okay, so it's very simple, of course, and it's one of the very, I'll say, user-friendly ways of interacting with the database, especially when you create a database and you have to, populate
+
+186
+00:30:51.820 --> 00:31:05.909
+Godfried Williams: the database, you know, that's… you input the database, and later on, you want to interact with the database, you know. So, these are examples that we have here. You have,
+
+187
+00:31:06.000 --> 00:31:12.379
+Godfried Williams: If you think about this sort of, you know, this example in abstract form, you look at the…
+
+188
+00:31:12.570 --> 00:31:20.250
+Godfried Williams: In a university education, educational setting, and then you have a host of residents, you have a student.
+
+189
+00:31:20.340 --> 00:31:39.509
+Godfried Williams: And you want to be able to have some interaction between the students and the halls, in terms of where… what hall a student may be residing, you know. So, this is fairly straightforward, because you have a student table, you create a hall table, and you establish
+
+190
+00:31:39.690 --> 00:31:41.760
+Godfried Williams: The interaction between
+
+191
+00:31:41.810 --> 00:31:50.199
+Godfried Williams: Your haul and a ceiling, and of course, you can have, friends as well that, you know, we created initially.
+
+192
+00:31:50.200 --> 00:32:09.949
+Godfried Williams: You know, so you can see that here we have three different types of tables, you know, one we created previously, again, a frames table, again, a hall, and then students tables. And then you can use that sort of query to interact, too. These are very simple, nothing complex about that. I mean, select all. The asteric is just to do with you selecting
+
+193
+00:32:10.090 --> 00:32:18.610
+Godfried Williams: Everything from the database, from the friends file, with a condition where the last name here is Smith.
+
+194
+00:32:18.610 --> 00:32:35.639
+Godfried Williams: or where the first name is John, you know, so that's fairly, fairly straightforward. I mean, I recommend that you… you practice some of these things, because it's… it's an enjoyable experience if you're using queries on databases, and you may not necessarily get
+
+195
+00:32:35.850 --> 00:32:51.930
+Godfried Williams: them sometimes right from the onset, but I mean, it challenges you to experiment, and for you to try how you can generate reports. So that is when you're doing direct interaction with the database. But the,
+
+196
+00:32:51.930 --> 00:32:58.980
+Godfried Williams: Instances where you need to create what they call procedures, you know, and these procedures will be
+
+197
+00:32:59.340 --> 00:33:02.610
+Godfried Williams: A suite of functions, you know, that
+
+198
+00:33:02.670 --> 00:33:19.469
+Godfried Williams: can be automated, and when you run the block of setups to functions as a procedure, that will interact with your database for you, so you don't have to do it manually, you know, because when you start initially, you do it manually because you want to interact.
+
+199
+00:33:19.510 --> 00:33:26.260
+Godfried Williams: With a database, and it's good, and it's a useful skill to be able to do that, because in some instances.
+
+200
+00:33:26.330 --> 00:33:32.630
+Godfried Williams: Your procedure might not be performing exactly what you want.
+
+201
+00:33:32.680 --> 00:33:47.169
+Godfried Williams: or there'll be a need within the business or within the organization in real time that you may need to implement. And that's not a time for you to write a new procedure or go and update your procedures
+
+202
+00:33:47.880 --> 00:34:02.289
+Godfried Williams: you know, that you have in the system. You may need to, sort of do that directly by interacting with the databases, and that will be dependent on your skill set, or your understanding of how to implement
+
+203
+00:34:02.320 --> 00:34:08.419
+Godfried Williams: these set of queries. Any questions after this point, please? Any questions? Or comments? Any questions?
+
+204
+00:34:08.739 --> 00:34:16.749
+Sonya Jackson: No, no questions for me. I'm still maybe slightly unclear on the difference between the union and join, but I can always look that up as well, so…
+
+205
+00:34:16.750 --> 00:34:35.500
+Godfried Williams: Right, yeah, just to do a bit of research on that, you know, but, yeah, the union has to do with your output when you've generated your input, and it doesn't mean that you have to use, join and union together, you know? I was just using those two clauses as examples, where sometimes.
+
+206
+00:34:35.500 --> 00:34:41.849
+Sonya Jackson: You know, users get them confused, but it's also dependent on what you're doing, because.
+
+207
+00:34:41.850 --> 00:34:48.010
+Godfried Williams: You know, how you use the clauses are dictated by…
+
+208
+00:34:48.190 --> 00:35:00.520
+Godfried Williams: what a business logic is, or what is required, you know, for you to perform on the database. And that will lead you to create the algorithm, or the logic.
+
+209
+00:35:00.750 --> 00:35:08.239
+Godfried Williams: or the civil code for interaction with the database. So, there's some element of…
+
+210
+00:35:08.350 --> 00:35:15.099
+Godfried Williams: creativity when it comes to you interacting with the database and writing queries. And you may have
+
+211
+00:35:15.390 --> 00:35:30.999
+Godfried Williams: three end users of the database management system that will write different queries by performing the same function, right? And, you know, sometimes that happens because one person
+
+212
+00:35:31.120 --> 00:35:45.549
+Godfried Williams: has got a better understanding of how best to use the clauses. Or, when you generate the same results, one query may be faster than the other, where performance is a premium. You know, so where performance is a premium.
+
+213
+00:35:45.550 --> 00:35:47.750
+Sonya Jackson: Yeah, you want to write a query.
+
+214
+00:35:47.750 --> 00:35:52.289
+Godfried Williams: that can generate the results quicker. You know, sometimes performance might not be a premium.
+
+215
+00:35:52.290 --> 00:35:52.690
+Sonya Jackson: Hold.
+
+216
+00:35:52.690 --> 00:35:54.989
+Godfried Williams: Or might not be a priority, and therefore.
+
+217
+00:35:54.990 --> 00:35:58.350
+Sonya Jackson: You don't have to, sort of, worry about that.
+
+218
+00:35:58.440 --> 00:36:04.050
+Godfried Williams: So we come to the subject of normalization, which is important, and the…
+
+219
+00:36:04.230 --> 00:36:17.239
+Godfried Williams: whole rationale behind normalization is to simplify your data sets, to simplify your database, because when you model your database, you may have
+
+220
+00:36:17.320 --> 00:36:32.599
+Godfried Williams: created a number of tables, and within the tables, you have your… your different… your number of fields, and… or rows. And sometimes, when you've done that, there are repetitions, you know, and these repetitions
+
+221
+00:36:32.650 --> 00:36:50.000
+Godfried Williams: setup might not be necessary, and… but it's something that happens at an initial stage, you know, it doesn't matter how experienced you are, you may not be able to create, any database straight away with… without the need to normalize, you know, so it's very normal to normalize.
+
+222
+00:36:50.000 --> 00:37:02.779
+Godfried Williams: And therefore, that comes because you may have some repetitions, redundancies, or duplications, and you want to be able to eliminate that. So that's the sort of rationale behind,
+
+223
+00:37:02.860 --> 00:37:06.080
+Godfried Williams: Normalizations. And there are rules to, sort of.
+
+224
+00:37:06.210 --> 00:37:25.679
+Godfried Williams: apply that normalization, according to rules. You have first, second, third normal forms, and then fourth normal forms. And they all are designed to address the, ambiguity, complexity, and duplications that exist within your database.
+
+225
+00:37:25.760 --> 00:37:30.769
+Godfried Williams: file, or filing system. So, there's certain benefits that comes with
+
+226
+00:37:30.990 --> 00:37:35.420
+Godfried Williams: normalization, this optimal database. You need to…
+
+227
+00:37:35.840 --> 00:37:45.040
+Godfried Williams: I understand, but also appreciate that when you create your database, think about performance. And it all depends on what
+
+228
+00:37:45.220 --> 00:37:47.210
+Godfried Williams: That our base is full.
+
+229
+00:37:47.350 --> 00:37:50.140
+Godfried Williams: I remember many years ago…
+
+230
+00:37:50.790 --> 00:37:55.939
+Godfried Williams: I sort of encountered a project that has to do with…
+
+231
+00:37:56.290 --> 00:38:06.650
+Godfried Williams: I think the Royal, you know, something to do with the Royal Mail, you know, and the program, that's many, many years ago, you know, it's a written in C program.
+
+232
+00:38:06.860 --> 00:38:09.589
+Godfried Williams: And the files were in C.
+
+233
+00:38:09.750 --> 00:38:14.729
+Godfried Williams: And the reason why the files were preferably in C rather than
+
+234
+00:38:14.960 --> 00:38:23.609
+Godfried Williams: other relational databases, was that C, as a program language, pro- produce
+
+235
+00:38:23.740 --> 00:38:38.760
+Godfried Williams: produce, at the time, very high performance, you know, because of the… the nature of the filing system. You know, the filing systems were flat, you know, when it creates them, and therefore you're able to access them directly, and all that. But…
+
+236
+00:38:39.580 --> 00:38:48.089
+Godfried Williams: So, depending on the application, depending on the requirements of the business.
+
+237
+00:38:48.710 --> 00:39:03.789
+Godfried Williams: optimal database performance is very important, and therefore, normalization to eliminate any redundancies and duplications is sort of key. Query efficiency. I mentioned that
+
+238
+00:39:04.090 --> 00:39:09.180
+Godfried Williams: Previously, that you may have Two or three end users.
+
+239
+00:39:09.830 --> 00:39:13.639
+Godfried Williams: or patients don't write a query, but the same…
+
+240
+00:39:13.800 --> 00:39:19.879
+Godfried Williams: You know, objective to interact with your database filing system.
+
+241
+00:39:19.960 --> 00:39:25.409
+Godfried Williams: But then, one of them can be more efficient, and it's more efficient because of the way
+
+242
+00:39:25.420 --> 00:39:33.690
+Godfried Williams: the individual might have constructed that specific query, and that's something that you need to bear in mind. So, query efficiency
+
+243
+00:39:33.690 --> 00:39:47.109
+Godfried Williams: comes to mind when you're normalizing, when you're normalizing very well, you have query efficiency. Not because the query that's been written is… there's one aspect of the query that's been written as more,
+
+244
+00:39:47.650 --> 00:40:05.949
+Godfried Williams: It's more efficient because it hasn't… it doesn't have unnecessary repetitions or loops. So, the query construct, it's different, it's important for efficiency, but then the database itself, because you've normalized.
+
+245
+00:40:06.200 --> 00:40:08.159
+Godfried Williams: Your query becomes…
+
+246
+00:40:08.190 --> 00:40:25.530
+Godfried Williams: more efficient, or faster, you know? And that is due to the fact that there aren't many loops or cycles when your query is interacting with your database, you know, and therefore you have query efficiency, simplicity, and avoidance of ambiguity.
+
+247
+00:40:25.550 --> 00:40:29.849
+Godfried Williams: Anonymization helps to achieve that, ensure data integrity.
+
+248
+00:40:29.930 --> 00:40:39.850
+Godfried Williams: Because there's consistency across the board. What you don't want to do with your database file, when you create your tables, is to have
+
+249
+00:40:40.110 --> 00:40:45.639
+Godfried Williams: These, you know, overlaps between your data items.
+
+250
+00:40:45.830 --> 00:40:53.050
+Godfried Williams: you know, it's like, the same data sets telling similar stories, and you repeated them. So…
+
+251
+00:40:53.200 --> 00:41:01.150
+Godfried Williams: When you simplify, it enhances integrity of your data. You know, the data's… the quality of the data is improved.
+
+252
+00:41:01.280 --> 00:41:04.529
+Godfried Williams: Through normalization. Effective use of storage.
+
+253
+00:41:05.210 --> 00:41:17.610
+Godfried Williams: I must say that the points that I've highlighted here, in most cases, are interrelated. You don't necessarily have to treat one in isolation of the other. For instance, when you take the use of the storage.
+
+254
+00:41:17.680 --> 00:41:28.470
+Godfried Williams: Use of the storage has to do with efficiency, has to do with performance, because you are storing either less data, because you've eliminated
+
+255
+00:41:28.950 --> 00:41:43.749
+Godfried Williams: duplications or redundancies. So it can tell you that the points that I've mentioned here are all interrelated, one or the other, and that's typical of systems, because you make adjustments here, it impacts on other factors of the system.
+
+256
+00:41:43.790 --> 00:42:01.000
+Godfried Williams: And so these are key benefits. But I must say that even as we mentioned, the benefit, there can be a downside of normalization as well. I mean, I'll come to that. You know, I don't think I've… I've sort of highlighted it, but I'm going to discuss that briefly when I've gone through this first normal form.
+
+257
+00:42:01.230 --> 00:42:08.090
+Godfried Williams: Where this is governed by two key rules. Rule one, use atomic values, no repeating values.
+
+258
+00:42:08.370 --> 00:42:13.439
+Godfried Williams: And an atomic value is a value that cannot be divine feathered.
+
+259
+00:42:13.660 --> 00:42:21.420
+Godfried Williams: And what that means is that do with the fact that when you process any value, it has no
+
+260
+00:42:21.570 --> 00:42:22.660
+Godfried Williams: immediate…
+
+261
+00:42:23.010 --> 00:42:33.050
+Godfried Williams: dependency on other values as well. So no repeating groups of the data table should be void of duplicating columns. You know, I mentioned that
+
+262
+00:42:33.190 --> 00:42:35.979
+Godfried Williams: Your database comprise…
+
+263
+00:42:36.440 --> 00:42:52.210
+Godfried Williams: rows and columns. And the rows are the records of the database, the columns are the fields. You don't want to repeat the fields, so you have a student ID, you don't want to call something like student number. So you have student ID, you have student number.
+
+264
+00:42:52.210 --> 00:42:58.519
+Godfried Williams: You may have dependencies like student ID and student name, so there's a relationship between student ID
+
+265
+00:42:58.520 --> 00:43:05.950
+Godfried Williams: as the name. But what you don't want to do is have a student ID, and then also have something like student number. They're all similar.
+
+266
+00:43:05.950 --> 00:43:17.319
+Godfried Williams: Or you have something like student ID, and you have an exam candidate number, something like that. You know, so these sort of repetitive words, or similar words should be
+
+267
+00:43:17.550 --> 00:43:27.699
+Godfried Williams: clearly avoided. So that's the first normal form. Second normal form eliminates partial dependencies by ensuring non-key attributes depend
+
+268
+00:43:27.860 --> 00:43:44.259
+Godfried Williams: Only on the primary key. So, non-key attributes, typical example, you may have what I just mentioned, you may have a student ID, and you have a student name. So, the student ID is a primary key, and the student…
+
+269
+00:43:44.700 --> 00:43:50.650
+Godfried Williams: Name is actually… Seen as something that is non…
+
+270
+00:43:50.780 --> 00:44:02.180
+Godfried Williams: is not unique, you know, so this implies a direct relationship between each column in the primary key, and not between multiple columns. There's a direct relationship with the incident ID,
+
+271
+00:44:02.180 --> 00:44:13.929
+Godfried Williams: and student name. In other words, you've eliminated the partial dependencies by ensuring some key attributes depend only on the primary key. So the student name
+
+272
+00:44:13.930 --> 00:44:25.470
+Godfried Williams: is a non-key attribute, but it's an ID is a key attribute, because it's a primary key. So, that is some of the things that you do. Third normal form…
+
+273
+00:44:26.010 --> 00:44:36.190
+Godfried Williams: transitive dependencies are removed, so that non-key attributes depend strictly on the primary key. This improves second normal form. Now, that's a very…
+
+274
+00:44:36.190 --> 00:44:51.670
+Godfried Williams: should I say, it's a very thin line between the second normal form and the third normal form, depending on how you look at the data base, you know, it's a matter of improving the second normal form to ensure that it's stricter in the relationship between
+
+275
+00:44:51.680 --> 00:44:54.969
+Godfried Williams: Your, primary keys, and…
+
+276
+00:44:55.000 --> 00:45:07.630
+Godfried Williams: the other, fields that are not necessarily primary. Then you have the Boeing's coat normal form also improved, or enhances the third normal form for resolving complex anomalies.
+
+277
+00:45:07.630 --> 00:45:15.880
+Godfried Williams: Sometimes you may have anomalies in your database system, and of course, you have the full normalization that
+
+278
+00:45:15.910 --> 00:45:29.499
+Godfried Williams: fold normal form, sorry, and that also, improves the boy's court normal form. This is sort of more experience when you begin to apply some of these principles.
+
+279
+00:45:29.610 --> 00:45:31.720
+Godfried Williams: In your,
+
+280
+00:45:31.820 --> 00:45:44.040
+Godfried Williams: the subsequent part of your assignment. It'll be useful to apply some of these principles, explain some of these principles, how you might have used them, or how you intend to use them.
+
+281
+00:45:44.110 --> 00:45:59.520
+Godfried Williams: under the circumstance you've been given, or the project that you're working on. And that would be very useful. I would like to see some of these explanations coming in. In other words, you'll be bringing the theory into… into practice. So this is…
+
+282
+00:45:59.550 --> 00:46:08.770
+Godfried Williams: Very key. So, there are downsides of normalization, because sometimes you may need… you may…
+
+283
+00:46:08.810 --> 00:46:24.710
+Godfried Williams: over-normalize as well, you know, so there's… there's some level of objectivity, creativity, and reasoning that should come to play when you're normalizing. Because what you don't want to do is, when you over-normalize, and you apply all these normal forms.
+
+284
+00:46:25.190 --> 00:46:28.229
+Godfried Williams: You, you can face the problem of…
+
+285
+00:46:28.390 --> 00:46:39.240
+Godfried Williams: Your system lacking performance, or your system not being able to respond effectively to selling queries, because you have
+
+286
+00:46:39.420 --> 00:46:56.739
+Godfried Williams: so many, tables that are very independent, you know? Even though you're intended to make them, shall I say, lean, or you intend to avoid duplications, there are some level of benefits.
+
+287
+00:46:56.790 --> 00:47:09.739
+Godfried Williams: when you… not necessarily duplication, but there's some level of benefits when there is some relationship between the tables. So it gives you options when you're interacting with the table. In other words.
+
+288
+00:47:09.820 --> 00:47:14.740
+Godfried Williams: even from a security perspective, or, should I say, reliability.
+
+289
+00:47:14.880 --> 00:47:30.659
+Godfried Williams: perspective of any kind of system, you know, a database management system supporting some commercial activity. If you're only restricted to querying the database in a specific order, or a specific format.
+
+290
+00:47:31.080 --> 00:47:36.799
+Godfried Williams: When you're faced with a situation where part of the query is not functioning properly.
+
+291
+00:47:36.910 --> 00:47:45.200
+Godfried Williams: you, you, you, it can, it can cause some sort of denial of service, you know? Or you can easily be,
+
+292
+00:47:45.700 --> 00:47:46.560
+Godfried Williams: Happed.
+
+293
+00:47:46.680 --> 00:47:57.019
+Godfried Williams: You know, when you have an injection into your database file. If you have an insession, unauthorized insertion, or a breach into your database file.
+
+294
+00:47:57.050 --> 00:48:11.560
+Godfried Williams: to corrupt your database, you may have limited options in terms of ensuring that your system still functions. But if you have options, if the query is not functioning in a certain order, you may have other options. So.
+
+295
+00:48:12.190 --> 00:48:31.489
+Godfried Williams: Let's look at a typical scenario. You may have a safety-critical system, such as aviation, or you may have within the medical system, if you're, you know, performing some sort of operation remotely, or you have communication between
+
+296
+00:48:31.970 --> 00:48:49.860
+Godfried Williams: air traffic control and pilots, they all use database management systems. You know, so if one part of the system fails to interact, there should be… you know, the system should get into some kind of fault tolerance mode.
+
+297
+00:48:50.010 --> 00:48:53.670
+Godfried Williams: You know, so, going to fault tolerance mode.
+
+298
+00:48:53.700 --> 00:49:05.990
+Godfried Williams: also sort of means that the querying of the system, the interaction between the end user, whether the pilots with the, air traffic control, radar systems.
+
+299
+00:49:06.010 --> 00:49:20.350
+Godfried Williams: The interaction, creates multiple paths, and it creates multiple paths because of the way the database management system is functioning, or the database files have been designed. And, you know, making it more robust.
+
+300
+00:49:20.350 --> 00:49:28.090
+Godfried Williams: more reliable, and the same principle will apply to a medical system as well. You know, but it depends on
+
+301
+00:49:28.300 --> 00:49:44.270
+Godfried Williams: what is the premium? The question is, what is the premium? Is it safety? Is it security? Is it reliability? Or is it about robustness? You know, so, these are all non-functional requirements of the system. Remember that we have what they call
+
+302
+00:49:44.760 --> 00:49:51.510
+Godfried Williams: functional requirements and the non-functional requirements. The non-functional requirements are…
+
+303
+00:49:52.010 --> 00:49:56.410
+Godfried Williams: Requirements that should be inherent or intrinsic
+
+304
+00:49:56.630 --> 00:50:07.509
+Godfried Williams: within the system that you have designed. In other words, every system should be considered, with respect to robustness, security.
+
+305
+00:50:07.560 --> 00:50:09.170
+Godfried Williams: reliability.
+
+306
+00:50:09.210 --> 00:50:28.299
+Godfried Williams: safety of the system and all that. So these are non-functional requirements. Then your functional requirements has to do with the… either the commercial activities or the business logic that drives the entire system. And I'm saying that if you're normalizing any database, system.
+
+307
+00:50:28.620 --> 00:50:44.839
+Godfried Williams: it's not every instance that your normalization sort of produces all benefits every time. No, sometimes you may have situations where you may need to denormalize. You know, that's some of the controversies in
+
+308
+00:50:44.840 --> 00:50:55.900
+Godfried Williams: in the thinking, so it requires some level of objectivity from the system developer or the system designer. So, this brings, an end to my, sort of,
+
+309
+00:50:55.950 --> 00:51:09.570
+Godfried Williams: the seminar this evening, and I think that we can discuss this further. If you have any questions, just feel free, let me know. Do you have any questions now, or any contributions at this point?
+
+310
+00:51:10.380 --> 00:51:12.639
+Sonya Jackson: No, no questions at the moment, thank you.
+
+311
+00:51:12.830 --> 00:51:32.350
+Godfried Williams: All right, okay. So anyway, thanks for coming once again, you're the most consistent among all UPS, and I think that… I'm sure that… I know that UPS also engage very well in different forms, their busy schedule, and I can see that. I've seen that within the submissions, and that's good just to sort of, it's good to recognize that.
+
+312
+00:51:32.350 --> 00:51:38.859
+Sonya Jackson: So I look forward to, seeing you once again, next, in, next seminar. Thanks for coming.
+
+313
+00:51:39.140 --> 00:51:39.800
+Godfried Williams: Right.
+
+314
+00:51:39.800 --> 00:51:40.699
+Sonya Jackson: Thank you, bye-bye.
+
+315
+00:51:41.510 --> 00:51:42.910
+Godfried Williams: Good evening, bye.
+

@@ -1,0 +1,23 @@
+Seminar 6, led by Dr. Godfried Williams, focused on building database management systems (DBMS) and understanding their role in real-world applications. The discussion built on the earlier “Dream Home” property management case study, where a company needed a system to manage property listings and client rentals. This example illustrated how databases support data storage, manipulation, and accessibility for both local and remote users.
+
+Focus: Design and implementation of relational database systems.
+
+Key Points:
+
+Builds on the Dream Home case by linking data modeling to real applications.
+
+Overview of relational database management systems: MySQL, SQL Server, SQLite.
+
+Discussion of data storage, manipulation, and global accessibility.
+
+Importance of maintaining data integrity and supporting multi-user environments.
+
+Learning Outcomes:
+
+Understand DBMS architecture and principles.
+
+Use relational models to organize and query structured data.
+
+Apply SQL for database creation, manipulation, and retrieval.
+
+Recognize scalability and accessibility challenges in distributed databases.

@@ -1,0 +1,17 @@
+The seminar, led by Dr. Godfried Williams, introduces SQL within relational database management systems and the concept of normalization. It begins with the historical shift from flat-file systems to relational databases, highlighting SQL’s role in industry.
+
+Key points covered:
+
+Relational DBMS foundations: tables, relationships, primary keys, foreign keys.
+
+Normalization process: eliminating redundancy, ensuring data integrity, and organizing data into logical structures.
+
+Normal forms: 1NF (atomic values), 2NF (removing partial dependencies), 3NF (removing transitive dependencies), and Boyce-Codd NF.
+
+Examples: splitting unstructured tables into normalized ones; identifying anomalies (insertion, update, deletion).
+
+Trade-offs: normalization improves integrity and reduces duplication but may reduce performance for large queries, leading to denormalization in practice.
+
+Industry context: importance in business systems, data quality, and scalability.
+
+The seminar closes by linking normalization to broader data science practices, stressing clean, well-structured data as the foundation for reliable analysis and decision-making.
